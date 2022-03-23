@@ -1,0 +1,5 @@
+*.so
+*.pyf
+*.json
+.settings/
+.ipynb_checkpoints/
