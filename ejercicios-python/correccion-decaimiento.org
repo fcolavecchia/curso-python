@@ -1,0 +1,128 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:nil e:t email:nil f:t inline:t num:nil
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:nil title:t toc:nil todo:t |:t
+#+TITLE: correccion ejercicio Decaimiento
+#+DATE: 
+#+AUTHOR: Cátedra 2022
+#+LANGUAGE: es
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+
+* González, Juan; Nota: 9
+
+** Puntos a evaluar
+
+*** Generales [3/3]:
+
+- [X] Documentación. Las funciones están bien documentadas
+
+- [X] Uso de bibliotecas. Usa bien, scipy.constants y curve_fit. Argparse y random bien usadas (np y plt también)
+
+- [X] Modularización. El programa está modularizado.
+
+
+*** Específicos [6/6]:
+1. [X] Simulacion del decaímiento espontáneo de partículas en una caja
+2. [X] Gráfico
+3. [X] Ajuste
+4. [X] Detección de electrones
+5. [X] Animación
+6. [X] Etapa 3. Detector plano
+
+*** Otros Comentarios/correcciones/ideas
+
+- Personaliza bien los gráficos, modifica cada tamaño de letra separadamente. No usa parámetros o style-sheets que quizás hubiera sido más simple y más fácil de modificar o mantener.
+
+- Los gráficos están muy bien, son legibles y estéticamente agradables. 
+
+- El fiteo sería más claro si se presentara también un gráfico comparando los modelos.
+
+- La ayuda por línea de comandos sería más útil si mostrara los valores que se usan por defecto.
+  
+- La línea:
+      #+begin_src python
+Initial_N = np.logspace(math.log10(simulation.nmin), math.log10(simulation.nmax),\
+			simulation.npops)
+      #+end_src
+está bien pero podría simplificarse usando ~np.geomspace()~
+
+- El cálculo del número de decaimientos se calcula utilizando la distribución de Poisson, que está bien pero en realidad es el resultado del desarrollo analítico para el caso en que la probabilidad por unidad de tiempo es constante.
+  Se puede simular directamente usando una distribución uniforme. De esta manera, la distribución de Poisson se obtendría naturalmente en forma numérica.
+
+
+
+* Ramos Villalobos, Kevin J; Nota:  7
+
+** Puntos a evaluar
+
+*** Generales [3/3]:
+
+- [X] Documentación. Las funciones no están documentadas, hay algunos comentarios en el código
+
+- [X] Uso de bibliotecas. Usa bien, scipy.constants y curve_fit. Argparse se usa solo para decidir el número de partículas. np.random está bien usado (np y plt también)
+
+- [X] Modularización. El programa está modularizado. Se crean funciones para los cálculos.
+
+
+*** Específicos [4/5]:
+1. [X] Simulacion del decaímiento espontáneo de partículas en una caja
+2. [X] Gráfico
+3. [X] Ajuste
+4. [ ] Animación
+5. [X] Detección de electrones
+6. [ ] Etapa 3. Detector plano
+
+
+*** Otros Comentarios/correcciones/ideas
+
+- Los gráficos están bien, quizás sería más claro si tuvieran algún título. Los gráficos son claros. No se personalizan.
+  Matplotlib tiene capacidad para escribir ecuaciones usando notación de LaTeX. Por ejemplo, se puede utilizar para los exponentes.
+
+- Se pueden utilizar las opciones de argumentos al programa para determinar su comportamiento. Por ejemplo, se podrían usar opciones para decidir que tipo de gráfico se va a mostrar, o si se va a estudiar su comportamiento funcional (exponencial o potencia), o si se va a mostrar como se vería el detector, etc.
+
+- El cálculo del número de decaimientos se calcula utilizando la distribución de Poisson, que está bien pero en realidad es el resultado del desarrollo analítico para el caso en que la probabilidad por unidad de tiempo es constante.
+  Se puede simular directamente usando una distribución uniforme. De esta manera, la distribución de Poisson se obtendría naturalmente en forma numérica.
+
+* Rodriguez López, Gieberth; Nota: 6
+
+** Puntos a evaluar
+
+*** Generales [3/3]:
+
+- [X] Documentación. Las funciones no están documentadas, hay algunos comentarios en el código
+
+- [X] Uso de bibliotecas. Usa bien, curve_fit. Usa random en lugar de numpy.random (np y plt también)
+
+- [X] Modularización. El programa está poco modularizado. Se crean funciones para el cálculo y ajustes.
+
+
+*** Específicos [3/6]:
+1. [X] Simulacion del decaímiento espontáneo de partículas en una caja
+2. [X] Gráfico
+3. [X] Ajuste
+4. [ ] Detección de electrones
+5. [ ] Animación
+6. [ ] Etapa 3. Detector plano
+
+*** Otros Comentarios/correcciones/ideas
+
+- La línea ~n   = int (1000)~ se escribe simplemente: ~n = 1000~
+
+- ¿Por qué se usan números de punto flotante para contar eventos? Por ejemplo en la línea: ~No  = float (1000)~
+
+- En la función ~metodo_euler()~ se calcula el número medio de partículas que decae en cada intervalo de tiempo.
+  Eso es diferente a calcular para cada partícula la probabilidad de que decaiga. Esto último se puede hacer calculando un número al azar y definiendo que decae si la probabilidad es menor a la probabilidad de supervivencia P. Si eso ocurre se resta del número de partículas original.
+  Al calcularse como número medio de partículas que decaen por intervalo (que puede no ser un número entero) se utiliza un único número random. Esa es la razón por la que los gráficos tienen bastante más ruido que en el ejemplo del enunciado.
+
+- Los gráficos están bien, se personalizan individualmente.  Quizás sería más claro si tuvieran algún título. Por ejemplo cuando se muestran los ajustes se podría indicar a que caso corresponde cada gráfico. Además de imprimir información de la forma funcional utilizada y los valores obtenidos para los parámetros se podría mostrar en el gráfico para mayor conveniencia.
+
+- Se podría modularizar un poco más para no repetir código. Por ejemplo los cálculos para distintos valores de partículas iniciales se podrían hacer con llamadas a una función y un loop. Similarmente para realizar y personalizar los gráficos. Alternativamente, dado que se utilizan los mismos parámetros por consistencia, se podrían haber personalizado utilizando métodos globales (como parámetros u hojas de estilo).
+
+  
+
+
+
+
+
