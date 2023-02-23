@@ -87,7 +87,8 @@ o usando `dnf` en Fedora::
 
   $ sudo dnf install git
   
-En Windows, se puede descargar `Git for Windows <https://gitforwindows.org/>`__ desde `este enlace <https://github.com/git-for-windows/git/releases/latest>`__,  ejecutar el instalador y seguir las instrucciones. Viene con una terminal y una interfaz gráfica.
+En Windows, se puede descargar `Git for Windows <https://gitforwindows.org/>`__ desde `este enlace <https://github.com/git-for-windows/git/releases/latest>`__,  ejecutar el instalador 
+y seguir las instrucciones. Viene con una terminal y una interfaz gráfica.
 
 
 Interfaces gráficas
@@ -190,9 +191,11 @@ Ejemplos:
 
 Los dos primeros ejemplos realizan una copia de trabajo de un proyecto alojado también localmente. En el segundo y cuarto casos les estamos dando un nuevo nombre a la copia local de trabajo.
 
-En los últimos tres ejemplos estamos copiando proyectos alojados en repositorios remotos, cuyo uso es bastante popular: `bitbucket <https://bitbucket.org/>`__, `gitlab <https://gitlab.com/>`__, y `github <https://github.com>`__.
+En los últimos tres ejemplos estamos copiando proyectos alojados en repositorios remotos, cuyo uso es bastante popular: 
+`bitbucket <https://bitbucket.org/>`__, `gitlab <https://gitlab.com/>`__, y `github <https://github.com>`__.
 
-Lo que estamos haciendo con estos comandos es copiar no sólo la versión actual del proyecto sino toda su historia. Después de ejecutar este comando tendremos en nuestra computadora cada versión de cada uno de los archivos del proyecto, con la información de quién hizo los cambios y cuándo se hicieron.
+Lo que estamos haciendo con estos comandos es copiar no sólo la versión actual del proyecto sino toda su historia. 
+Después de ejecutar este comando tendremos en nuestra computadora cada versión de cada uno de los archivos del proyecto, con la información de quién hizo los cambios y cuándo se hicieron.
 
 
 Una vez que ya tenemos una copia local de un proyecto vamos a querer trabajar: modificar los archivos, agregar nuevos, borrar alguno, etc.
