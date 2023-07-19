@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: "00 Intro"
 chapters:
 - file: "0 Introducción a Jupyter Notebooks.ipynb"
 - file: "1 El lenguaje Python.ipynb"
@@ -12,21 +12,19 @@ chapters:
 - file: "5 Numpy - avanzado.ipynb"
 - file: "5 Numpy.ipynb"
 - file: "6 Matplotlib.ipynb"
-# - file: "6 Plotly.ipynb"
 - file: "7 Intermedio.ipynb"
 - file: "8 Interpolación.ipynb"
 - file: "9 Dicom.ipynb"
 - file: "A Dicom 3D.ipynb"
 - file: "B Integrales.ipynb"
 - file: "Borges y matplotlib resuelto.ipynb"
-- file: "Borges y matplotlib.ipynb"
-# - file: "Clase.ipynb"
+# - file: "Borges y matplotlib.ipynb"
 - file: "Create_the_std_lib.ipynb"
-- file: "Ejercicios 07.ipynb"
+# - file: "Ejercicios 07.ipynb"
 - file: "Find_the_file.ipynb"
 - file: "Generala.ipynb"
 - file: "Jugando con strings solución.ipynb"
-- file: "Jugando con strings.ipynb"
+# - file: "Jugando con strings.ipynb"
 - file: "Pangram solucion.ipynb"
 - file: "Pangrama Versiones.ipynb"
 - file: "Pangrama.ipynb"
@@ -37,5 +35,4 @@ chapters:
 - file: "pandas.ipynb"
 - file: "pandas_intro.ipynb"
 - file: "scikit_image_filters.ipynb"
-- file: "16_Python funcional 2.ipynb"
 - file: "16_Python funcional.ipynb"
