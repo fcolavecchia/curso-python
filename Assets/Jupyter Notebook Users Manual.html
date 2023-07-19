@@ -1,0 +1,1851 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Getting to Know your Jupyter Notebook’s Toolbar &#8212; Python para imágenes médicas</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Assets/Jupyter Notebook Users Manual';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../00%20Intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Python para imágenes médicas</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../00%20Intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../0%20Introducci%C3%B3n%20a%20Jupyter%20Notebooks.html">Clase 0</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../1%20El%20lenguaje%20Python.html">Introducción a Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2%20Funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3%20M%C3%A1s%20sobre%20funciones.html">Más sobre Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4%20M%C3%B3dulos.html">Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5%20Numpy%20-%20avanzado.html">NumPy - Avanzado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5%20Numpy.html">NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6%20Matplotlib.html">Líneas, símbolos y colores</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../7%20Intermedio.html">Windows, <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> y más</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../8%20Interpolaci%C3%B3n.html">Interpolación - Scipy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../9%20Dicom.html">Imágenes médicas - DICOM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A%20Dicom%203D.html">Imágenes médicas - DICOM 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../B%20Integrales.html">Integración numérica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ejercicios/Borges%20y%20matplotlib.html">Borges y  <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Pangrama%20Versiones.html">Pangrama</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../Generala.html">Examen Final</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAssets/Jupyter Notebook Users Manual.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Assets/Jupyter Notebook Users Manual.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1. Getting to Know your Jupyter Notebook’s Toolbar</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. Getting to Know your Jupyter Notebook’s Toolbar</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#different-kinds-of-cells">2. Different Kinds of Cells</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">2.1 Code Cells</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cell-layout">2.1.1 Code Cell Layout</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#row-configuration-default-setting">2.1.1.1 Row Configuration (Default Setting)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-tabbing">2.1.1.2 Cell Tabbing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-configuration">2.1.1.3 Column Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">2.2 Markdown Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-cells">2.3 Raw Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#header-cells">2.4 Header Cells</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linking">2.4.1 Linking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-section-numbering-and-table-of-contents-support">2.4.2 Automatic Section Numbering and Table of Contents Support</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-section-numbering">2.4.2.1 Automatic Section Numbering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents-support">2.4.2.2 Table of Contents Support</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-both-automatic-section-numbering-and-table-of-contents-support">2.4.2.3 Using Both Automatic Section Numbering and Table of Contents Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keyboard-shortcuts">3. Keyboard Shortcuts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-markdown-cells-for-writing">4. Using Markdown Cells for Writing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#block-elements">4.1 Block Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paragraph-breaks">4.1.1 Paragraph Breaks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-breaks">4.1.2 Line Breaks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-wrapping-and-soft-wrapping">4.1.2.1 Hard-Wrapping and Soft-Wrapping</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soft-wrapping">4.1.2.2 Soft-Wrapping</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-wrapping">4.1.2.3 Hard-Wrapping</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#headers">4.1.3 Headers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#block-quotes">4.1.4 Block Quotes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-block-quoting">4.1.4.1 Standard Block Quoting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-block-quoting">4.1.4.2 Nested Block Quoting</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">4.1.5 Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-lists">4.1.5.1 Ordered Lists</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bulleted-lists">4.1.5.2 Bulleted Lists</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-breaks">4.1.6 Section Breaks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backslash-escape">4.2 Backslash Escape</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-definitely-a-header">This is definitely a header.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperlinks">4.3 Hyperlinks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-links">4.3.1 Automatic Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-links">4.3.2 Standard Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-links-with-mouse-over-titles">4.3.3 Standard Links With Mouse-Over Titles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-links">4.3.4 Reference Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-internal-links">4.3.5 Notebook-Internal Links</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-notebook-internal-links-without-mouse-over-titles">4.3.5.1 Standard Notebook-Internal Links Without Mouse-Over Titles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-notebook-internal-links-with-mouse-over-titles">4.3.5.2 Standard Notebook-Internal Links With Mouse-Over Titles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-style-notebook-internal-links">4.3.5.3 Reference-Style Notebook-Internal Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">4.4 Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-justification">4.4.1 Cell Justification</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#style-and-emphasis">4.5 Style and Emphasis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-characters">4.6 Other Characters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#including-code-examples">4.7 Including Code Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images">4.8 Images</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images-from-the-internet">4.8.1 Images from the Internet</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-style-images-from-the-internet">4.8.1.1 Reference-Style Images from the Internet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latex-math">4.9 LaTeX Math</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliographic-support">5. Bibliographic Support</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-bibtex-database">5.1 Creating a Bibtex Database</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-bibliographic-databases">5.1.1 External Bibliographic Databases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-bibliographic-databases">5.1.2 Internal Bibliographic Databases</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hiding-your-internal-database">5.1.2.1 Hiding Your Internal Database</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-bibtex-entries">5.1.3 Formatting Bibtex Entries</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cite-commands-and-citation-ids">5.2 Cite Commands and Citation IDs</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#turning-your-jupyter-notebook-into-a-slideshow">6. Turning Your Jupyter Notebook into a Slideshow</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p>#Jupyter Notebook Users Manual</p>
+<p>This page describes the functionality of the <a class="reference external" href="http://jupyter.org">Jupyter</a> electronic document system. Jupyter documents are called “notebooks” and can be seen as many things at once. For example, notebooks allow:</p>
+<ul class="simple">
+<li><p>creation in a <strong>standard web browser</strong></p></li>
+<li><p>direct <strong>sharing</strong></p></li>
+<li><p>using <strong>text with styles</strong> (such as italics and titles) to be explicitly marked using a <a class="reference external" href="http://en.wikipedia.org/wiki/Wiki_markup">wikitext language</a></p></li>
+<li><p>easy creation and display of beautiful <strong>equations</strong></p></li>
+<li><p>creation and execution of interactive embedded <strong>computer programs</strong></p></li>
+<li><p>easy creation and display of <strong>interactive visualizations</strong></p></li>
+</ul>
+<p>Jupyter notebooks (previously called “IPython notebooks”) are thus interesting and useful to different groups of people:</p>
+<ul class="simple">
+<li><p>readers who want to view and execute computer programs</p></li>
+<li><p>authors who want to create executable documents or documents with visualizations</p></li>
+</ul>
+<hr size="5"/><p>###Table of Contents</p>
+<ul class="simple">
+<li><p><span class="xref myst">1. Getting to Know your Jupyter Notebook’s Toolbar</span></p></li>
+<li><p><span class="xref myst">2. Different Kinds of Cells</span></p>
+<ul>
+<li><p><span class="xref myst">2.1 Code Cells</span></p>
+<ul>
+<li><p><span class="xref myst">2.1.1 Code Cell Layout</span></p>
+<ul>
+<li><p><span class="xref myst">2.1.1.1 Row Configuration (Default Setting)</span></p></li>
+<li><p><span class="xref myst">2.1.1.2 Cell Tabbing</span></p></li>
+<li><p><span class="xref myst">2.1.1.3 Column Configuration</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><span class="xref myst">2.2 Markdown Cells</span></p></li>
+<li><p><span class="xref myst">2.3 Raw Cells</span></p></li>
+<li><p><span class="xref myst">2.4 Header Cells</span></p>
+<ul>
+<li><p><span class="xref myst">2.4.1 Linking</span></p></li>
+<li><p><span class="xref myst">2.4.2 Automatic Section Numbering and Table of Contents Support</span></p>
+<ul>
+<li><p><span class="xref myst">2.4.2.1 Automatic Section Numbering</span></p></li>
+<li><p><span class="xref myst">2.4.2.2 Table of Contents Support</span></p></li>
+<li><p><span class="xref myst">2.4.2.3 Using Both Automatic Section Numbering and Table of Contents Support</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><span class="xref myst">3. Keyboard Shortcuts</span></p></li>
+<li><p><span class="xref myst">4. Using Markdown Cells for Writing</span></p>
+<ul>
+<li><p><span class="xref myst">4.1 Block Elements</span></p>
+<ul>
+<li><p><span class="xref myst">4.1.1 Paragraph Breaks</span></p></li>
+<li><p><span class="xref myst">4.1.2 Line Breaks</span></p>
+<ul>
+<li><p><span class="xref myst">4.1.2.1 Hard-Wrapping and Soft-Wrapping</span></p></li>
+<li><p><span class="xref myst">4.1.2.2 Soft-Wrapping</span></p></li>
+<li><p><span class="xref myst">4.1.2.3 Hard-Wrapping</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">4.1.3 Headers</span></p></li>
+<li><p><span class="xref myst">4.1.4 Block Quotes</span></p>
+<ul>
+<li><p><span class="xref myst">4.1.4.1 Standard Block Quoting</span></p></li>
+<li><p><span class="xref myst">4.1.4.2 Nested Block Quoting</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">4.1.5 Lists</span></p>
+<ul>
+<li><p><span class="xref myst">4.1.5.1 Ordered Lists</span></p></li>
+<li><p><span class="xref myst">4.1.5.2 Bulleted Lists</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">4.1.6 Section Breaks</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">4.2 Backslash Escape</span></p></li>
+<li><p><span class="xref myst">4.3 Hyperlinks</span></p>
+<ul>
+<li><p><span class="xref myst">4.3.1 Automatic Links</span></p></li>
+<li><p><span class="xref myst">4.3.2 Standard Links</span></p></li>
+<li><p><span class="xref myst">4.3.3 Standard Links With Mouse-Over Titles</span></p></li>
+<li><p><span class="xref myst">4.3.4 Reference Links</span></p></li>
+<li><p><span class="xref myst">4.3.5 Notebook-Internal Links</span></p>
+<ul>
+<li><p><span class="xref myst">4.3.5.1 Standard Notebook-Internal Links Without Mouse-Over Titles</span></p></li>
+<li><p><span class="xref myst">4.3.5.2 Standard Notebook-Internal Links With Mouse-Over Titles</span></p></li>
+<li><p><span class="xref myst">4.3.5.3 Reference-Style Notebook-Internal Links</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><span class="xref myst">4.4 Tables</span></p>
+<ul>
+<li><p><span class="xref myst">4.4.1 Cell Justification</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">4.5 Style and Emphasis</span></p></li>
+<li><p><span class="xref myst">4.6 Other Characters</span></p></li>
+<li><p><span class="xref myst">4.7 Including Code Examples</span></p></li>
+<li><p><span class="xref myst">4.8 Images</span></p>
+<ul>
+<li><p><span class="xref myst">4.8.1 Images from the Internet</span></p>
+<ul>
+<li><p><span class="xref myst">4.8.1.1 Reference-Style Images from the Internet</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><span class="xref myst">4.9 LaTeX Math</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">5. Bibliographic Support</span></p>
+<ul>
+<li><p><span class="xref myst">5.1 Creating a Bibtex Database</span></p>
+<ul>
+<li><p><span class="xref myst">5.1.1 External Bibliographic Databases</span></p></li>
+<li><p><span class="xref myst">5.1.2 Internal Bibliographic Databases</span></p>
+<ul>
+<li><p><span class="xref myst">5.1.2.1 Hiding Your Internal Database</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">5.1.3 Formatting Bibtex Entries</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">5.2 Cite Commands and Citation IDs</span></p></li>
+</ul>
+</li>
+<li><p><span class="xref myst">6. Turning Your Jupyter Notebook into a Slideshow</span></p></li>
+</ul>
+<div class="tex2jax_ignore mathjax_ignore section" id="getting-to-know-your-jupyter-notebook-s-toolbar">
+<h1>1. Getting to Know your Jupyter Notebook’s Toolbar<a class="headerlink" href="#getting-to-know-your-jupyter-notebook-s-toolbar" title="Permalink to this headline">#</a></h1>
+<p>At the top of your Jupyter Notebook window there is a toolbar. It looks like this:</p>
+<p><img alt="" src="Assets/images/jupytertoolbar.png" /></p>
+<p>Below is a table which helpfully pairs a picture of each of the items in your toolbar with a corresponding explanation of its function.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Button</p></th>
+<th class="head"><p>Function</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarsave.png" /></p></td>
+<td><p>This is your save button. You can click this button to save your notebook at any time, though keep in mind that Jupyter Notebooks automatically save your progress very frequently.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbarnewcell.png" /></p></td>
+<td><p>This is the new cell button. You can click this button any time you want a new cell in your Jupyter Notebook.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarcutcell.png" /></p></td>
+<td><p>This is the cut cell button. If you click this button, the cell you currently have selected will be deleted from your Notebook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbarcopycell.png" /></p></td>
+<td><p>This is the copy cell button. If you click this button, the currently selected cell will be duplicated and stored in your clipboard.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarpastecell.png" /></p></td>
+<td><p>This is the past button. It allows you to paste the duplicated cell from your clipboard into your notebook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbarupdown.png" /></p></td>
+<td><p>These buttons allow you to move the location of a selected cell within a Notebook. Simply select the cell you wish to move and click either the up or down button until the cell is in the location you want it to be.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarrun.png" /></p></td>
+<td><p>This button will “run” your cell, meaning that it will interpret your input and render the output in a way that depends on [what kind of cell] <span class="xref myst">cell kind</span> you’re using.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbarstop.png" /></p></td>
+<td><p>This is the stop button. Clicking this button will stop your cell from continuing to run. This tool can be useful if you are trying to execute more complicated code, which can sometimes take a while, and you want to edit the cell before waiting for it to finish rendering.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarrestartkernel.png" /></p></td>
+<td><p>This is the restart kernel button. See your kernel documentation for more information.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbarcellkind.png" /></p></td>
+<td><p>This is a drop down menu which allows you to tell your Notebook how you want it to interpret any given cell. You can read more about the [different kinds of cells] <span class="xref myst">cell kind</span> in the following section.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbartoolbartype.png" /></p></td>
+<td><p>Individual cells can have their own toolbars. This is a drop down menu from which you can select the type of toolbar that you’d like to use with the cells in your Notebook. Some of the options in the cell toolbar menu will only work in <span class="xref myst">certain kinds of cells</span>. “None,” which is how you specify that you do not want any cell toolbars, is the default setting. If you select “Edit Metadata,” a toolbar that allows you to edit data about <span class="xref myst">Code Cells</span> directly will appear in the corner of all the Code cells in your notebook. If you select “Raw Cell Format,” a tool bar that gives you several formatting options will appear in the corner of all your <span class="xref myst">Raw Cells</span>. If you want to view and present your notebook as a slideshow, you can select “Slideshow” and a toolbar that enables you to organize your cells in to slides, sub-slides, and slide fragments will appear in the corner of every cell. Go to <span class="xref myst">this section</span> for more information on how to create a slideshow out of your Jupyter Notebook.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbarsectionmove.png" /></p></td>
+<td><p>These buttons allow you to move the location of an entire section within a Notebook. Simply select the Header Cell for the section or subsection you wish to move and click either the up or down button until the section is in the location you want it to be. If your have used <span class="xref myst">Automatic Section Numbering</span> or <span class="xref myst">Table of Contents Support</span> remember to rerun those tools so that your section numbers or table of contents reflects your Notebook’s new organization.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarsectionnumbering.png" /></p></td>
+<td><p>Clicking this button will automatically number your Notebook’s sections. For more information, check out the Reference Guide’s <span class="xref myst">section on Automatic Section Numbering</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbartableofcontents.png" /></p></td>
+<td><p>Clicking this button will generate a table of contents using the titles you’ve given your Notebook’s sections. For more information, check out the Reference Guide’s <span class="xref myst">section on Table of Contents Support</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarbib.png" /></p></td>
+<td><p>Clicking this button will search your document for <span class="xref myst">cite commands</span> and automatically generate intext citations as well as a references cell at the end of your Notebook. For more information, you can read the Reference Guide’s <span class="xref myst">section on Bibliographic Support</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbartab.png" /></p></td>
+<td><p>Clicking this button will toggle <span class="xref myst">cell tabbing</span>, which you can learn more about in the Reference Guides’ <span class="xref myst">section on the layout options for Code Cells</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="Assets/images/jupytertoolbarcollumn.png" /></p></td>
+<td><p>Clicking this button will toggle the <span class="xref myst">collumn configuration</span> for Code Cells, which you can learn more about in the Reference Guides’ <span class="xref myst">section on the layout options for Code Cells</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="Assets/images/jupytertoolbarspellcheck.png" /></p></td>
+<td><p>Clicking this button will toggle spell checking. Spell checking only works in unrendered <span class="xref myst">Markdown Cells</span> and <span class="xref myst">Header Cells</span>. When spell checking is on all incorrectly spelled words will be underlined with a red squiggle. Keep in mind that the dictionary cannot tell what are <span class="xref myst">Markdown</span> commands and what aren’t, so it will occasionally underline a correctly spelled word surrounded by asterisks, brackets, or other symbols that have specific meaning in Markdown.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="different-kinds-of-cells">
+<h1>2. Different Kinds of Cells<a class="headerlink" href="#different-kinds-of-cells" title="Permalink to this headline">#</a></h1>
+<p>There are essentially four kinds of cells in your Jupyter notebook: Code Cells, Markdown Cells, Raw Cells, and Header Cells, though there are six levels of Header Cells.</p>
+<div class="section" id="code-cells">
+<h2>2.1 Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">#</a></h2>
+<p>By default, Jupyter Notebooks’ Code Cells will execute Python. Jupyter Notebooks generally also support JavaScript, Python, HTML, and Bash commands. For a more comprehensive list, see your Kernel’s documentation.</p>
+<div class="section" id="code-cell-layout">
+<h3>2.1.1 Code Cell Layout<a class="headerlink" href="#code-cell-layout" title="Permalink to this headline">#</a></h3>
+<p>Code cells have both an input and an output component. You can view these components in three different ways.</p>
+<div class="section" id="row-configuration-default-setting">
+<h4>2.1.1.1 Row Configuration (Default Setting)<a class="headerlink" href="#row-configuration-default-setting" title="Permalink to this headline">#</a></h4>
+<p>Unless you specific otherwise, your Code Cells will always be configured this way, with both the input and output components appearing as horizontal rows and with the input above the output. Below is an example of a Code Cell in this default setting:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cell-tabbing">
+<h4>2.1.1.2 Cell Tabbing<a class="headerlink" href="#cell-tabbing" title="Permalink to this headline">#</a></h4>
+<p>Cell tabbing allows you to look at the input and output components of a cell separately. It also allows you to hide either component behind the other, which can be usefull when creating visualizations of data. Below is an example of a tabbed Code Cell:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="column-configuration">
+<h4>2.1.1.3 Column Configuration<a class="headerlink" href="#column-configuration" title="Permalink to this headline">#</a></h4>
+<p>Like the row configuration, the column layout option allows you to look at both the input and the output components at once. In the column layout, however, the two components appear beside one another, with the input on the left and the output on the right. Below is an example of a Code Cell in the column configuration:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="markdown-cells">
+<h2>2.2 Markdown Cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">#</a></h2>
+<p>In Jupyter Notebooks, Markdown Cells are the easiest way to write and format text. For a more thorough explanation of how to write in Markdown cells, refer to <span class="xref myst">this section of the guide</span>.</p>
+</div>
+<div class="section" id="raw-cells">
+<h2>2.3 Raw Cells<a class="headerlink" href="#raw-cells" title="Permalink to this headline">#</a></h2>
+<p>Raw Cells, unlike all other Jupyter Notebook cells, have no input-output distinction. This means that Raw Cells cannot be rendered into anything other than what they already are. If you click the run button in your tool bar with a Raw Cell selected, the cell will remain exactly as is and your Jupyter Notebook will automatically select the cell directly below it. Raw cells have no style options, just the same monospace font that you use in all other unrendered Notebook cells. You cannot bold, italicize, or enlarge any text or characters in a Raw Cell.</p>
+<p>Because they have no rendered form, Raw Cells are mainly used to create examples. If you save and close your Notebook and then reopen it, all of the Code, Markdown, and Header Cells will automatically render in whatever form you left them when you first closed the document. This means  that if you wanted to preserve the unrendered version of a cell, say if you were writing a computer science paper and needed code examples, or if you were writing [documentation on how to use Markdown] <span class="xref myst">writing markdown</span> and needed to demonstrate what input would yield which output, then you might want to use a Raw Cell to make sure your examples stayed in their most useful form.</p>
+</div>
+<div class="section" id="header-cells">
+<h2>2.4 Header Cells<a class="headerlink" href="#header-cells" title="Permalink to this headline">#</a></h2>
+<p>While it is possible to organize your document using <span class="xref myst">Markdown headers</span>, Header Cells provide a more deeply structural organization for your Notebook and thus there are several advantages to using them.</p>
+<div class="section" id="linking">
+<h3>2.4.1 Linking<a class="headerlink" href="#linking" title="Permalink to this headline">#</a></h3>
+<p>Header Cells have specific locations inside your Notebook. This means you can use them to <span class="xref myst">create Notebook-internal links</span>.</p>
+</div>
+<div class="section" id="automatic-section-numbering-and-table-of-contents-support">
+<h3>2.4.2 Automatic Section Numbering and Table of Contents Support<a class="headerlink" href="#automatic-section-numbering-and-table-of-contents-support" title="Permalink to this headline">#</a></h3>
+<p>Your Jupyter Notebook has two helpful tools that utilize the structural organization that Header Cells give your document: automatic section numbering and table of contents generation.</p>
+<div class="section" id="automatic-section-numbering">
+<h4>2.4.2.1 Automatic Section Numbering<a class="headerlink" href="#automatic-section-numbering" title="Permalink to this headline">#</a></h4>
+<p>Suppose you are writing a paper and, as is prone to happening when you have a lot of complicate thoughts buzzing around your brain, you’ve reorganized your ideas several times. Automatic section numbering will go through your Notebook and number your sections and subsection as designated by your Header Cells. This means that if you’ve moved one or more big sections around several times, you won’t have to go through your paper and renumber it, as well as all its subsections, yourself.</p>
+<p><strong>Notes:</strong> Automatic Section Numbering tri-toggling tool, so when you click the Number Sections button one of three actions will occur: Automatic Section Numbering will number your sections, correct inconsistent numbering, or unnumber your sections (if all of your sections are already consistently and correctly numbered).</p>
+<p>So, even if you have previously numbered your sections, Automatic Section Numbering will go through your document, delete the current section numbers, and replace them the correct number in a linear sequence. This means that if your third section was once your second, Automatic Section Numbering will delete the “2” in front of your section’s name and replace it with a “3.”</p>
+<p>While this function saves you a lot of time, it creates one limitation. Maybe you’re writing a paper about children’s books and one of the books you’re discussing is called <strong><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">Cats</span></code></strong>. You’ve unsurprisingly titled the section where you summarize and analyze this book <strong><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">Cats</span></code></strong>. Automatic Section Numbering will assume the number 2 is section information and delete it, leaving just the title <strong><code class="docutils literal notranslate"><span class="pre">Cats</span></code></strong> behind. If you bold, italicize, or place the title of the section inside quotes, however, the entire section title will be be preserved without any trouble. It should also be noted that even if you must title a section with a number occurring before any letters and you do not want to bold it, italicize it, or place it inside quotes, then you can always run Automatic Section Numbering and then go to that section and retype its name by hand.</p>
+<p>Because Automatic Section Numbering uses your header cells, its performance relies somewhat on the clarity of your organization. If you have two sections that begin with Header 1 Cells in your paper, and each of the sections has two subsections that begin with Header 2 Cells, Automatic Section Numbering will number them 1, 1.1, 1.2, 2, 2.1, and 2.2 respectively. If, however, you have used a Header 3 Cell to indicate the beginning of what would have been section 2.1, Automatic Section Numbering will number that section 2.0.1 and an error message will appear telling you that “You placed a Header 3 cell under a Header 2 Cell in section 2”. Similarly, if you begin your paper with any Header Cell smaller than a Header 1, say a Header 3 Cell, then Automatic Section Numbering will number your first section 0.0.3 and an error message will appear telling you that “Notebook begins with a Header 3 Cell.”</p>
+</div>
+<div class="section" id="table-of-contents-support">
+<h4>2.4.2.2 Table of Contents Support<a class="headerlink" href="#table-of-contents-support" title="Permalink to this headline">#</a></h4>
+<p>The Table of Contents tool will automatically generate a table of contents for your paper by taking all your Header Cell titles and ordering them in a list, which it will place in a new cell at the very beginning of you Notebook. Because your Notebook does note utilize formal page breaks or numbers, each listed section will be hyperlinked to the actual section within your document.</p>
+<p>**Notes: **Because Table of Contents Support uses your header cells, its performance relies somewhat on the clarity of your organization. If you have two sections that begin with Header 1 Cells in your paper, and each of the sections has two subsections that begin with Header 2 Cells, Table of Contents will order them in the following way:</p>
+<ul>
+<li><ol class="arabic simple">
+<li></li>
+</ol>
+<ul class="simple">
+<li><p>1.1</p></li>
+<li><p>1.2</p></li>
+</ul>
+</li>
+<li><ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<ul class="simple">
+<li><p>2.1</p></li>
+<li><p>2.2</p></li>
+</ul>
+</li>
+</ul>
+<p>If, however, you have used a Header 3 Cell to indicate the beginning of what would have been section 2.1, Table of Contents Support will insert a dummy line so that your table of contents looks like this:</p>
+<ul>
+<li><ol class="arabic simple">
+<li></li>
+</ol>
+<ul class="simple">
+<li><p>1.1</p></li>
+<li><p>1.2</p></li>
+</ul>
+</li>
+<li><ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<ul class="simple">
+<li><p> </p>
+<ul>
+<li><p>2.0.1</p></li>
+</ul>
+</li>
+<li><p>2.2</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="using-both-automatic-section-numbering-and-table-of-contents-support">
+<h4>2.4.2.3 Using Both Automatic Section Numbering and Table of Contents Support<a class="headerlink" href="#using-both-automatic-section-numbering-and-table-of-contents-support" title="Permalink to this headline">#</a></h4>
+<p>Automatic Section Numbering will always update every aspect of your notebook that is dependent on the title of one or more of your sections. This means that it will automatically correct an existing table of contents and all of your Notebook-internal links to reflect the new numbered section titles.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="keyboard-shortcuts">
+<h1>3. Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">#</a></h1>
+<p>Jupyter Notebooks support many helpful Keyboard shortcuts, including ones for most of the buttons in <span class="xref myst">your toolbar</span>. To view these shortcuts, you can click the help menu and then select Keyboard Shortcuts, as pictured below.</p>
+<p><img alt="" src="Assets/images/keyboardshortcuts.png" /></p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="using-markdown-cells-for-writing">
+<h1>4. Using Markdown Cells for Writing<a class="headerlink" href="#using-markdown-cells-for-writing" title="Permalink to this headline">#</a></h1>
+<p><strong>Why aren’t there font and font size selection drop down menus, buttons I can press to bold and italicize my text, or other advanced style options in my Notebook?</strong></p>
+<p>When you use Microsoft Word, Google Docs, Apple Pages, Open Office, or any other word processing software, you generally use your mouse to select various style options, like line spacing, font size, font color, paragraph format etc. This kind of system is often describes as a WYSIWYG (What You See Is What You Get) interface. This means that the input (what you tell the computer) exactly matches the output (what the computer gives back to you). If you type the letter <strong><code class="docutils literal notranslate"><span class="pre">G</span></code></strong>, highlight it, select the color green and up the font size to 64 pt, your word processor will show you a fairly large green colored letter <strong><code class="docutils literal notranslate"><span class="pre">G</span></code></strong>. And if you print out that document you will print out a fairly large green colored letter <strong><code class="docutils literal notranslate"><span class="pre">G</span></code></strong>.</p>
+<p>This Notebook, however, does not use a WYSIWYG interface. Instead it uses something called a “<a class="reference external" href="http://en.wikipedia.org/wiki/Markup_language">markup Language</a>”. When you use a a markup language, your input does not necessarily exactly equal your output.</p>
+<p>For example, if I type “#Header 1” at the beginning of a cell, but then press Shift-Enter (or click the play button at the top of the window), this notebook will turn my input into a somewhat different output in the following way:</p>
+<pre>
+#Header 1
+</pre><p>#Header 1</p>
+<p>And if I type “##Header 2” (at the beginning of a cell), this notebook will turn that input into another output:</p>
+<pre>
+##Header 2
+</pre><p>##Header 2</p>
+<p>In these examples, the hashtags are markers which tell the Notebook how to typeset the text. There are many markup languages, but one family, or perhaps guiding philosophy, of markup languages is called “Markdown,” named somewhat jokingly for its simplicity. Your Notebook uses “marked,” a Markdown library of typeset and other formatting instructions, like the hashtags in the examples above.</p>
+<p>Markdown is a markup language that generates HTML, which the cell can interpret and render. This means that Markdown Cells can also render plain HTML code. If you’re interested in learning HTML, check out this <a class="reference external" href="http://www.w3schools.com/html/">helpful online tutorial</a>.</p>
+<p><strong>Why Use Markdown (and not a WYSIWYG)?</strong></p>
+<p>Why is Markdown better? Well, it’s worth saying that maybe it isn’t. Mainly, it’s not actually a question of better or worse, but of what’s in front of you and of who you are. A definitive answer depends on the user and on that user’s goals and experience. These Notebooks don’t use Markdown because it’s definitely better, but rather because it’s different and thus encourages users to think about their work differently.</p>
+<p>It is very important for computer science students to learn how to conceptualize input and output as dependent, but also distinct. One good reason to use Markdown is that it encourages this kind of thinking. Relatedly, it might also promote focus on substance over surface aesthetic. Markdown is somewhat limited in its style options, which means that there are inherently fewer non-subject-specific concerns to agonize over while working. It is the conceit of this philosophy that you would, by using Markdown and this Notebook, begin to think of the specific stylistic rendering of your cells as distinct from what you type into those same cells, and thus also think of the content of your writing as necessarily separate from its formating and appearance.</p>
+<div class="section" id="block-elements">
+<h2>4.1 Block Elements<a class="headerlink" href="#block-elements" title="Permalink to this headline">#</a></h2>
+<div class="section" id="paragraph-breaks">
+<h3>4.1.1 Paragraph Breaks<a class="headerlink" href="#paragraph-breaks" title="Permalink to this headline">#</a></h3>
+<p>Paragraphs consist of one or more consecutive lines of text and they are separated by one or more blank lines. If a line contains only spaces, it is a blank line.</p>
+</div>
+<div class="section" id="line-breaks">
+<h3>4.1.2 Line Breaks<a class="headerlink" href="#line-breaks" title="Permalink to this headline">#</a></h3>
+<div class="section" id="hard-wrapping-and-soft-wrapping">
+<h4>4.1.2.1 Hard-Wrapping and Soft-Wrapping<a class="headerlink" href="#hard-wrapping-and-soft-wrapping" title="Permalink to this headline">#</a></h4>
+<p>If you’re used to word processing software, you’ve been writing with automatically hard-wrapped lines and paragraphs. In a hard-wrapped paragraph the line breaks are not dependent on the size of the viewing window. If you click and drag your mouse to expand a word processing document, for example, the shape of the paragraphs and the length of the lines will not change. In other words, the length of a hard-wrapped line is determined either by the number of words in the line (in the case of word processing software where this number is predetermined and the program wraps for the user automatically), or individual intention (when a user manually presses an Enter or Return key to control exactly how long a line is).</p>
+<p>Soft-wrapped paragraphs and lines, however, <em>do</em> depend on the size of their viewing window. If you increase the size of a window where soft-wrapped paragraphs are displayed, they too will expand into longer lines, becoming shorter and wider to fill the increased window space horizontally. Unsurprising, then, if you <em>narrow</em> a window, soft-wrapped lines will shrink and the paragraphs will become longer vertically.</p>
+<p>Markdown, unlike most word processing software, does not automatically hard-wrap. If you want your paragraphs to have a particular or deliberate shape and size, you must insert your own break by ending the line with two spaces and then typing Return.</p>
+</div>
+<div class="section" id="soft-wrapping">
+<h4>4.1.2.2 Soft-Wrapping<a class="headerlink" href="#soft-wrapping" title="Permalink to this headline">#</a></h4>
+<tt>
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+</tt><p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+</div>
+<div class="section" id="hard-wrapping">
+<h4>4.1.2.3 Hard-Wrapping<a class="headerlink" href="#hard-wrapping" title="Permalink to this headline">#</a></h4>
+<tt>
+blah blah blah blah blah  
+blah blah blah blah blah blah blah blah blah  
+blah blah blah blah blah blah blah blah blah blah blah  
+blah blah blah blah blah  
+blah blah blah blah blah   
+blah blah blah blah blah blah blah blah blah blah blah blah blah  
+</tt><p>blah blah blah blah blah<br />
+blah blah blah blah blah blah blah blah blah<br />
+blah blah blah blah blah blah blah blah blah blah blah<br />
+blah blah blah blah blah<br />
+blah blah blah blah blah<br />
+blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+</div>
+</div>
+<div class="section" id="headers">
+<h3>4.1.3 Headers<a class="headerlink" href="#headers" title="Permalink to this headline">#</a></h3>
+<pre>
+#Header 1
+</pre><p>#Header 1</p>
+<pre>
+##Header 2
+</pre><p>##Header 2</p>
+<pre>
+###Header 3
+</pre><p>###Header 3</p>
+<pre>
+####Header 4
+</pre><p>####Header 4</p>
+<pre>
+#####Header 5
+</pre><p>#####Header 5</p>
+<pre>
+######Header 6
+</pre><p>######Header 6</p>
+</div>
+<div class="section" id="block-quotes">
+<h3>4.1.4 Block Quotes<a class="headerlink" href="#block-quotes" title="Permalink to this headline">#</a></h3>
+<div class="section" id="standard-block-quoting">
+<h4>4.1.4.1 Standard Block Quoting<a class="headerlink" href="#standard-block-quoting" title="Permalink to this headline">#</a></h4>
+<tt>
+>blah blah block quote blah blah block quote blah blah block  
+quote blah blah block quote blah blah block   
+quote blah blah block quote blah blah block quote blah blah block quote
+</tt><blockquote>
+<div><p>blah blah block quote blah blah block quote blah blah block<br />
+quote blah blah block quote blah blah block<br />
+quote blah blah block quote blah blah block quote blah blah block quote</p>
+</div></blockquote>
+<p><strong>Note</strong>: Block quotes work best if you intentionally hard-wrap the lines.</p>
+</div>
+<div class="section" id="nested-block-quoting">
+<h4>4.1.4.2 Nested Block Quoting<a class="headerlink" href="#nested-block-quoting" title="Permalink to this headline">#</a></h4>
+<pre>
+>blah blah block quote blah blah block quote blah blah block  
+block quote blah blah block block quote blah blah block  
+>>quote blah blah block quote blah blah  
+block block quote blah blah block   
+>>>quote blah blah block quote blah blah block quote blah blah block quote
+</pre><blockquote>
+<div><p>blah blah block quote blah blah block quote blah blah block<br />
+block quote blah blah block block quote blah blah block</p>
+<blockquote>
+<div><p>quote blah blah block quote blah blah<br />
+block block quote blah blah block</p>
+<blockquote>
+<div><p>quote blah blah block quote blah blah block quote blah blah block quote</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="lists">
+<h3>4.1.5 Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h3>
+<div class="section" id="ordered-lists">
+<h4>4.1.5.1 Ordered Lists<a class="headerlink" href="#ordered-lists" title="Permalink to this headline">#</a></h4>
+<p>In Markdown, you can list items using numbers, a <strong><code class="docutils literal notranslate"><span class="pre">+</span></code></strong>, a <strong><code class="docutils literal notranslate"><span class="pre">-</span></code></strong>, or a <strong><code class="docutils literal notranslate"><span class="pre">*</span></code></strong>. However, if the first item in a list or sublist is numbered, Markdown will interpret the entire list as ordered and will automatically number the items linearly, no matter what character you use to denote any given separate item.</p>
+<pre>
+####Groceries:
+
+0. Fruit:
+    6. Pears
+    0. Peaches
+    3. Plums
+    4. Apples 
+        2. Granny Smith 
+        7. Gala
+    * Oranges
+    - Berries 
+        8. Strawberries 
+        + Blueberries
+        * Raspberries
+    - Bananas
+9. Bread:
+    9. Whole Wheat
+        0. With oats on crust
+        0. Without oats on crust
+    0. Rye 
+    0. White
+0. Dairy:
+    0. Milk
+        0. Whole
+        0. Skim
+    0. Cheese
+        0. Wisconsin Cheddar
+        0. Pepper Jack
+</pre> <p>####Groceries:</p>
+<ol class="arabic" start="0">
+<li><p>Fruit:
+6. Pears
+0. Peaches
+3. Plums
+4. Apples
+2. Granny Smith
+7. Gala</p>
+<ul class="simple">
+<li><p>Oranges</p></li>
+</ul>
+<ul>
+<li><p>Berries
+8. Strawberries</p>
+<ul class="simple">
+<li><p>Blueberries</p></li>
+</ul>
+<ul class="simple">
+<li><p>Raspberries</p></li>
+</ul>
+</li>
+<li><p>Bananas</p></li>
+</ul>
+</li>
+<li><p>Bread:
+9. Whole Wheat
+0. With oats on crust
+0. Without oats on crust
+0. Rye
+0. White</p></li>
+<li><p>Dairy:
+0. Milk
+0. Whole
+0. Skim
+0. Cheese
+0. Wisconsin Cheddar
+0. Pepper Jack</p></li>
+</ol>
+</div>
+<div class="section" id="bulleted-lists">
+<h4>4.1.5.2 Bulleted Lists<a class="headerlink" href="#bulleted-lists" title="Permalink to this headline">#</a></h4>
+<p>If you begin your list or sublist with a <strong><code class="docutils literal notranslate"><span class="pre">+</span></code></strong>, a <strong><code class="docutils literal notranslate"><span class="pre">-</span></code></strong>, or a <strong><code class="docutils literal notranslate"><span class="pre">*</span></code></strong>, then Markdown will interpret the whole list as unordered and will use bullets regardless of the characters you type before any individual list item.</p>
+<pre>
+####Groceries:
+
+* Fruit:
+    * Pears
+    0. Peaches
+    3. Plums
+    4. Apples 
+        - Granny Smith 
+        7. Gala
+    * Oranges
+    - Berries 
+        - Strawberries 
+        + Blueberries
+        * Raspberries
+    - Bananas
+9. Bread:
+    * Whole Wheat
+        * With oats on crust
+        0. Without oats on crust
+    + Rye 
+    0. White
+0. Dairy:
+    * Milk
+        + Whole
+        0. Skim
+    - Cheese
+        - Wisconsin Cheddar
+        0. Pepper Jack
+        </pre><p>####Groceries:</p>
+<ul>
+<li><p>Fruit:</p>
+<ul class="simple">
+<li><p>Pears</p></li>
+</ul>
+<ol class="arabic" start="0">
+<li><p>Peaches</p></li>
+<li><p>Plums</p></li>
+<li><p>Apples</p>
+<ul class="simple">
+<li><p>Granny Smith</p></li>
+</ul>
+<ol class="arabic simple" start="7">
+<li><p>Gala</p></li>
+</ol>
+</li>
+</ol>
+<ul class="simple">
+<li><p>Oranges</p></li>
+</ul>
+<ul>
+<li><p>Berries</p>
+<ul class="simple">
+<li><p>Strawberries</p></li>
+</ul>
+<ul class="simple">
+<li><p>Blueberries</p></li>
+</ul>
+<ul class="simple">
+<li><p>Raspberries</p></li>
+</ul>
+</li>
+<li><p>Bananas</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic" start="9">
+<li><p>Bread:</p>
+<ul>
+<li><p>Whole Wheat</p>
+<ul class="simple">
+<li><p>With oats on crust</p></li>
+</ul>
+<ol class="arabic simple" start="0">
+<li><p>Without oats on crust</p></li>
+</ol>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Rye</p></li>
+</ul>
+<ol class="arabic simple" start="0">
+<li><p>White</p></li>
+</ol>
+</li>
+<li><p>Dairy:</p>
+<ul>
+<li><p>Milk</p>
+<ul class="simple">
+<li><p>Whole</p></li>
+</ul>
+<ol class="arabic simple" start="0">
+<li><p>Skim</p></li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>Cheese</p>
+<ul class="simple">
+<li><p>Wisconsin Cheddar</p></li>
+</ul>
+<ol class="arabic simple" start="0">
+<li><p>Pepper Jack</p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="section-breaks">
+<h3>4.1.6 Section Breaks<a class="headerlink" href="#section-breaks" title="Permalink to this headline">#</a></h3>
+<pre>
+___
+</pre><hr class="docutils" />
+<pre>
+***
+</pre><hr class="docutils" />
+<pre>------</pre><hr class="docutils" />
+<pre>
+* * *
+</pre><hr class="docutils" />
+<pre>
+_ _ _
+</pre><hr class="docutils" />
+<pre> 
+- - -
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="backslash-escape">
+<h2>4.2 Backslash Escape<a class="headerlink" href="#backslash-escape" title="Permalink to this headline">#</a></h2>
+<p>What happens if you want to include a literal character, like a <strong><code class="docutils literal notranslate"><span class="pre">#</span></code></strong>, that usually has a specific function in Markdown? Backslash Escape is a function that prevents Markdown from interpreting a character as an instruction, rather than as the character itself. It works like this:</p>
+<pre>
+\# Wow, this isn't a header. 
+# This is definitely a header.
+</pre><p># Wow, this isn’t a header.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="this-is-definitely-a-header">
+<h1>This is definitely a header.<a class="headerlink" href="#this-is-definitely-a-header" title="Permalink to this headline">#</a></h1>
+<p>Markdown allows you to use a backslash to escape from the functions of the following characters:</p>
+<ul class="simple">
+<li><p>\   backslash</p></li>
+<li><p>`   backtick</p></li>
+<li><p>*   asterisk</p></li>
+<li><p>_   underscore</p></li>
+<li><p>{}  curly braces</p></li>
+<li><p>[]  square brackets</p></li>
+<li><p>()  parentheses</p></li>
+<li><p>#   hashtag</p></li>
+<li><p>+   plus sign|</p></li>
+<li><p>-   minus sign (hyphen)</p></li>
+<li><p>.   dot</p></li>
+<li><p>!   exclamation mark</p></li>
+</ul>
+<div class="section" id="hyperlinks">
+<h2>4.3 Hyperlinks<a class="headerlink" href="#hyperlinks" title="Permalink to this headline">#</a></h2>
+<div class="section" id="automatic-links">
+<h3>4.3.1 Automatic Links<a class="headerlink" href="#automatic-links" title="Permalink to this headline">#</a></h3>
+<pre>
+http://en.wikipedia.org
+</pre><p><a class="reference external" href="http://en.wikipedia.org">http://en.wikipedia.org</a></p>
+</div>
+<div class="section" id="standard-links">
+<h3>4.3.2 Standard Links<a class="headerlink" href="#standard-links" title="Permalink to this headline">#</a></h3>
+<pre>
+[click this link](http://en.wikipedia.org)
+</pre><p><a class="reference external" href="http://en.wikipedia.org">click this link</a></p>
+</div>
+<div class="section" id="standard-links-with-mouse-over-titles">
+<h3>4.3.3 Standard Links With Mouse-Over Titles<a class="headerlink" href="#standard-links-with-mouse-over-titles" title="Permalink to this headline">#</a></h3>
+<pre> 
+[click this link](http://en.wikipedia.org "Wikipedia")
+</pre><p><a class="reference external" href="http://en.wikipedia.org">click this link</a></p>
+</div>
+<div class="section" id="reference-links">
+<h3>4.3.4 Reference Links<a class="headerlink" href="#reference-links" title="Permalink to this headline">#</a></h3>
+<p>Suppose you are writing a document in which you intend to include many links. The format above is a little arduous and if you have to do it repeatedly <em>while</em> you’re trying to focus on the content of what you’re writing, it’s going to be a really big pain.</p>
+<p>Fortunately, there is an alternative way to insert hyperlinks into your text, one where you indicate that there is a link, name that link, and then use the name to provide the actually URL later on when you’re less in the writing zone. This method can be thought of as a “reference-style” link because it is similar to using in-text citations and then defining those citations later in a more detailed reference section or bibliography.</p>
+<pre>
+This is [a reference] [identification tag for link]
+
+[identification tag for link]: http://en.wikipedia.org/wiki/Chile "Wikipedia Article About Chile"
+</pre><p>This is <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">a reference</a> <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">identification tag for link</a></p>
+<p><strong>Note:</strong> The “identification tag for link” can be anything. For example:</p>
+<pre>
+This is [a reference] [lfskdhflhslgfh333676]
+
+[lfskdhflhslgfh333676]: http://en.wikipedia.org/wiki/Chile "Wikipedia Article About Chile"
+</pre><p>This is <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">a reference</a> <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">lfskdhflhslgfh333676</a></p>
+<p>This means you can give your link an intuitive, easy to remember, and relevant ID:</p>
+<pre>
+This is [a reference][Chile]
+
+[chile]: http://en.wikipedia.org/wiki/Chile "Wikipedia Article About Chile"
+</pre><p>This is <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">a reference</a></p>
+<p><strong>Note</strong>: Link IDs are not case-sensitive.</p>
+<p>If you don’t want to give your link an ID, you don’t have to. As a short cut, Markdown will understand if you just use the words in the first set of brackets to define the link later on. This works in the following way:</p>
+<pre>
+This is [a reference][]
+
+[a reference]: http://en.wikipedia.org/wiki/Chile "Wikipedia Article About Chile"
+</pre><p>This is <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">a reference</a></p>
+<p>Another really helpful feature of a reference-style link is that you can define the link anywhere in the cell. (must be in the cell) For example:</p>
+<tt>
+This is [a reference] [ref] blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah <br/><br/>
+</tt><p>This is <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">a reference</a> <a class="reference external" href="http://en.wikipedia.org/wiki/Chile">ref</a> blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+<p><strong>Note:</strong> Providing a mouse-over title for any link, regardless of whether it is a standard or reference-stlye type, is optional. With reference-style links, you can include the mouse-over title by placing it in quotes, single quotes, or parentheses. For standard links, you can only define a mouse-over title in quotes.</p>
+</div>
+<div class="section" id="notebook-internal-links">
+<h3>4.3.5 Notebook-Internal Links<a class="headerlink" href="#notebook-internal-links" title="Permalink to this headline">#</a></h3>
+<p>When you create a Header you also create a discrete location within your Notebook. This means that, just like you can link to a specific location on the web, you can also link to a Header Cell inside your Notebook. Internal links have very similar Markdown formatting to regular links. The only difference is that the name of the link, which is the URL in the case of external links, is just a hashtag plus the name of the Header Cell you are linking to (case-sensitive) with dashes in between every word. If you hover your mouse over a Header Cell, a blue Greek pi letter will appear next to your title. If you click on it, the URL at the top of your window will change and the internal link to that section will appear last in the address. You can copy and paste it in order to make an internal link inside a Markdown Cell.</p>
+<div class="section" id="standard-notebook-internal-links-without-mouse-over-titles">
+<h4>4.3.5.1 Standard Notebook-Internal Links Without Mouse-Over Titles<a class="headerlink" href="#standard-notebook-internal-links-without-mouse-over-titles" title="Permalink to this headline">#</a></h4>
+<pre>
+&#91;Here's a link to the section of Automatic Section Numbering](&#35;Automatic-Section-Numbering)
+</pre><p><span class="xref myst">Here’s a link to the section of Automatic Section Numbering</span></p>
+</div>
+<div class="section" id="standard-notebook-internal-links-with-mouse-over-titles">
+<h4>4.3.5.2 Standard Notebook-Internal Links With Mouse-Over Titles<a class="headerlink" href="#standard-notebook-internal-links-with-mouse-over-titles" title="Permalink to this headline">#</a></h4>
+<pre>
+&#91;Here's a link to the section on lists](#Lists "Lists")
+</pre><p><span class="xref myst">Here’s a link to the section of Automatic Section Numbering</span></p>
+</div>
+<div class="section" id="reference-style-notebook-internal-links">
+<h4>4.3.5.3 Reference-Style Notebook-Internal Links<a class="headerlink" href="#reference-style-notebook-internal-links" title="Permalink to this headline">#</a></h4>
+<pre>
+[Here's a link to the section on Table of Contents Support][TOC]
+
+&#91;TOC]: #Table-of-Contents-Support
+</pre><p><span class="xref myst">Here’s a link to the section on Table of Contents Support</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="tables">
+<h2>4.4 Tables<a class="headerlink" href="#tables" title="Permalink to this headline">#</a></h2>
+<p>In Markdown, you can make a table by using vertical bars and dashes to define the cell and header borders:</p>
+<pre>
+|Header|Header|Header|Header|
+|------|------|------|------|
+|Cell  |Cell  |Cell  | Cell |
+|Cell  |Cell  |Cell  | Cell |
+|Cell  |Cell  |Cell  | Cell |
+|Cell  |Cell  |Cell  | Cell |
+</pre><table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Header</p></th>
+<th class="head"><p>Header</p></th>
+<th class="head"><p>Header</p></th>
+<th class="head"><p>Header</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+</tbody>
+</table>
+<p>Making a table this way might be especially useful if you want your document to be legible both rendered and unrendered. However, you don’t <em>need</em> to include all of those dashes, vertical bars, and spaces for Markdown to understand that you’re making a table. Here’s the bare minimum you would need to create the table above:</p>
+<pre>
+Header|Header|Header|Header
+-|-|-|-
+Cell|Cell|Cell|Cell
+Cell|Cell|Cell|Cell
+Cell|Cell|Cell|Cell
+Cell|Cell|Cell|Cell
+</pre><table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Header</p></th>
+<th class="head"><p>Header</p></th>
+<th class="head"><p>Header</p></th>
+<th class="head"><p>Header</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+<td><p>Cell</p></td>
+</tr>
+</tbody>
+</table>
+<p>It’s important to note that the second line of dashes and vertical bars is essential. If you have just the line of headers and the second line of dashes and vertical bars, that’s enough for Markdown to make a table.</p>
+<p>Another important formatting issue has to do with the vertical bars that define the left and right edges of the table. If you include all the vertical bars on the far left and right of the table, like in the first example above, Markdown will ignore them completely. <em>But</em>, if you leave out some and include others, Markdown will interpret any extra vertical bar as an additional cell on the side that the bar appears in the unrendered version of the text. This also means that if you include the far left or right vertical bar in the second line of bars and dashes, you must include all of the otherwise optional vertical bars (like in the first example above).</p>
+<div class="section" id="cell-justification">
+<h3>4.4.1 Cell Justification<a class="headerlink" href="#cell-justification" title="Permalink to this headline">#</a></h3>
+<p>If not otherwise specified the text in each header and cell of a table will justify to the left. If, however, you wish to specify either right justification or centering, you may do so like this:</p>
+<tt>
+**Centered, Right-Justified, and Regular Cells and Headers**:
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>centered header</p></th>
+<th class="head"><p>regular header</p></th>
+<th class="text-right head"><p>right-justified header</p></th>
+<th class="text-center head"><p>centered header</p></th>
+<th class="head"><p>regular header</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+<td class="text-right"><p>right-justified cell</p></td>
+<td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+<td class="text-right"><p>right-justified cell</p></td>
+<td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p></tt></p></td>
+<td><p></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-center"><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Centered, Right-Justified, and Regular Cells and Headers</strong>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>centered header</p></th>
+<th class="head"><p>regular header</p></th>
+<th class="text-right head"><p>right-justified header</p></th>
+<th class="text-center head"><p>centered header</p></th>
+<th class="head"><p>regular header</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+<td class="text-right"><p>right-justified cell</p></td>
+<td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+<td class="text-right"><p>right-justified cell</p></td>
+<td class="text-center"><p>centered cell</p></td>
+<td><p>regular cell</p></td>
+</tr>
+</tbody>
+</table>
+<p>While it is difficult to see that the headers are differently justified from one another, this is just because the longest line of characters in any column defines the width of the headers and cells in that column.</p>
+<p><strong>Note:</strong> You cannot make tables directly beneath a line of text. You must put a blank line between the end of a paragraph and the beginning of a table.</p>
+</div>
+</div>
+<div class="section" id="style-and-emphasis">
+<h2>4.5 Style and Emphasis<a class="headerlink" href="#style-and-emphasis" title="Permalink to this headline">#</a></h2>
+<pre>
+*Italics*
+</pre><p><em>Italics</em></p>
+<pre>
+_Italics_
+</pre><p><em>Italics</em></p>
+<pre>
+**Bold**
+</pre><p><strong>Bold</strong></p>
+<pre>
+__Bold__
+</pre><p><strong>Bold</strong></p>
+<p><strong>Note:</strong> If you want actual asterisks or underscores to appear in your text, you can use the [backslash escape function] <span class="xref myst">backslash</span> like this:</p>
+<pre>
+\*awesome asterisks\* and \_incredible under scores\_
+</pre><p>*awesome asterisks* and _incredible under scores_</p>
+</div>
+<div class="section" id="other-characters">
+<h2>4.6 Other Characters<a class="headerlink" href="#other-characters" title="Permalink to this headline">#</a></h2>
+<pre> 
+Ampersand &amp;amp; Ampersand
+</pre><p>Ampersand &amp; Ampersand</p>
+<pre>
+&amp;lt; angle brackets &amp;gt;
+</pre><p>&lt; angle brackets &gt;</p>
+<pre>
+&amp;quot; quotes &amp;quot; <p>” quotes “</p>
+</div>
+<div class="section" id="including-code-examples">
+<h2>4.7 Including Code Examples<a class="headerlink" href="#including-code-examples" title="Permalink to this headline">#</a></h2>
+<p>If you want to signify that a particular section of text is actually an example of code, you can use backquotes to surround the code example. These will switch the font to monospace, which creates a clear visual formatting difference between the text that is meant to be code and the text that isn’t.</p>
+<p>Code can either in the middle of a paragraph, or as a block. Use a single backquote to start and stop code in the middle of a paragraph. Here’s an example:</p>
+<pre>
+The word `monospace` will appear in a code-like form.
+</pre><p>The word <code class="docutils literal notranslate"><span class="pre">monospace</span></code> will appear in a code-like form.</p>
+<p><strong>Note:</strong> If you want to include a literal backquote in your code example you must suround the whole text block in double backquotes like this:</p>
+<pre>
+`` Look at this literal backquote ` ``
+</pre><p><code class="docutils literal notranslate"><span class="pre">Look</span> <span class="pre">at</span> <span class="pre">this</span> <span class="pre">literal</span> <span class="pre">backquote</span> <span class="pre">`</span></code></p>
+<p>To include a complete code-block inside a Markdown cell, use triple backquotes. Optionally, you can put the name of the language that you are quoting after the starting triple backquotes, like this:</p>
+<pre>
+```python
+def function(n):
+    return n + 1
+```
+</pre><p>That will format the code-block (sometimes called “fenced code”) with syntax coloring. The above code block will be rendered like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>The language formatting names that you can currently use after the triple backquote are:</p>
+<pre>
+apl           django   go            jinja2      ntriples    q       smalltalk    toml
+asterisk      dtd      groovy        julia       octave      r       smarty       turtle
+clike         dylan    haml          less        pascal      rpm     smartymixed  vb
+clojure       ecl      haskell       livescript  pegjs       rst     solr         vbscript
+cobol         eiffel   haxe          lua         perl        ruby    sparql       velocity
+coffeescript  erlang   htmlembedded  markdown    php         rust    sql          verilog
+commonlisp    fortran  htmlmixed                 pig         sass    stex         xml
+css           gas      http          mirc        properties  scheme  tcl          xquery
+d             gfm      jade          mllike      puppet      shell   tiddlywiki   yaml
+diff          gherkin  javascript    nginx       python      sieve   tiki         z80
+</pre></div>
+<div class="section" id="images">
+<h2>4.8 Images<a class="headerlink" href="#images" title="Permalink to this headline">#</a></h2>
+<div class="section" id="images-from-the-internet">
+<h3>4.8.1 Images from the Internet<a class="headerlink" href="#images-from-the-internet" title="Permalink to this headline">#</a></h3>
+<p>Inserting an image from the internet is almost identical to inserting a link. You just also type a <strong><code class="docutils literal notranslate"><span class="pre">!</span></code></strong> before the first set of brackets:</p>
+<pre>
+![It doesn't matter what you write here](http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/South_African_Giraffe,_head.jpg/877px-South_African_Giraffe,_head.jpg "Picture of a Giraffe)
+</pre><p><img alt="It doesn't matter what I write here" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/South_African_Giraffe,_head.jpg/877px-South_African_Giraffe,_head.jpg" /></p>
+<p><strong>Note:</strong> Unlike with a link, the words that you type in the first set of brackets do not appear when they are rendered into html by Markdown.</p>
+<div class="section" id="reference-style-images-from-the-internet">
+<h4>4.8.1.1 Reference-Style Images from the Internet<a class="headerlink" href="#reference-style-images-from-the-internet" title="Permalink to this headline">#</a></h4>
+<p>Just like with links, you can also use a reference-style format when inserting images from the internet. This involves indicating where you want to place a picture, giving that picture an ID tag, and then later defining that ID tag. The process is nearly identical to using the reference-style format to insert a link:</p>
+<pre>
+![][giraffe]
+
+[giraffe]:http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/South_African_Giraffe,_head.jpg/877px-South_African_Giraffe,_head.jpg "Picture of a Giraffe"
+</pre><p><img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/South_African_Giraffe,_head.jpg/877px-South_African_Giraffe,_head.jpg" /></p>
+</div>
+</div>
+</div>
+<div class="section" id="latex-math">
+<h2>4.9 LaTeX Math<a class="headerlink" href="#latex-math" title="Permalink to this headline">#</a></h2>
+<p>Jupyter Notebooks’ Markdown cells support LateX for formatting mathematical equations. To tell Markdown to interpret your text as LaTex, surround your input with dollar signs like this:</p>
+<pre>
+$z=\dfrac{2x}{3y}$
+</pre><p><span class="math notranslate nohighlight">\(z=\dfrac{2x}{3y}\)</span></p>
+<p>An equation can be very complex:</p>
+<pre>
+$F(k) = \int_{-\infty}^{\infty} f(x) e^{2\pi i k} dx$
+</pre><p><span class="math notranslate nohighlight">\(F(k) = \int_{-\infty}^{\infty} f(x) e^{2\pi i k} dx\)</span></p>
+<p>If you want your LaTex equations to be indented towards the center of the cell, surround your input with two dollar signs on each side like this:</p>
+<pre>
+$$2x+3y=z$$
+</pre><div class="math notranslate nohighlight">
+\[2x+3y=z\]</div>
+<p>For a comprehensive guide to the mathematical symbols and notations supported by Jupyter Notebooks’ Markdown cells, check out <a class="reference external" href="http://martinkeefe.com/math/mathjax1">Martin Keefe’s helpful reference materials on the subject</a>.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="bibliographic-support">
+<h1>5. Bibliographic Support<a class="headerlink" href="#bibliographic-support" title="Permalink to this headline">#</a></h1>
+<p>Bibliographic Support makes managing references and citations in your Notebook much easier, by automating some of the bibliographic process every person goes through when doing research or writing in an academic context. There are essentially three steps to this process for which your Notebook’s Bibliographic support can assist: gathering and organizing sources you intend to use, citing those sources within the text you are writing, and compiling all of the material you referenced in an organized, correctly formatted list, the kind which usually appears at the end of a paper in a section titled “References,” “Bibliography,” or “Works Cited.</p>
+<p>In order to benefit from this functionality, you need to do two things while writing your paper: first, you need to create a <span class="xref myst">Bibtex database</span> of information about your sources and second, you must use the the <span class="xref myst">cite command</span> in your Markdown writing cells to indicate where you want in-text citations to appear.</p>
+<p>If you do both these things, the “Generate References” button will be able to do its job by replacing all of your cite commands with validly formatted in-text citations and creating a References section at the end of your document, which will only ever include the works you specifically cited within in your Notebook.</p>
+<p><strong>Note:</strong> References are generated without a header cell, just a <span class="xref myst">markdown header</span>. This means that if you want a References section to appear in your table of contents, you will have to unrender the References cell, delete the “References” header, make a Header Cell of the appropriate level and title it “References” yourself, and then generate a table of contents using <span class="xref myst">Table of Contents Support</span>. This way, you can also title your References section “Bibliography” or “Works Cited,” if you want.</p>
+<div class="section" id="creating-a-bibtex-database">
+<h2>5.1 Creating a Bibtex Database<a class="headerlink" href="#creating-a-bibtex-database" title="Permalink to this headline">#</a></h2>
+<p>Bibtex is reference management software for formatting lists of references ([from Wikipedia](BibTeX is reference management software for formatting lists of references “Wikipedia Article On Bibtex”)). While your Notebook does not use the Bibtex software, it does use <span class="xref myst">Bibtex formatting</span> for creating references within your Bibliographic database.</p>
+<p>In order for the Generate References button to work, you need a bibliographic database for it to search and match up with the sources you’ve indicated you want to credit using <span class="xref myst">cite commands and citation IDs</span>.</p>
+<p>When creating a bibliographic database for your Notebook, you have two options: you can make an external database, which will exist in a separate Notebook from the one you are writing in, or you can make an internal database which will exist in a single cell inside the Notebook in which you are writing. Below are explanations of how to use these database creation strategies, as well as a discussion of the pros and cons for each.</p>
+<div class="section" id="external-bibliographic-databases">
+<h3>5.1.1 External Bibliographic Databases<a class="headerlink" href="#external-bibliographic-databases" title="Permalink to this headline">#</a></h3>
+<p>To create an external bibliographic database, you will need to create a new Notebook and title it <strong><code class="docutils literal notranslate"><span class="pre">Bibliography</span></code></strong> in the toplevel folder of your current Jupyter session. As long as you do not also have an internal bibliographic database, when you click the Generate References button your Notebook’s Bibliographic Support will search this other <strong><code class="docutils literal notranslate"><span class="pre">Bibliography</span></code></strong> Notebook for Bibtex entries. Bibtex entries can be in any cell and in any kind of cell in your <strong><code class="docutils literal notranslate"><span class="pre">Bibliography</span></code></strong> Notebook as long as the cell begins with <strong><code class="docutils literal notranslate"><span class="pre">&lt;!--bibtex</span></code></strong> and ends with <strong><code class="docutils literal notranslate"><span class="pre">--&gt;</span></code></strong>. Go to <span class="xref myst">this section</span> for examples of valid BibTex formatting.</p>
+<p>Not every cell has to contain BibTex entries for the external bibliographic database to work as intended with your Notebook’s bibliographic support. This means you can use the same helpful organization features that you use in other Notebooks, like <span class="xref myst">Automatic Section Numbering</span> and <span class="xref myst">Table of Contents Support</span>, to structure your own little library of references. The best part of this is that any Notebook containing validly formatted <span class="xref myst">cite commands</span> can check your external database and find only the items that you have indicated you want to cite. So you only ever have to make the entry once and your external database can grow large and comprehensive over the course of your accademic writing career.</p>
+<p>There are several advantages to using an external database over [an internal one][internal database]. The biggest one, which has already been described, is that you will only ever need to create one and you can organize it into sections by using headers and generating <span class="xref myst">automatic section numbers</span> and a <span class="xref myst">table of contents</span>. These tools will help you to easily find the right <span class="xref myst">citation ID</span> for a given source you want to cite. The other major advantage is that an external database is not visible when viewing the Notebook in which you are citing sources and generating a References list. Bibtex databases are not very attractive or readable and you probably won’t want one to show up in your finished document. There are <span class="xref myst">ways to hide internal databases</span>, but it’s convenient not to have to worry about that.</p>
+</div>
+<div class="section" id="internal-bibliographic-databases">
+<h3>5.1.2 Internal Bibliographic Databases<a class="headerlink" href="#internal-bibliographic-databases" title="Permalink to this headline">#</a></h3>
+<p>Unlike <span class="xref myst">external bibliographic databases</span>, which are comprised from an entire separate notebook, internal bibliographic databases consist of only one cell within in the Notebook in which you are citing sources and compiling a References list. The single cell, like all of the many BibTex cells that can make up an external database, must begin with <strong><code class="docutils literal notranslate"><span class="pre">&lt;!--bibtex</span></code></strong> and end with <strong><code class="docutils literal notranslate"><span class="pre">--&gt;</span></code></strong> in order to be validly formatted and correctly interpreted by your Notebook’s Bibliographic Support. It’s probably best to keep this cell at the very end or the very beginning of your Notebook so you always know where it is. This is because when you use an intenral bibliographic databse it can only consist of one cell. This means that if you want to cite multiple sources you will need to keep track of the single cell that comprises your entire internal bibliographic database during every step of the research and writing process.</p>
+<p>Internal bibliographic databases make more sense when your project is a small one and the list of total sources is short. This is especially convenient if you don’t already have a built-up external database. With an internal database you don’t have to create and organize a whole separate Notebook, a task that’s only useful when you have to keep track of a lot of different material.  Additionally, if you want to share your finished Notebook with others in a form that retains its structural validity, you only have to send one Notebook, as oppose to both the project itself and the Notebook that comprises your external bibliographic database. This is especially useful for a group project, where you want to give another reader the ability to edit, not simply read, your References section.</p>
+<div class="section" id="hiding-your-internal-database">
+<h4>5.1.2.1 Hiding Your Internal Database<a class="headerlink" href="#hiding-your-internal-database" title="Permalink to this headline">#</a></h4>
+<p>Even though they have some advantages, especially for smaller projects, internal databases have on major draw back. They are not very attractive or polished looking and you probably won’t want one to appear in your final product. Fortunately, there are two methods for hiding your internal biblioraphic database.</p>
+<p>While your Notebook’s bibliographic support will be able to interpret <span class="xref myst">correctly formatted BibTex entries</span> in any <span class="xref myst">kind of cell</span>, if you use a <span class="xref myst">Markdown Cell</span> to store your internal bibliographic database, then when you run the cell all of the ugly BibTex formatting will disappear. This is handy, but it also makes the cell very difficult to find, so remember to keep careful track of where your hidden BibTex databse is if you’re planning to edit it later. If you want your final product to be viewed stably as HTML, then you can make your internal BibTex database inside a <span class="xref myst">Raw Cell</span>, use the <span class="xref myst">cell toolbar</span> to select “Raw Cell Format”, and then select “None” in the toolbar that appears in the corner of your Raw Cell BibTex database. This way, you will still be able to easily find and edit the database when you are working on your Notebook, but others won’t be able to see the database when viewing your project in its final form.</p>
+</div>
+</div>
+<div class="section" id="formatting-bibtex-entries">
+<h3>5.1.3 Formatting Bibtex Entries<a class="headerlink" href="#formatting-bibtex-entries" title="Permalink to this headline">#</a></h3>
+<p>BibTex entries consist of three crucial components: one, the type of source you are citing (a book, article, website, etc.); two, the unique <span class="xref myst">citation ID</span> you wish to remember the source by; and three, the fields of information about that source (author, title of work, date of publication, etc.). Below is an example entry, with each of these three components designated clearly</p>
+<pre>
+
+&lt;!--bibtex
+
+@ENTRY TYPE{CITATION ID,
+    FIELD 1 = {source specific information},
+    FIELD 2 = {source specific informatio},
+    FIEL 3 = {source specific informatio},
+    FIELD 4 = {source specific informatio}
+}
+
+-->
+
+</pre>
+<p>More comprehensive documentation of what entry types and corresponding sets of required and optional fields BibTex supports can be found in the <a class="reference external" href="http://en.wikipedia.org/wiki/Markdown">Wikipedia article on BibTex</a>.</p>
+<p>Below is a section of the external bibliographic database for a fake history paper about the fictional island nation of Calico. (None of the entries contain information about real books or articles):</p>
+<pre>
+
+&lt;!--bibtex
+
+@book{wellfarecut,
+    title = {Our Greatest Threat: The Rise of Anti-Wellfare Politics in Calico in the 21st Century},
+    author = {Jacob, Bernadette},
+    year = {2010},
+    publisher = {Jupyter University Press}
+}
+                  
+@article{militaryex2,
+    title = {Rethinking Calican Military Expansion for the New Century},
+    author = {Collier, Brian F.},
+    journal = {Modern Politics},
+    volume = {60},
+    issue = {25},
+    pages = {35 - 70},
+    year = {2012} 
+}
+
+@article{militaryex1,
+    title = {Conservative Majority Passes Budget to Grow Military},
+    author = {Lane, Lois},
+    journal = {The Daily Calican},
+    month = {October 19th, 2011},
+    pages = {15 - 17},
+    year = {2011}
+}
+
+@article{oildrill,
+    title = {Oil Drilling Off the Coast of Jupyter Approved for Early Next Year},
+    author = {Marks, Meghan L.},
+    journal = {The Python Gazette},
+    month = {December 5th, 2012},
+    pages = {8 - 9},
+    year = {2012}
+}
+
+@article{rieseinterview,
+    title = {Interview with Up and Coming Freshman Senator, Alec Riese of Python},
+    author = {Wilmington, Oliver},
+    journal = {The Jupyter Times},
+    month = {November 24th, 2012},
+    pages = {4 - 7},
+    year = {2012}
+}
+
+@book{calicoww2:1,
+    title = {Calico and WWII: Untold History},
+    author = {French, Viola},
+    year = {1997},
+    publisher = {Calicia City Free Press}
+}
+
+@book{calicoww2:2,
+    title = {Rebuilding Calico After Japanese Occupation},
+    author = {Kepps, Milo },
+    year = {2002},
+    publisher = {Python Books}
+}
+-->
+</pre></div>
+</div>
+<div class="section" id="cite-commands-and-citation-ids">
+<h2>5.2 Cite Commands and Citation IDs<a class="headerlink" href="#cite-commands-and-citation-ids" title="Permalink to this headline">#</a></h2>
+<p>When you want to cite a bibliographic entry from a database (either internal or external), you must know the citation ID, sometimes called the “key”, for that entry. Citation IDs are strings of letters, numbers, and symbols that <em>you</em> make up, so they can be any word or combination of words you find easy to remember. Once, you’ve given an entry a citation ID, however, you do need to use that same ID every time you cite that source, so it may behoove you to keep your database organized. This way it will be much easier to locate any given source’s entry and its potentially forgotten citation ID.</p>
+<p>Once you know the citation ID for a given entry, use the following format to indicate to your Notebook’s bibliographic support that you’d like to insert an in-text citation:</p>
+<pre>
+[](&#35;cite-CITATION ID)
+</pre>
+<p>This format is the cite command. For example, if you wanted to cite <em>Rebuilding Calico After Japanese Occupation</em> listed above, you would use the cite command and the specific citation ID for that source:</p>
+<pre>
+[](&#35;cite-calicoww2:2)
+</pre>
+<p>Before clicking the “Generate References” button, your unrendered text might look like this:</p>
+<pre>
+Rebuilding Calico took many years &#91;](&#35;cite-calicoww2:2).
+</pre>
+<p>After clicking the “Generate References” button, your unrendered text might look like this:</p>
+<pre>
+Rebuilding Calico took many years &lt;a name="ref-1"/>&#91;(Kepps, 2002)](#cite-calicoww2:2).
+</pre>
+<p>and then the text would render as:</p>
+<blockquote>
+<div><p>Rebuilding Calico took many years <a name="ref-1"/><span class="xref myst">(Kepps, 2002)</span>.</p>
+</div></blockquote>
+<p>In addition, a cell would be added at the bottom with the following contents:</p>
+<blockquote>
+<div><p>#References</p>
+</div></blockquote>
+<blockquote>
+<div><p><a name="cite-calicoww2:2"/><sup><span class="xref myst">^</span> <span class="xref myst">^</span> </sup>Kepps, Milo . 2002. <em>Rebuilding Calico After Japanese Occupation</em>.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="turning-your-jupyter-notebook-into-a-slideshow">
+<h1>6. Turning Your Jupyter Notebook into a Slideshow<a class="headerlink" href="#turning-your-jupyter-notebook-into-a-slideshow" title="Permalink to this headline">#</a></h1>
+<p>To install slideshow support for your Notebook, go <a class="reference external" href="http://nbviewer.ipython.org/github/fperez/nb-slideshow-template/blob/master/install-support.ipynb">here</a>.</p>
+<p>To see a tutorial and example slideshow, go <a class="reference external" href="http://www.damian.oquanta.info/posts/make-your-slides-with-ipython.html">here</a>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Assets"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. Getting to Know your Jupyter Notebook’s Toolbar</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#different-kinds-of-cells">2. Different Kinds of Cells</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cells">2.1 Code Cells</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-cell-layout">2.1.1 Code Cell Layout</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#row-configuration-default-setting">2.1.1.1 Row Configuration (Default Setting)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-tabbing">2.1.1.2 Cell Tabbing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-configuration">2.1.1.3 Column Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-cells">2.2 Markdown Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-cells">2.3 Raw Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#header-cells">2.4 Header Cells</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linking">2.4.1 Linking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-section-numbering-and-table-of-contents-support">2.4.2 Automatic Section Numbering and Table of Contents Support</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-section-numbering">2.4.2.1 Automatic Section Numbering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents-support">2.4.2.2 Table of Contents Support</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-both-automatic-section-numbering-and-table-of-contents-support">2.4.2.3 Using Both Automatic Section Numbering and Table of Contents Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#keyboard-shortcuts">3. Keyboard Shortcuts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-markdown-cells-for-writing">4. Using Markdown Cells for Writing</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#block-elements">4.1 Block Elements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paragraph-breaks">4.1.1 Paragraph Breaks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-breaks">4.1.2 Line Breaks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-wrapping-and-soft-wrapping">4.1.2.1 Hard-Wrapping and Soft-Wrapping</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soft-wrapping">4.1.2.2 Soft-Wrapping</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hard-wrapping">4.1.2.3 Hard-Wrapping</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#headers">4.1.3 Headers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#block-quotes">4.1.4 Block Quotes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-block-quoting">4.1.4.1 Standard Block Quoting</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nested-block-quoting">4.1.4.2 Nested Block Quoting</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">4.1.5 Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-lists">4.1.5.1 Ordered Lists</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bulleted-lists">4.1.5.2 Bulleted Lists</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-breaks">4.1.6 Section Breaks</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backslash-escape">4.2 Backslash Escape</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-definitely-a-header">This is definitely a header.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperlinks">4.3 Hyperlinks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-links">4.3.1 Automatic Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-links">4.3.2 Standard Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-links-with-mouse-over-titles">4.3.3 Standard Links With Mouse-Over Titles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-links">4.3.4 Reference Links</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-internal-links">4.3.5 Notebook-Internal Links</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-notebook-internal-links-without-mouse-over-titles">4.3.5.1 Standard Notebook-Internal Links Without Mouse-Over Titles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-notebook-internal-links-with-mouse-over-titles">4.3.5.2 Standard Notebook-Internal Links With Mouse-Over Titles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-style-notebook-internal-links">4.3.5.3 Reference-Style Notebook-Internal Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">4.4 Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-justification">4.4.1 Cell Justification</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#style-and-emphasis">4.5 Style and Emphasis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-characters">4.6 Other Characters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#including-code-examples">4.7 Including Code Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#images">4.8 Images</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#images-from-the-internet">4.8.1 Images from the Internet</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-style-images-from-the-internet">4.8.1.1 Reference-Style Images from the Internet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latex-math">4.9 LaTeX Math</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliographic-support">5. Bibliographic Support</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-bibtex-database">5.1 Creating a Bibtex Database</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-bibliographic-databases">5.1.1 External Bibliographic Databases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-bibliographic-databases">5.1.2 Internal Bibliographic Databases</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hiding-your-internal-database">5.1.2.1 Hiding Your Internal Database</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-bibtex-entries">5.1.3 Formatting Bibtex Entries</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cite-commands-and-citation-ids">5.2 Cite Commands and Citation IDs</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#turning-your-jupyter-notebook-into-a-slideshow">6. Turning Your Jupyter Notebook into a Slideshow</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
