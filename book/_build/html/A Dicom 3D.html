@@ -1,0 +1,973 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imágenes médicas - DICOM 3D &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'A Dicom 3D';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Integración numérica" href="B%20Integrales.html" />
+    <link rel="prev" title="Imágenes médicas - DICOM" href="9%20Dicom.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0%20Introducci%C3%B3n%20a%20Jupyter%20Notebooks.html">Clase 0</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="1%20El%20lenguaje%20Python.html">Introducción al Lenguaje Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2%20Funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3%20M%C3%A1s%20sobre%20funciones.html">Más sobre Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4%20M%C3%B3dulos.html">Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5%20Numpy%20-%20avanzado.html">NumPy - Avanzado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5%20Numpy.html">NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6%20Matplotlib.html">Líneas, símbolos y colores</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6%20Plotly.html">Más gráficos: <code class="docutils literal notranslate"><span class="pre">Plotly</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="7%20Intermedio.html">Windows, <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> y más</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="8%20Interpolaci%C3%B3n.html">Interpolación - Scipy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="9%20Dicom.html">Imágenes médicas - DICOM</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Imágenes médicas - DICOM 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B%20Integrales.html">Integración numérica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Borges%20y%20matplotlib%20resuelto.html">Borges y  <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Borges%20y%20matplotlib.html">Borges y  <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create_the_std_lib.html">Archivo para la preparación de la clase sobre <code class="docutils literal notranslate"><span class="pre">os</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicios%2007.html">Ejercicio</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Find_the_file.html">Instalando Git</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Generala.html">Examen Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jugando%20con%20strings.html">Jugando con strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pangrama%20Versiones.html">Pangrama</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Pangrama.html">Pangrama</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sortea%20ejercicios.html">Sortea ejercicios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scikit_image_filters.html">Image filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Python%20funcional%202.html">Programación funcional con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Python%20funcional.html">Programación funcional con Python</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FA Dicom 3D.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/A Dicom 3D.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Imágenes médicas - DICOM 3D</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abrir-un-archivo-dicom">Abrir un archivo DICOM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ventanas-de-visualizacion-tipicas-en-ct">Ventanas de visualización típicas en CT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstruccion-multiplanar">Reconstrucción multiplanar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cargar-todos-los-cortes-de-la-tomografia">1 Cargar todos los cortes de la tomografía</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intermezzo-sort-y-mutabilidad"><em>Intermezzo</em>: sort y mutabilidad</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fin-intermezzo"><em>Fin intermezzo</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#construccion-del-volumen-tomografico">2 Construcción del volumen tomográfico</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#extraccion-de-imagenes">3 Extracción de imágenes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relacion-de-aspecto">4 Relación de aspecto</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#una-cosa-mas">Una cosa más…</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="imagenes-medicas-dicom-3d">
+<h1>Imágenes médicas - DICOM 3D<a class="headerlink" href="#imagenes-medicas-dicom-3d" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pydicom</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="abrir-un-archivo-dicom">
+<h2>Abrir un archivo DICOM<a class="headerlink" href="#abrir-un-archivo-dicom" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DCM</span> <span class="o">=</span> <span class="n">pydicom</span><span class="o">.</span><span class="n">dcmread</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;../Assets/CT/IM-0001-0200-0001.dcm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">DCM</span> <span class="o">=</span> <span class="n">pydicom</span><span class="o">.</span><span class="n">dcmread</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;../Assets/CT/IM-0001-0200-0001.dcm&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pydicom/filereader.py:993,</span> in <span class="ni">dcmread</span><span class="nt">(fp, defer_size, stop_before_pixels, force, specific_tags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">991</span>     <span class="n">caller_owns_file</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">992</span>     <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Reading file &#39;</span><span class="si">{0}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fp</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">993</span>     <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">994</span> <span class="k">elif</span> <span class="n">fp</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s2">&quot;read&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s2">&quot;seek&quot;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">995</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;dcmread: Expected a file path or a file-like, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">996</span>                     <span class="s2">&quot;but got &quot;</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../Assets/CT/IM-0001-0200-0001.dcm&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">DCM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DCM</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para acceder a cada uno de los atributos del archivo DICOM se utiliza el nombre del atributo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DCM</span><span class="o">.</span><span class="n">PatientName</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DCM</span><span class="o">.</span><span class="n">StudyDescription</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DCM</span><span class="o">.</span><span class="n">ProtocolName</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pero también tengo la información desde el tag, usando el grupo y elemento en representación hexadecimal:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tag  : &quot;</span><span class="p">,</span><span class="n">DCM</span><span class="p">[</span><span class="mh">0x0018</span><span class="p">,</span><span class="mh">0x1030</span><span class="p">]</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;VR   : &quot;</span><span class="p">,</span><span class="n">DCM</span><span class="p">[</span><span class="mh">0x0018</span><span class="p">,</span><span class="mh">0x1030</span><span class="p">]</span><span class="o">.</span><span class="n">VR</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;valor: &quot;</span><span class="p">,</span><span class="n">DCM</span><span class="p">[</span><span class="mh">0x0018</span><span class="p">,</span><span class="mh">0x1030</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ventanas-de-visualizacion-tipicas-en-ct">
+<h3>Ventanas de visualización típicas en CT<a class="headerlink" href="#ventanas-de-visualizacion-tipicas-en-ct" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Cabeza y cuello</p>
+<ul>
+<li><p>cerebro w:80 c:40</p></li>
+<li><p>subdural w:130-300 c:50-100</p></li>
+<li><p>acv w:8 c:32 / w:40 c:40</p></li>
+<li><p>hueso w:2800 c:600</p></li>
+<li><p>Tejido blando: w:350–400 c:20–60</p></li>
+</ul>
+</li>
+<li><p>Pecho</p>
+<ul>
+<li><p>Pulmones w:1500 c:-600</p></li>
+<li><p>Mediastino w:350 c:50</p></li>
+</ul>
+</li>
+<li><p>Abdomen</p>
+<ul>
+<li><p>Tejido blando w:400 c:50</p></li>
+<li><p>Hígado w:150 c:30</p></li>
+</ul>
+</li>
+<li><p>Columna</p>
+<ul>
+<li><p>Tejido blando w:250 c:50</p></li>
+<li><p>Hueso w:1800 c:400</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="reconstruccion-multiplanar">
+<h2>Reconstrucción multiplanar<a class="headerlink" href="#reconstruccion-multiplanar" title="Permalink to this headline">#</a></h2>
+<p>Las tomografías son un conjunto de imágenes (cortes, slices) que se adquieren en un mismo acto de diagnóstico. Es por ello que permiten realizar reconstrucciones, esto es, obtener una imagen en cualquier plano que intersecte el volumen tomográfico relevado.</p>
+<p>Usualmente se estila utilizar los cortes tranversales, coronales y sagitales para analizar la imagen.</p>
+<div class="section" id="cargar-todos-los-cortes-de-la-tomografia">
+<h3>1 Cargar todos los cortes de la tomografía<a class="headerlink" href="#cargar-todos-los-cortes-de-la-tomografia" title="Permalink to this headline">#</a></h3>
+<p>Para poder realizar una reconstrucción, es necesario contar con todos los cortes tomográficos. Para ellos vamos a usar el módulo <code class="docutils literal notranslate"><span class="pre">glob</span></code>, que permite acceder a la información completa de un directorio en nuestra computadora.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
+
+<span class="n">directorio</span> <span class="o">=</span> <span class="s1">&#39;../Assets/CT/*.dcm&#39;</span>
+
+<span class="n">archivos</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">directorio</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">archivos</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">archivos</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">archivos</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se puede ver que <code class="docutils literal notranslate"><span class="pre">glob.glob</span></code> devuelve en <code class="docutils literal notranslate"><span class="pre">archivos</span></code> una lista de los archivos en el directorio. Sin embargo, la lista de archivos está desordenada. Para ello, tenemos que hacer un paréntesis y analizar cómo ordenar la lista.</p>
+<div class="section" id="intermezzo-sort-y-mutabilidad">
+<h4><em>Intermezzo</em>: sort y mutabilidad<a class="headerlink" href="#intermezzo-sort-y-mutabilidad" title="Permalink to this headline">#</a></h4>
+<p>Python, por supuesto, nos brinda la función <code class="docutils literal notranslate"><span class="pre">sorted</span></code> que puede ordenar una lista. Pero también nos da el método <code class="docutils literal notranslate"><span class="pre">sort</span></code> que reordena una lista. ¿Cuál es la diferencia? Veamos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;monoambiente&#39;</span><span class="p">,</span> <span class="s1">&#39;casa&#39;</span><span class="p">,</span> <span class="s1">&#39;departamento&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">largo</span><span class="p">(</span><span class="n">palabra</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        función de ordenamiento, recibe un sólo argumento</span>
+<span class="sd">        y retorna un solo valor, correspondiente al criterio </span>
+<span class="sd">        de ordenamiento de la lista</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">palabra</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">largo</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">))</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;monoambiente&#39;</span><span class="p">,</span> <span class="s1">&#39;casa&#39;</span><span class="p">,</span> <span class="s1">&#39;departamento&#39;</span><span class="p">,</span><span class="s1">&#39;posada&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c ordenado alfabéticamente: &quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="n">largo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c ordenado por largo de palabra: &quot;</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="n">largo</span><span class="p">,</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c ordenado por largo de palabra, inverso: &quot;</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Mientras que <code class="docutils literal notranslate"><span class="pre">sorted</span></code> devuelve una lista ordenada, <code class="docutils literal notranslate"><span class="pre">sort</span></code> reordena la lista en sí misma</p>
+</div></blockquote>
+<p>En este sentido, decimos que <code class="docutils literal notranslate"><span class="pre">sort</span></code> es una función que <em>muta</em> una variable en su mismo lugar (en inglés, <em>in place</em>). Por otro lado, <code class="docutils literal notranslate"><span class="pre">sorted</span></code> no cambia la variable de entrada de la función, y retorna una nueva variable.</p>
+</div>
+<div class="section" id="fin-intermezzo">
+<h4><em>Fin intermezzo</em><a class="headerlink" href="#fin-intermezzo" title="Permalink to this headline">#</a></h4>
+<p>Volviendo a nuestro ejemplo con los archivos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">archivos_ordenados</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">archivos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">archivos_ordenados</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dicoms</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">archivos_ordenados</span><span class="p">:</span>
+    <span class="n">dicoms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pydicom</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Número de cortes tomográficos:&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">dicoms</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora nuestra lista <code class="docutils literal notranslate"><span class="pre">dicom</span></code> contiene los datos DICOM de <strong>todos</strong> los cortes tomográficos. Veamos si es así:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_cts</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dicoms</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">dcm</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n_cts</span><span class="p">),</span><span class="n">dicoms</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Paciente en el corte &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">dcm</span><span class="o">.</span><span class="n">PatientName</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es claro que todos los cortes deben tener el mismo nombre de paciente. Hay otros datos dicom que cambian de acuerdo al corte tomográfico, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">dcm</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n_cts</span><span class="p">),</span><span class="n">dicoms</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Posición del corte &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">dcm</span><span class="o">.</span><span class="n">SliceLocation</span><span class="p">,</span> <span class="s2">&quot; mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="construccion-del-volumen-tomografico">
+<h4>2 Construcción del volumen tomográfico<a class="headerlink" href="#construccion-del-volumen-tomografico" title="Permalink to this headline">#</a></h4>
+<p>Convencidos de que tenemos efectivamente la información DICOM en nuestra lista, ahora debemos recuperar la imagen de cada corte, y construir un volumen con ellas. Para eso vamos a usar un arreglo 3D de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slice0</span> <span class="o">=</span> <span class="n">dicoms</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   <span class="c1"># Primer corte, lo uso para recuperar los datos comunes a todos los cortes</span>
+<span class="n">vol_shape</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">slice0</span><span class="o">.</span><span class="n">pixel_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># Tamaño de la imagen 2D</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vol_shape</span><span class="p">)</span>
+<span class="n">vol_shape</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dicoms</span><span class="p">))</span>   <span class="c1"># Agregamos a la lista el tamaño de la imagen a lo largo de z</span>
+<span class="c1"># Si tenemos poca RAM, podemos fijar la cantidad de cortes en el eje z</span>
+<span class="c1"># vol_shape.append(100)   # Agregamos a la lista el tamaño de la imagen a lo largo de z</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">vol_shape</span><span class="p">)</span>
+
+<span class="n">matriz3D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">vol_shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matriz3D</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ya tenemos nuestro volumen tomográfico listo para ser llenado con las imágenes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Si tenemos poca RAM, podemos leer sólo los cortes que queremos,acorde</span>
+<span class="c1"># a la cantidad de cortes que definimos antes</span>
+<span class="c1"># for i, slice in enumerate(dicoms[100:200]):</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="nb">slice</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dicoms</span><span class="p">):</span>
+
+    <span class="n">corte</span> <span class="o">=</span> <span class="nb">slice</span><span class="o">.</span><span class="n">pixel_array</span> <span class="o">*</span> <span class="nb">slice</span><span class="o">.</span><span class="n">RescaleSlope</span> <span class="o">+</span> <span class="nb">slice</span><span class="o">.</span><span class="n">RescaleIntercept</span>
+    <span class="n">matriz3D</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">corte</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extraccion-de-imagenes">
+<h4>3 Extracción de imágenes<a class="headerlink" href="#extraccion-de-imagenes" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1">#   Window and level</span>
+<span class="c1">#</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">ventmax</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="n">w</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">ventmin</span> <span class="o">=</span> <span class="n">c</span> <span class="o">-</span> <span class="n">w</span><span class="o">/</span><span class="mi">2</span>
+
+
+<span class="n">fig_1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">fig_1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">a1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matriz3D</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">ventmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">ventmax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="relacion-de-aspecto">
+<h4>4 Relación de aspecto<a class="headerlink" href="#relacion-de-aspecto" title="Permalink to this headline">#</a></h4>
+<p>Como puede verse,la imagen aparece ‘aplastada’ en la dirección longitudinal. Esto se debe a que <strong>los vóxeles no son isotrópicos</strong> en CT, es decir, no tienen las mismas dimensiones:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">espaciadoX</span><span class="p">,</span><span class="n">espaciadoY</span> <span class="o">=</span> <span class="n">slice0</span><span class="o">.</span><span class="n">PixelSpacing</span>
+<span class="n">espesor</span> <span class="o">=</span> <span class="n">slice0</span><span class="o">.</span><span class="n">SliceThickness</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El espesor de corte es de: </span><span class="si">{:.2f}</span><span class="s1"> mm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">espesor</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La dimension en el plano X,Y es de </span><span class="si">{:.2f}</span><span class="s1"> mm x </span><span class="si">{:.2f}</span><span class="s1"> mm &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">espaciadoX</span><span class="p">,</span><span class="n">espaciadoY</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con estos datos podemos definir la relación de aspecto entre el eje Z y el eje X (o Y):</p>
+<div class="math notranslate nohighlight">
+\[
+\texttt{AspectRatio} = \frac{\texttt{PixelSpacing}}{\texttt{SliceThickness}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aspecto</span> <span class="o">=</span> <span class="n">espesor</span><span class="o">/</span><span class="n">espaciadoX</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Relación de aspecto:&quot;</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">fig_1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">fig_1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">a1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matriz3D</span><span class="p">[</span><span class="mi">280</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">ventmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">ventmax</span><span class="p">)</span>
+<span class="n">a1</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">a1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;MPR CORONAL&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="una-cosa-mas">
+<h3>Una cosa más…<a class="headerlink" href="#una-cosa-mas" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p><strong>No siempre el orden de los nombres de los archivos DICOM de una CT corresponde con el orden a lo largo del eje Z !!!</strong></p>
+</div></blockquote>
+<p>En efecto, bien podría ser que al ordenar los archivos por su nombre, como hicimos más arriba, los cortes tomográficos queden desordenados.</p>
+<p>Por suerte, como vimos antes, <code class="docutils literal notranslate"><span class="pre">sorted</span></code> viene al rescate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">sorted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La función <code class="docutils literal notranslate"><span class="pre">sorted</span></code> puede recibir en forma opcional una función que se utilice para ordenar la lista, en el parámetro <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p>
+<p>En nuestro caso, la función que necesitamos es aquella que nos devuelve el valor de <code class="docutils literal notranslate"><span class="pre">SliceLocation</span></code>, que efectivamente indica la posición del corte a lo largo del eje Z.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">z_mm</span><span class="p">(</span><span class="n">archivo</span><span class="p">):</span>
+    <span class="n">dcm</span> <span class="o">=</span> <span class="n">pydicom</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dcm</span><span class="o">.</span><span class="n">SliceLocation</span>
+
+<span class="n">z_mm</span><span class="p">(</span><span class="s1">&#39;../Assets/CT/IM-0001-0145-0001.dcm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">archivos</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">archivos_reordenados</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">archivos</span><span class="p">,</span><span class="n">key</span> <span class="o">=</span> <span class="n">z_mm</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">archivos_reordenados</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dicoms</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">archivos_reordenados</span><span class="p">:</span>
+    <span class="n">dicoms</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pydicom</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Número de cortes tomográficos:&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">dicoms</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="nb">slice</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dicoms</span><span class="p">):</span>
+    <span class="n">corte</span> <span class="o">=</span> <span class="nb">slice</span><span class="o">.</span><span class="n">pixel_array</span> <span class="o">*</span> <span class="nb">slice</span><span class="o">.</span><span class="n">RescaleSlope</span> <span class="o">+</span> <span class="nb">slice</span><span class="o">.</span><span class="n">RescaleIntercept</span>
+    <span class="n">matriz3D</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">corte</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aspecto</span> <span class="o">=</span> <span class="n">espesor</span><span class="o">/</span><span class="n">espaciadoX</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Relación de aspecto:&quot;</span><span class="p">,</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">fig_1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">fig_1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">a1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matriz3D</span><span class="p">[</span><span class="mi">280</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">ventmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">ventmax</span><span class="p">)</span>
+<span class="n">a1</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="n">aspecto</span><span class="p">)</span>
+<span class="n">a1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;MPR CORONAL&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="9%20Dicom.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Imágenes médicas - DICOM</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="B%20Integrales.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Integración numérica</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abrir-un-archivo-dicom">Abrir un archivo DICOM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ventanas-de-visualizacion-tipicas-en-ct">Ventanas de visualización típicas en CT</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reconstruccion-multiplanar">Reconstrucción multiplanar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cargar-todos-los-cortes-de-la-tomografia">1 Cargar todos los cortes de la tomografía</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intermezzo-sort-y-mutabilidad"><em>Intermezzo</em>: sort y mutabilidad</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fin-intermezzo"><em>Fin intermezzo</em></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#construccion-del-volumen-tomografico">2 Construcción del volumen tomográfico</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#extraccion-de-imagenes">3 Extracción de imágenes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relacion-de-aspecto">4 Relación de aspecto</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#una-cosa-mas">Una cosa más…</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

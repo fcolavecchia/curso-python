@@ -1,0 +1,2114 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'datos pdd';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="pandas.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="Untitled.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0%20Introducci%C3%B3n%20a%20Jupyter%20Notebooks.html">Clase 0</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="1%20El%20lenguaje%20Python.html">Introducción al Lenguaje Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2%20Funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3%20M%C3%A1s%20sobre%20funciones.html">Más sobre Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4%20M%C3%B3dulos.html">Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5%20Numpy%20-%20avanzado.html">NumPy - Avanzado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5%20Numpy.html">NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6%20Matplotlib.html">Líneas, símbolos y colores</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6%20Plotly.html">Más gráficos: <code class="docutils literal notranslate"><span class="pre">Plotly</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="7%20Intermedio.html">Windows, <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> y más</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="8%20Interpolaci%C3%B3n.html">Interpolación - Scipy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="9%20Dicom.html">Imágenes médicas - DICOM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A%20Dicom%203D.html">Imágenes médicas - DICOM 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B%20Integrales.html">Integración numérica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Borges%20y%20matplotlib%20resuelto.html">Borges y  <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Borges%20y%20matplotlib.html">Borges y  <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create_the_std_lib.html">Archivo para la preparación de la clase sobre <code class="docutils literal notranslate"><span class="pre">os</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicios%2007.html">Ejercicio</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Find_the_file.html">Instalando Git</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Generala.html">Examen Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jugando%20con%20strings.html">Jugando con strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pangrama%20Versiones.html">Pangrama</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Pangrama.html">Pangrama</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sortea%20ejercicios.html">Sortea ejercicios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scikit_image_filters.html">Image filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Python%20funcional%202.html">Programación funcional con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Python%20funcional.html">Programación funcional con Python</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdatos pdd.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/datos pdd.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="o">%</span><span class="k">matplotlib</span> notebook
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function read_csv in module pandas.io.parsers.readers:
+
+read_csv(filepath_or_buffer: &#39;FilePath | ReadCsvBuffer[bytes] | ReadCsvBuffer[str]&#39;, *, sep: &#39;str | None | lib.NoDefault&#39; = &lt;no_default&gt;, delimiter: &#39;str | None | lib.NoDefault&#39; = None, header: &quot;int | Sequence[int] | None | Literal[&#39;infer&#39;]&quot; = &#39;infer&#39;, names: &#39;Sequence[Hashable] | None | lib.NoDefault&#39; = &lt;no_default&gt;, index_col: &#39;IndexLabel | Literal[False] | None&#39; = None, usecols=None, squeeze: &#39;bool | None&#39; = None, prefix: &#39;str | lib.NoDefault&#39; = &lt;no_default&gt;, mangle_dupe_cols: &#39;bool&#39; = True, dtype: &#39;DtypeArg | None&#39; = None, engine: &#39;CSVEngine | None&#39; = None, converters=None, true_values=None, false_values=None, skipinitialspace: &#39;bool&#39; = False, skiprows=None, skipfooter: &#39;int&#39; = 0, nrows: &#39;int | None&#39; = None, na_values=None, keep_default_na: &#39;bool&#39; = True, na_filter: &#39;bool&#39; = True, verbose: &#39;bool&#39; = False, skip_blank_lines: &#39;bool&#39; = True, parse_dates=None, infer_datetime_format: &#39;bool&#39; = False, keep_date_col: &#39;bool&#39; = False, date_parser=None, dayfirst: &#39;bool&#39; = False, cache_dates: &#39;bool&#39; = True, iterator: &#39;bool&#39; = False, chunksize: &#39;int | None&#39; = None, compression: &#39;CompressionOptions&#39; = &#39;infer&#39;, thousands: &#39;str | None&#39; = None, decimal: &#39;str&#39; = &#39;.&#39;, lineterminator: &#39;str | None&#39; = None, quotechar: &#39;str&#39; = &#39;&quot;&#39;, quoting: &#39;int&#39; = 0, doublequote: &#39;bool&#39; = True, escapechar: &#39;str | None&#39; = None, comment: &#39;str | None&#39; = None, encoding: &#39;str | None&#39; = None, encoding_errors: &#39;str | None&#39; = &#39;strict&#39;, dialect: &#39;str | csv.Dialect | None&#39; = None, error_bad_lines: &#39;bool | None&#39; = None, warn_bad_lines: &#39;bool | None&#39; = None, on_bad_lines=None, delim_whitespace: &#39;bool&#39; = False, low_memory=True, memory_map: &#39;bool&#39; = False, float_precision: &quot;Literal[&#39;high&#39;, &#39;legacy&#39;] | None&quot; = None, storage_options: &#39;StorageOptions&#39; = None) -&gt; &#39;DataFrame | TextFileReader&#39;
+    Read a comma-separated values (csv) file into DataFrame.
+    
+    Also supports optionally iterating or breaking of the file
+    into chunks.
+    
+    Additional help can be found in the online docs for
+    `IO Tools &lt;https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html&gt;`_.
+    
+    Parameters
+    ----------
+    filepath_or_buffer : str, path object or file-like object
+        Any valid string path is acceptable. The string could be a URL. Valid
+        URL schemes include http, ftp, s3, gs, and file. For file URLs, a host is
+        expected. A local file could be: file://localhost/path/to/table.csv.
+    
+        If you want to pass in a path object, pandas accepts any ``os.PathLike``.
+    
+        By file-like object, we refer to objects with a ``read()`` method, such as
+        a file handle (e.g. via builtin ``open`` function) or ``StringIO``.
+    sep : str, default &#39;,&#39;
+        Delimiter to use. If sep is None, the C engine cannot automatically detect
+        the separator, but the Python parsing engine can, meaning the latter will
+        be used and automatically detect the separator by Python&#39;s builtin sniffer
+        tool, ``csv.Sniffer``. In addition, separators longer than 1 character and
+        different from ``&#39;\s+&#39;`` will be interpreted as regular expressions and
+        will also force the use of the Python parsing engine. Note that regex
+        delimiters are prone to ignoring quoted data. Regex example: ``&#39;\r\t&#39;``.
+    delimiter : str, default ``None``
+        Alias for sep.
+    header : int, list of int, None, default &#39;infer&#39;
+        Row number(s) to use as the column names, and the start of the
+        data.  Default behavior is to infer the column names: if no names
+        are passed the behavior is identical to ``header=0`` and column
+        names are inferred from the first line of the file, if column
+        names are passed explicitly then the behavior is identical to
+        ``header=None``. Explicitly pass ``header=0`` to be able to
+        replace existing names. The header can be a list of integers that
+        specify row locations for a multi-index on the columns
+        e.g. [0,1,3]. Intervening rows that are not specified will be
+        skipped (e.g. 2 in this example is skipped). Note that this
+        parameter ignores commented lines and empty lines if
+        ``skip_blank_lines=True``, so ``header=0`` denotes the first line of
+        data rather than the first line of the file.
+    names : array-like, optional
+        List of column names to use. If the file contains a header row,
+        then you should explicitly pass ``header=0`` to override the column names.
+        Duplicates in this list are not allowed.
+    index_col : int, str, sequence of int / str, or False, optional, default ``None``
+      Column(s) to use as the row labels of the ``DataFrame``, either given as
+      string name or column index. If a sequence of int / str is given, a
+      MultiIndex is used.
+    
+      Note: ``index_col=False`` can be used to force pandas to *not* use the first
+      column as the index, e.g. when you have a malformed file with delimiters at
+      the end of each line.
+    usecols : list-like or callable, optional
+        Return a subset of the columns. If list-like, all elements must either
+        be positional (i.e. integer indices into the document columns) or strings
+        that correspond to column names provided either by the user in `names` or
+        inferred from the document header row(s). If ``names`` are given, the document
+        header row(s) are not taken into account. For example, a valid list-like
+        `usecols` parameter would be ``[0, 1, 2]`` or ``[&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;]``.
+        Element order is ignored, so ``usecols=[0, 1]`` is the same as ``[1, 0]``.
+        To instantiate a DataFrame from ``data`` with element order preserved use
+        ``pd.read_csv(data, usecols=[&#39;foo&#39;, &#39;bar&#39;])[[&#39;foo&#39;, &#39;bar&#39;]]`` for columns
+        in ``[&#39;foo&#39;, &#39;bar&#39;]`` order or
+        ``pd.read_csv(data, usecols=[&#39;foo&#39;, &#39;bar&#39;])[[&#39;bar&#39;, &#39;foo&#39;]]``
+        for ``[&#39;bar&#39;, &#39;foo&#39;]`` order.
+    
+        If callable, the callable function will be evaluated against the column
+        names, returning names where the callable function evaluates to True. An
+        example of a valid callable argument would be ``lambda x: x.upper() in
+        [&#39;AAA&#39;, &#39;BBB&#39;, &#39;DDD&#39;]``. Using this parameter results in much faster
+        parsing time and lower memory usage.
+    squeeze : bool, default False
+        If the parsed data only contains one column then return a Series.
+    
+        .. deprecated:: 1.4.0
+            Append ``.squeeze(&quot;columns&quot;)`` to the call to ``read_csv`` to squeeze
+            the data.
+    prefix : str, optional
+        Prefix to add to column numbers when no header, e.g. &#39;X&#39; for X0, X1, ...
+    
+        .. deprecated:: 1.4.0
+           Use a list comprehension on the DataFrame&#39;s columns after calling ``read_csv``.
+    mangle_dupe_cols : bool, default True
+        Duplicate columns will be specified as &#39;X&#39;, &#39;X.1&#39;, ...&#39;X.N&#39;, rather than
+        &#39;X&#39;...&#39;X&#39;. Passing in False will cause data to be overwritten if there
+        are duplicate names in the columns.
+    
+        .. deprecated:: 1.5.0
+            Not implemented, and a new argument to specify the pattern for the
+            names of duplicated columns will be added instead
+    dtype : Type name or dict of column -&gt; type, optional
+        Data type for data or columns. E.g. {&#39;a&#39;: np.float64, &#39;b&#39;: np.int32,
+        &#39;c&#39;: &#39;Int64&#39;}
+        Use `str` or `object` together with suitable `na_values` settings
+        to preserve and not interpret dtype.
+        If converters are specified, they will be applied INSTEAD
+        of dtype conversion.
+    
+        .. versionadded:: 1.5.0
+    
+            Support for defaultdict was added. Specify a defaultdict as input where
+            the default determines the dtype of the columns which are not explicitly
+            listed.
+    engine : {&#39;c&#39;, &#39;python&#39;, &#39;pyarrow&#39;}, optional
+        Parser engine to use. The C and pyarrow engines are faster, while the python engine
+        is currently more feature-complete. Multithreading is currently only supported by
+        the pyarrow engine.
+    
+        .. versionadded:: 1.4.0
+    
+            The &quot;pyarrow&quot; engine was added as an *experimental* engine, and some features
+            are unsupported, or may not work correctly, with this engine.
+    converters : dict, optional
+        Dict of functions for converting values in certain columns. Keys can either
+        be integers or column labels.
+    true_values : list, optional
+        Values to consider as True.
+    false_values : list, optional
+        Values to consider as False.
+    skipinitialspace : bool, default False
+        Skip spaces after delimiter.
+    skiprows : list-like, int or callable, optional
+        Line numbers to skip (0-indexed) or number of lines to skip (int)
+        at the start of the file.
+    
+        If callable, the callable function will be evaluated against the row
+        indices, returning True if the row should be skipped and False otherwise.
+        An example of a valid callable argument would be ``lambda x: x in [0, 2]``.
+    skipfooter : int, default 0
+        Number of lines at bottom of file to skip (Unsupported with engine=&#39;c&#39;).
+    nrows : int, optional
+        Number of rows of file to read. Useful for reading pieces of large files.
+    na_values : scalar, str, list-like, or dict, optional
+        Additional strings to recognize as NA/NaN. If dict passed, specific
+        per-column NA values.  By default the following values are interpreted as
+        NaN: &#39;&#39;, &#39;#N/A&#39;, &#39;#N/A N/A&#39;, &#39;#NA&#39;, &#39;-1.#IND&#39;, &#39;-1.#QNAN&#39;, &#39;-NaN&#39;, &#39;-nan&#39;,
+        &#39;1.#IND&#39;, &#39;1.#QNAN&#39;, &#39;&lt;NA&gt;&#39;, &#39;N/A&#39;, &#39;NA&#39;, &#39;NULL&#39;, &#39;NaN&#39;, &#39;n/a&#39;,
+        &#39;nan&#39;, &#39;null&#39;.
+    keep_default_na : bool, default True
+        Whether or not to include the default NaN values when parsing the data.
+        Depending on whether `na_values` is passed in, the behavior is as follows:
+    
+        * If `keep_default_na` is True, and `na_values` are specified, `na_values`
+          is appended to the default NaN values used for parsing.
+        * If `keep_default_na` is True, and `na_values` are not specified, only
+          the default NaN values are used for parsing.
+        * If `keep_default_na` is False, and `na_values` are specified, only
+          the NaN values specified `na_values` are used for parsing.
+        * If `keep_default_na` is False, and `na_values` are not specified, no
+          strings will be parsed as NaN.
+    
+        Note that if `na_filter` is passed in as False, the `keep_default_na` and
+        `na_values` parameters will be ignored.
+    na_filter : bool, default True
+        Detect missing value markers (empty strings and the value of na_values). In
+        data without any NAs, passing na_filter=False can improve the performance
+        of reading a large file.
+    verbose : bool, default False
+        Indicate number of NA values placed in non-numeric columns.
+    skip_blank_lines : bool, default True
+        If True, skip over blank lines rather than interpreting as NaN values.
+    parse_dates : bool or list of int or names or list of lists or dict, default False
+        The behavior is as follows:
+    
+        * boolean. If True -&gt; try parsing the index.
+        * list of int or names. e.g. If [1, 2, 3] -&gt; try parsing columns 1, 2, 3
+          each as a separate date column.
+        * list of lists. e.g.  If [[1, 3]] -&gt; combine columns 1 and 3 and parse as
+          a single date column.
+        * dict, e.g. {&#39;foo&#39; : [1, 3]} -&gt; parse columns 1, 3 as date and call
+          result &#39;foo&#39;
+    
+        If a column or index cannot be represented as an array of datetimes,
+        say because of an unparsable value or a mixture of timezones, the column
+        or index will be returned unaltered as an object data type. For
+        non-standard datetime parsing, use ``pd.to_datetime`` after
+        ``pd.read_csv``. To parse an index or column with a mixture of timezones,
+        specify ``date_parser`` to be a partially-applied
+        :func:`pandas.to_datetime` with ``utc=True``. See
+        :ref:`io.csv.mixed_timezones` for more.
+    
+        Note: A fast-path exists for iso8601-formatted dates.
+    infer_datetime_format : bool, default False
+        If True and `parse_dates` is enabled, pandas will attempt to infer the
+        format of the datetime strings in the columns, and if it can be inferred,
+        switch to a faster method of parsing them. In some cases this can increase
+        the parsing speed by 5-10x.
+    keep_date_col : bool, default False
+        If True and `parse_dates` specifies combining multiple columns then
+        keep the original columns.
+    date_parser : function, optional
+        Function to use for converting a sequence of string columns to an array of
+        datetime instances. The default uses ``dateutil.parser.parser`` to do the
+        conversion. Pandas will try to call `date_parser` in three different ways,
+        advancing to the next if an exception occurs: 1) Pass one or more arrays
+        (as defined by `parse_dates`) as arguments; 2) concatenate (row-wise) the
+        string values from the columns defined by `parse_dates` into a single array
+        and pass that; and 3) call `date_parser` once for each row using one or
+        more strings (corresponding to the columns defined by `parse_dates`) as
+        arguments.
+    dayfirst : bool, default False
+        DD/MM format dates, international and European format.
+    cache_dates : bool, default True
+        If True, use a cache of unique, converted dates to apply the datetime
+        conversion. May produce significant speed-up when parsing duplicate
+        date strings, especially ones with timezone offsets.
+    
+        .. versionadded:: 0.25.0
+    iterator : bool, default False
+        Return TextFileReader object for iteration or getting chunks with
+        ``get_chunk()``.
+    
+        .. versionchanged:: 1.2
+    
+           ``TextFileReader`` is a context manager.
+    chunksize : int, optional
+        Return TextFileReader object for iteration.
+        See the `IO Tools docs
+        &lt;https://pandas.pydata.org/pandas-docs/stable/io.html#io-chunking&gt;`_
+        for more information on ``iterator`` and ``chunksize``.
+    
+        .. versionchanged:: 1.2
+    
+           ``TextFileReader`` is a context manager.
+    compression : str or dict, default &#39;infer&#39;
+        For on-the-fly decompression of on-disk data. If &#39;infer&#39; and &#39;filepath_or_buffer&#39; is
+        path-like, then detect compression from the following extensions: &#39;.gz&#39;,
+        &#39;.bz2&#39;, &#39;.zip&#39;, &#39;.xz&#39;, &#39;.zst&#39;, &#39;.tar&#39;, &#39;.tar.gz&#39;, &#39;.tar.xz&#39; or &#39;.tar.bz2&#39;
+        (otherwise no compression).
+        If using &#39;zip&#39; or &#39;tar&#39;, the ZIP file must contain only one data file to be read in.
+        Set to ``None`` for no decompression.
+        Can also be a dict with key ``&#39;method&#39;`` set
+        to one of {``&#39;zip&#39;``, ``&#39;gzip&#39;``, ``&#39;bz2&#39;``, ``&#39;zstd&#39;``, ``&#39;tar&#39;``} and other
+        key-value pairs are forwarded to
+        ``zipfile.ZipFile``, ``gzip.GzipFile``,
+        ``bz2.BZ2File``, ``zstandard.ZstdDecompressor`` or
+        ``tarfile.TarFile``, respectively.
+        As an example, the following could be passed for Zstandard decompression using a
+        custom compression dictionary:
+        ``compression={&#39;method&#39;: &#39;zstd&#39;, &#39;dict_data&#39;: my_compression_dict}``.
+    
+            .. versionadded:: 1.5.0
+                Added support for `.tar` files.
+    
+        .. versionchanged:: 1.4.0 Zstandard support.
+    
+    thousands : str, optional
+        Thousands separator.
+    decimal : str, default &#39;.&#39;
+        Character to recognize as decimal point (e.g. use &#39;,&#39; for European data).
+    lineterminator : str (length 1), optional
+        Character to break file into lines. Only valid with C parser.
+    quotechar : str (length 1), optional
+        The character used to denote the start and end of a quoted item. Quoted
+        items can include the delimiter and it will be ignored.
+    quoting : int or csv.QUOTE_* instance, default 0
+        Control field quoting behavior per ``csv.QUOTE_*`` constants. Use one of
+        QUOTE_MINIMAL (0), QUOTE_ALL (1), QUOTE_NONNUMERIC (2) or QUOTE_NONE (3).
+    doublequote : bool, default ``True``
+       When quotechar is specified and quoting is not ``QUOTE_NONE``, indicate
+       whether or not to interpret two consecutive quotechar elements INSIDE a
+       field as a single ``quotechar`` element.
+    escapechar : str (length 1), optional
+        One-character string used to escape other characters.
+    comment : str, optional
+        Indicates remainder of line should not be parsed. If found at the beginning
+        of a line, the line will be ignored altogether. This parameter must be a
+        single character. Like empty lines (as long as ``skip_blank_lines=True``),
+        fully commented lines are ignored by the parameter `header` but not by
+        `skiprows`. For example, if ``comment=&#39;#&#39;``, parsing
+        ``#empty\na,b,c\n1,2,3`` with ``header=0`` will result in &#39;a,b,c&#39; being
+        treated as the header.
+    encoding : str, optional
+        Encoding to use for UTF when reading/writing (ex. &#39;utf-8&#39;). `List of Python
+        standard encodings
+        &lt;https://docs.python.org/3/library/codecs.html#standard-encodings&gt;`_ .
+    
+        .. versionchanged:: 1.2
+    
+           When ``encoding`` is ``None``, ``errors=&quot;replace&quot;`` is passed to
+           ``open()``. Otherwise, ``errors=&quot;strict&quot;`` is passed to ``open()``.
+           This behavior was previously only the case for ``engine=&quot;python&quot;``.
+    
+        .. versionchanged:: 1.3.0
+    
+           ``encoding_errors`` is a new argument. ``encoding`` has no longer an
+           influence on how encoding errors are handled.
+    
+    encoding_errors : str, optional, default &quot;strict&quot;
+        How encoding errors are treated. `List of possible values
+        &lt;https://docs.python.org/3/library/codecs.html#error-handlers&gt;`_ .
+    
+        .. versionadded:: 1.3.0
+    
+    dialect : str or csv.Dialect, optional
+        If provided, this parameter will override values (default or not) for the
+        following parameters: `delimiter`, `doublequote`, `escapechar`,
+        `skipinitialspace`, `quotechar`, and `quoting`. If it is necessary to
+        override values, a ParserWarning will be issued. See csv.Dialect
+        documentation for more details.
+    error_bad_lines : bool, optional, default ``None``
+        Lines with too many fields (e.g. a csv line with too many commas) will by
+        default cause an exception to be raised, and no DataFrame will be returned.
+        If False, then these &quot;bad lines&quot; will be dropped from the DataFrame that is
+        returned.
+    
+        .. deprecated:: 1.3.0
+           The ``on_bad_lines`` parameter should be used instead to specify behavior upon
+           encountering a bad line instead.
+    warn_bad_lines : bool, optional, default ``None``
+        If error_bad_lines is False, and warn_bad_lines is True, a warning for each
+        &quot;bad line&quot; will be output.
+    
+        .. deprecated:: 1.3.0
+           The ``on_bad_lines`` parameter should be used instead to specify behavior upon
+           encountering a bad line instead.
+    on_bad_lines : {&#39;error&#39;, &#39;warn&#39;, &#39;skip&#39;} or callable, default &#39;error&#39;
+        Specifies what to do upon encountering a bad line (a line with too many fields).
+        Allowed values are :
+    
+            - &#39;error&#39;, raise an Exception when a bad line is encountered.
+            - &#39;warn&#39;, raise a warning when a bad line is encountered and skip that line.
+            - &#39;skip&#39;, skip bad lines without raising or warning when they are encountered.
+    
+        .. versionadded:: 1.3.0
+    
+        .. versionadded:: 1.4.0
+    
+            - callable, function with signature
+              ``(bad_line: list[str]) -&gt; list[str] | None`` that will process a single
+              bad line. ``bad_line`` is a list of strings split by the ``sep``.
+              If the function returns ``None``, the bad line will be ignored.
+              If the function returns a new list of strings with more elements than
+              expected, a ``ParserWarning`` will be emitted while dropping extra elements.
+              Only supported when ``engine=&quot;python&quot;``
+    
+    delim_whitespace : bool, default False
+        Specifies whether or not whitespace (e.g. ``&#39; &#39;`` or ``&#39;    &#39;``) will be
+        used as the sep. Equivalent to setting ``sep=&#39;\s+&#39;``. If this option
+        is set to True, nothing should be passed in for the ``delimiter``
+        parameter.
+    low_memory : bool, default True
+        Internally process the file in chunks, resulting in lower memory use
+        while parsing, but possibly mixed type inference.  To ensure no mixed
+        types either set False, or specify the type with the `dtype` parameter.
+        Note that the entire file is read into a single DataFrame regardless,
+        use the `chunksize` or `iterator` parameter to return the data in chunks.
+        (Only valid with C parser).
+    memory_map : bool, default False
+        If a filepath is provided for `filepath_or_buffer`, map the file object
+        directly onto memory and access the data directly from there. Using this
+        option can improve performance because there is no longer any I/O overhead.
+    float_precision : str, optional
+        Specifies which converter the C engine should use for floating-point
+        values. The options are ``None`` or &#39;high&#39; for the ordinary converter,
+        &#39;legacy&#39; for the original lower precision pandas converter, and
+        &#39;round_trip&#39; for the round-trip converter.
+    
+        .. versionchanged:: 1.2
+    
+    storage_options : dict, optional
+        Extra options that make sense for a particular storage connection, e.g.
+        host, port, username, password, etc. For HTTP(S) URLs the key-value pairs
+        are forwarded to ``urllib.request.Request`` as header options. For other
+        URLs (e.g. starting with &quot;s3://&quot;, and &quot;gcs://&quot;) the key-value pairs are
+        forwarded to ``fsspec.open``. Please see ``fsspec`` and ``urllib`` for more
+        details, and for more examples on storage options refer `here
+        &lt;https://pandas.pydata.org/docs/user_guide/io.html?
+        highlight=storage_options#reading-writing-remote-files&gt;`_.
+    
+        .. versionadded:: 1.2
+    
+    Returns
+    -------
+    DataFrame or TextParser
+        A comma-separated values (csv) file is returned as two-dimensional
+        data structure with labeled axes.
+    
+    See Also
+    --------
+    DataFrame.to_csv : Write DataFrame to a comma-separated values (csv) file.
+    read_csv : Read a comma-separated values (csv) file into DataFrame.
+    read_fwf : Read a table of fixed-width formatted lines into DataFrame.
+    
+    Examples
+    --------
+    &gt;&gt;&gt; pd.read_csv(&#39;data.csv&#39;)  # doctest: +SKIP
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pdd_cs</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Examen/PDD_10x10_CS.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+<span class="n">pdd_ev</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Examen/10x10.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+<span class="n">per_ref</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Examen/ref_d10.0_10x10.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+<span class="n">per_ev</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Examen/eval_d10.0_10x10.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pdd_cs</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Examen/PDD_10x10_CS.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">pdd_ev</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Examen/10x10.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">per_ref</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Examen/ref_d10.0_10x10.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span> <span class="p">)</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
+<span class="ne">--&gt; </span><span class="mi">211</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:950,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">950</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:605,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">602</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">604</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">605</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1442,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1439</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1441</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1442</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1735,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1733</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1734</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1735</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1736</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1737</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1738</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1739</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1740</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1741</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1742</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1743</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1744</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1745</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1746</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File /opt/miniconda3/lib/python3.9/site-packages/pandas/io/common.py:856,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">851</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">852</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">853</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">854</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">856</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;Examen/PDD_10x10_CS.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">per_ref</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">per_ev</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         0         1
+0   -198.4  0.000120
+1   -195.3  0.000138
+2   -192.2  0.000146
+3   -189.1  0.000150
+4   -185.9  0.000153
+..     ...       ...
+123  185.9  0.000153
+124  189.1  0.000150
+125  192.2  0.000145
+126  195.3  0.000136
+127  198.4  0.000111
+
+[128 rows x 2 columns]
+     0       1
+0  -76  0.0369
+1  -74  0.0399
+2  -72  0.0440
+3  -70  0.0490
+4  -68  0.0561
+..  ..     ...
+93  68  0.0526
+94  70  0.0475
+95  72  0.0425
+96  74  0.0384
+97  76  0.0359
+
+[98 rows x 2 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con <code class="docutils literal notranslate"><span class="pre">keys()</span></code> encuentro los nombres de las hojas del archivo excel</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">depth_cs</span> <span class="o">=</span> <span class="n">pdd_cs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dose_cs</span> <span class="o">=</span> <span class="n">pdd_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">depth_ev</span> <span class="o">=</span> <span class="n">pdd_ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dose_ev</span> <span class="o">=</span> <span class="n">pdd_ev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">max_cs</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dose_cs</span><span class="p">)</span>
+<span class="n">max_ev</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dose_ev</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_ref</span> <span class="o">=</span> <span class="n">per_ref</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dose_ref</span> <span class="o">=</span> <span class="n">per_ref</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">x_ev</span> <span class="o">=</span> <span class="n">per_ev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dose_ev</span> <span class="o">=</span> <span class="n">per_ev</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">max_ref</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dose_ref</span><span class="p">)</span>
+<span class="n">max_ev</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dose_ev</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_ref</span><span class="p">,</span><span class="n">dose_ref</span><span class="o">/</span><span class="n">max_ref</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_ev</span><span class="p">,</span><span class="n">dose_ev</span><span class="o">/</span><span class="n">max_ev</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">/* Put everything inside the global mpl namespace */
+/* global mpl */
+window.mpl = {};
+
+mpl.get_websocket_type = function () {
+    if (typeof WebSocket !== 'undefined') {
+        return WebSocket;
+    } else if (typeof MozWebSocket !== 'undefined') {
+        return MozWebSocket;
+    } else {
+        alert(
+            'Your browser does not have WebSocket support. ' +
+                'Please try Chrome, Safari or Firefox ≥ 6. ' +
+                'Firefox 4 and 5 are also supported but you ' +
+                'have to enable WebSockets in about:config.'
+        );
+    }
+};
+
+mpl.figure = function (figure_id, websocket, ondownload, parent_element) {
+    this.id = figure_id;
+
+    this.ws = websocket;
+
+    this.supports_binary = this.ws.binaryType !== undefined;
+
+    if (!this.supports_binary) {
+        var warnings = document.getElementById('mpl-warnings');
+        if (warnings) {
+            warnings.style.display = 'block';
+            warnings.textContent =
+                'This browser does not support binary websocket messages. ' +
+                'Performance may be slow.';
+        }
+    }
+
+    this.imageObj = new Image();
+
+    this.context = undefined;
+    this.message = undefined;
+    this.canvas = undefined;
+    this.rubberband_canvas = undefined;
+    this.rubberband_context = undefined;
+    this.format_dropdown = undefined;
+
+    this.image_mode = 'full';
+
+    this.root = document.createElement('div');
+    this.root.setAttribute('style', 'display: inline-block');
+    this._root_extra_style(this.root);
+
+    parent_element.appendChild(this.root);
+
+    this._init_header(this);
+    this._init_canvas(this);
+    this._init_toolbar(this);
+
+    var fig = this;
+
+    this.waiting = false;
+
+    this.ws.onopen = function () {
+        fig.send_message('supports_binary', { value: fig.supports_binary });
+        fig.send_message('send_image_mode', {});
+        if (fig.ratio !== 1) {
+            fig.send_message('set_dpi_ratio', { dpi_ratio: fig.ratio });
+        }
+        fig.send_message('refresh', {});
+    };
+
+    this.imageObj.onload = function () {
+        if (fig.image_mode === 'full') {
+            // Full images could contain transparency (where diff images
+            // almost always do), so we need to clear the canvas so that
+            // there is no ghosting.
+            fig.context.clearRect(0, 0, fig.canvas.width, fig.canvas.height);
+        }
+        fig.context.drawImage(fig.imageObj, 0, 0);
+    };
+
+    this.imageObj.onunload = function () {
+        fig.ws.close();
+    };
+
+    this.ws.onmessage = this._make_on_message_function(this);
+
+    this.ondownload = ondownload;
+};
+
+mpl.figure.prototype._init_header = function () {
+    var titlebar = document.createElement('div');
+    titlebar.classList =
+        'ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix';
+    var titletext = document.createElement('div');
+    titletext.classList = 'ui-dialog-title';
+    titletext.setAttribute(
+        'style',
+        'width: 100%; text-align: center; padding: 3px;'
+    );
+    titlebar.appendChild(titletext);
+    this.root.appendChild(titlebar);
+    this.header = titletext;
+};
+
+mpl.figure.prototype._canvas_extra_style = function (_canvas_div) {};
+
+mpl.figure.prototype._root_extra_style = function (_canvas_div) {};
+
+mpl.figure.prototype._init_canvas = function () {
+    var fig = this;
+
+    var canvas_div = (this.canvas_div = document.createElement('div'));
+    canvas_div.setAttribute(
+        'style',
+        'border: 1px solid #ddd;' +
+            'box-sizing: content-box;' +
+            'clear: both;' +
+            'min-height: 1px;' +
+            'min-width: 1px;' +
+            'outline: 0;' +
+            'overflow: hidden;' +
+            'position: relative;' +
+            'resize: both;'
+    );
+
+    function on_keyboard_event_closure(name) {
+        return function (event) {
+            return fig.key_event(event, name);
+        };
+    }
+
+    canvas_div.addEventListener(
+        'keydown',
+        on_keyboard_event_closure('key_press')
+    );
+    canvas_div.addEventListener(
+        'keyup',
+        on_keyboard_event_closure('key_release')
+    );
+
+    this._canvas_extra_style(canvas_div);
+    this.root.appendChild(canvas_div);
+
+    var canvas = (this.canvas = document.createElement('canvas'));
+    canvas.classList.add('mpl-canvas');
+    canvas.setAttribute('style', 'box-sizing: content-box;');
+
+    this.context = canvas.getContext('2d');
+
+    var backingStore =
+        this.context.backingStorePixelRatio ||
+        this.context.webkitBackingStorePixelRatio ||
+        this.context.mozBackingStorePixelRatio ||
+        this.context.msBackingStorePixelRatio ||
+        this.context.oBackingStorePixelRatio ||
+        this.context.backingStorePixelRatio ||
+        1;
+
+    this.ratio = (window.devicePixelRatio || 1) / backingStore;
+
+    var rubberband_canvas = (this.rubberband_canvas = document.createElement(
+        'canvas'
+    ));
+    rubberband_canvas.setAttribute(
+        'style',
+        'box-sizing: content-box; position: absolute; left: 0; top: 0; z-index: 1;'
+    );
+
+    // Apply a ponyfill if ResizeObserver is not implemented by browser.
+    if (this.ResizeObserver === undefined) {
+        if (window.ResizeObserver !== undefined) {
+            this.ResizeObserver = window.ResizeObserver;
+        } else {
+            var obs = _JSXTOOLS_RESIZE_OBSERVER({});
+            this.ResizeObserver = obs.ResizeObserver;
+        }
+    }
+
+    this.resizeObserverInstance = new this.ResizeObserver(function (entries) {
+        var nentries = entries.length;
+        for (var i = 0; i < nentries; i++) {
+            var entry = entries[i];
+            var width, height;
+            if (entry.contentBoxSize) {
+                if (entry.contentBoxSize instanceof Array) {
+                    // Chrome 84 implements new version of spec.
+                    width = entry.contentBoxSize[0].inlineSize;
+                    height = entry.contentBoxSize[0].blockSize;
+                } else {
+                    // Firefox implements old version of spec.
+                    width = entry.contentBoxSize.inlineSize;
+                    height = entry.contentBoxSize.blockSize;
+                }
+            } else {
+                // Chrome <84 implements even older version of spec.
+                width = entry.contentRect.width;
+                height = entry.contentRect.height;
+            }
+
+            // Keep the size of the canvas and rubber band canvas in sync with
+            // the canvas container.
+            if (entry.devicePixelContentBoxSize) {
+                // Chrome 84 implements new version of spec.
+                canvas.setAttribute(
+                    'width',
+                    entry.devicePixelContentBoxSize[0].inlineSize
+                );
+                canvas.setAttribute(
+                    'height',
+                    entry.devicePixelContentBoxSize[0].blockSize
+                );
+            } else {
+                canvas.setAttribute('width', width * fig.ratio);
+                canvas.setAttribute('height', height * fig.ratio);
+            }
+            canvas.setAttribute(
+                'style',
+                'width: ' + width + 'px; height: ' + height + 'px;'
+            );
+
+            rubberband_canvas.setAttribute('width', width);
+            rubberband_canvas.setAttribute('height', height);
+
+            // And update the size in Python. We ignore the initial 0/0 size
+            // that occurs as the element is placed into the DOM, which should
+            // otherwise not happen due to the minimum size styling.
+            if (fig.ws.readyState == 1 && width != 0 && height != 0) {
+                fig.request_resize(width, height);
+            }
+        }
+    });
+    this.resizeObserverInstance.observe(canvas_div);
+
+    function on_mouse_event_closure(name) {
+        return function (event) {
+            return fig.mouse_event(event, name);
+        };
+    }
+
+    rubberband_canvas.addEventListener(
+        'mousedown',
+        on_mouse_event_closure('button_press')
+    );
+    rubberband_canvas.addEventListener(
+        'mouseup',
+        on_mouse_event_closure('button_release')
+    );
+    // Throttle sequential mouse events to 1 every 20ms.
+    rubberband_canvas.addEventListener(
+        'mousemove',
+        on_mouse_event_closure('motion_notify')
+    );
+
+    rubberband_canvas.addEventListener(
+        'mouseenter',
+        on_mouse_event_closure('figure_enter')
+    );
+    rubberband_canvas.addEventListener(
+        'mouseleave',
+        on_mouse_event_closure('figure_leave')
+    );
+
+    canvas_div.addEventListener('wheel', function (event) {
+        if (event.deltaY < 0) {
+            event.step = 1;
+        } else {
+            event.step = -1;
+        }
+        on_mouse_event_closure('scroll')(event);
+    });
+
+    canvas_div.appendChild(canvas);
+    canvas_div.appendChild(rubberband_canvas);
+
+    this.rubberband_context = rubberband_canvas.getContext('2d');
+    this.rubberband_context.strokeStyle = '#000000';
+
+    this._resize_canvas = function (width, height, forward) {
+        if (forward) {
+            canvas_div.style.width = width + 'px';
+            canvas_div.style.height = height + 'px';
+        }
+    };
+
+    // Disable right mouse context menu.
+    this.rubberband_canvas.addEventListener('contextmenu', function (_e) {
+        event.preventDefault();
+        return false;
+    });
+
+    function set_focus() {
+        canvas.focus();
+        canvas_div.focus();
+    }
+
+    window.setTimeout(set_focus, 100);
+};
+
+mpl.figure.prototype._init_toolbar = function () {
+    var fig = this;
+
+    var toolbar = document.createElement('div');
+    toolbar.classList = 'mpl-toolbar';
+    this.root.appendChild(toolbar);
+
+    function on_click_closure(name) {
+        return function (_event) {
+            return fig.toolbar_button_onclick(name);
+        };
+    }
+
+    function on_mouseover_closure(tooltip) {
+        return function (event) {
+            if (!event.currentTarget.disabled) {
+                return fig.toolbar_button_onmouseover(tooltip);
+            }
+        };
+    }
+
+    fig.buttons = {};
+    var buttonGroup = document.createElement('div');
+    buttonGroup.classList = 'mpl-button-group';
+    for (var toolbar_ind in mpl.toolbar_items) {
+        var name = mpl.toolbar_items[toolbar_ind][0];
+        var tooltip = mpl.toolbar_items[toolbar_ind][1];
+        var image = mpl.toolbar_items[toolbar_ind][2];
+        var method_name = mpl.toolbar_items[toolbar_ind][3];
+
+        if (!name) {
+            /* Instead of a spacer, we start a new button group. */
+            if (buttonGroup.hasChildNodes()) {
+                toolbar.appendChild(buttonGroup);
+            }
+            buttonGroup = document.createElement('div');
+            buttonGroup.classList = 'mpl-button-group';
+            continue;
+        }
+
+        var button = (fig.buttons[name] = document.createElement('button'));
+        button.classList = 'mpl-widget';
+        button.setAttribute('role', 'button');
+        button.setAttribute('aria-disabled', 'false');
+        button.addEventListener('click', on_click_closure(method_name));
+        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
+
+        var icon_img = document.createElement('img');
+        icon_img.src = '_images/' + image + '.png';
+        icon_img.srcset = '_images/' + image + '_large.png 2x';
+        icon_img.alt = tooltip;
+        button.appendChild(icon_img);
+
+        buttonGroup.appendChild(button);
+    }
+
+    if (buttonGroup.hasChildNodes()) {
+        toolbar.appendChild(buttonGroup);
+    }
+
+    var fmt_picker = document.createElement('select');
+    fmt_picker.classList = 'mpl-widget';
+    toolbar.appendChild(fmt_picker);
+    this.format_dropdown = fmt_picker;
+
+    for (var ind in mpl.extensions) {
+        var fmt = mpl.extensions[ind];
+        var option = document.createElement('option');
+        option.selected = fmt === mpl.default_extension;
+        option.innerHTML = fmt;
+        fmt_picker.appendChild(option);
+    }
+
+    var status_bar = document.createElement('span');
+    status_bar.classList = 'mpl-message';
+    toolbar.appendChild(status_bar);
+    this.message = status_bar;
+};
+
+mpl.figure.prototype.request_resize = function (x_pixels, y_pixels) {
+    // Request matplotlib to resize the figure. Matplotlib will then trigger a resize in the client,
+    // which will in turn request a refresh of the image.
+    this.send_message('resize', { width: x_pixels, height: y_pixels });
+};
+
+mpl.figure.prototype.send_message = function (type, properties) {
+    properties['type'] = type;
+    properties['figure_id'] = this.id;
+    this.ws.send(JSON.stringify(properties));
+};
+
+mpl.figure.prototype.send_draw_message = function () {
+    if (!this.waiting) {
+        this.waiting = true;
+        this.ws.send(JSON.stringify({ type: 'draw', figure_id: this.id }));
+    }
+};
+
+mpl.figure.prototype.handle_save = function (fig, _msg) {
+    var format_dropdown = fig.format_dropdown;
+    var format = format_dropdown.options[format_dropdown.selectedIndex].value;
+    fig.ondownload(fig, format);
+};
+
+mpl.figure.prototype.handle_resize = function (fig, msg) {
+    var size = msg['size'];
+    if (size[0] !== fig.canvas.width || size[1] !== fig.canvas.height) {
+        fig._resize_canvas(size[0], size[1], msg['forward']);
+        fig.send_message('refresh', {});
+    }
+};
+
+mpl.figure.prototype.handle_rubberband = function (fig, msg) {
+    var x0 = msg['x0'] / fig.ratio;
+    var y0 = (fig.canvas.height - msg['y0']) / fig.ratio;
+    var x1 = msg['x1'] / fig.ratio;
+    var y1 = (fig.canvas.height - msg['y1']) / fig.ratio;
+    x0 = Math.floor(x0) + 0.5;
+    y0 = Math.floor(y0) + 0.5;
+    x1 = Math.floor(x1) + 0.5;
+    y1 = Math.floor(y1) + 0.5;
+    var min_x = Math.min(x0, x1);
+    var min_y = Math.min(y0, y1);
+    var width = Math.abs(x1 - x0);
+    var height = Math.abs(y1 - y0);
+
+    fig.rubberband_context.clearRect(
+        0,
+        0,
+        fig.canvas.width / fig.ratio,
+        fig.canvas.height / fig.ratio
+    );
+
+    fig.rubberband_context.strokeRect(min_x, min_y, width, height);
+};
+
+mpl.figure.prototype.handle_figure_label = function (fig, msg) {
+    // Updates the figure title.
+    fig.header.textContent = msg['label'];
+};
+
+mpl.figure.prototype.handle_cursor = function (fig, msg) {
+    var cursor = msg['cursor'];
+    switch (cursor) {
+        case 0:
+            cursor = 'pointer';
+            break;
+        case 1:
+            cursor = 'default';
+            break;
+        case 2:
+            cursor = 'crosshair';
+            break;
+        case 3:
+            cursor = 'move';
+            break;
+    }
+    fig.rubberband_canvas.style.cursor = cursor;
+};
+
+mpl.figure.prototype.handle_message = function (fig, msg) {
+    fig.message.textContent = msg['message'];
+};
+
+mpl.figure.prototype.handle_draw = function (fig, _msg) {
+    // Request the server to send over a new figure.
+    fig.send_draw_message();
+};
+
+mpl.figure.prototype.handle_image_mode = function (fig, msg) {
+    fig.image_mode = msg['mode'];
+};
+
+mpl.figure.prototype.handle_history_buttons = function (fig, msg) {
+    for (var key in msg) {
+        if (!(key in fig.buttons)) {
+            continue;
+        }
+        fig.buttons[key].disabled = !msg[key];
+        fig.buttons[key].setAttribute('aria-disabled', !msg[key]);
+    }
+};
+
+mpl.figure.prototype.handle_navigate_mode = function (fig, msg) {
+    if (msg['mode'] === 'PAN') {
+        fig.buttons['Pan'].classList.add('active');
+        fig.buttons['Zoom'].classList.remove('active');
+    } else if (msg['mode'] === 'ZOOM') {
+        fig.buttons['Pan'].classList.remove('active');
+        fig.buttons['Zoom'].classList.add('active');
+    } else {
+        fig.buttons['Pan'].classList.remove('active');
+        fig.buttons['Zoom'].classList.remove('active');
+    }
+};
+
+mpl.figure.prototype.updated_canvas_event = function () {
+    // Called whenever the canvas gets updated.
+    this.send_message('ack', {});
+};
+
+// A function to construct a web socket function for onmessage handling.
+// Called in the figure constructor.
+mpl.figure.prototype._make_on_message_function = function (fig) {
+    return function socket_on_message(evt) {
+        if (evt.data instanceof Blob) {
+            /* FIXME: We get "Resource interpreted as Image but
+             * transferred with MIME type text/plain:" errors on
+             * Chrome.  But how to set the MIME type?  It doesn't seem
+             * to be part of the websocket stream */
+            evt.data.type = 'image/png';
+
+            /* Free the memory for the previous frames */
+            if (fig.imageObj.src) {
+                (window.URL || window.webkitURL).revokeObjectURL(
+                    fig.imageObj.src
+                );
+            }
+
+            fig.imageObj.src = (window.URL || window.webkitURL).createObjectURL(
+                evt.data
+            );
+            fig.updated_canvas_event();
+            fig.waiting = false;
+            return;
+        } else if (
+            typeof evt.data === 'string' &&
+            evt.data.slice(0, 21) === 'data:image/png;base64'
+        ) {
+            fig.imageObj.src = evt.data;
+            fig.updated_canvas_event();
+            fig.waiting = false;
+            return;
+        }
+
+        var msg = JSON.parse(evt.data);
+        var msg_type = msg['type'];
+
+        // Call the  "handle_{type}" callback, which takes
+        // the figure and JSON message as its only arguments.
+        try {
+            var callback = fig['handle_' + msg_type];
+        } catch (e) {
+            console.log(
+                "No handler for the '" + msg_type + "' message type: ",
+                msg
+            );
+            return;
+        }
+
+        if (callback) {
+            try {
+                // console.log("Handling '" + msg_type + "' message: ", msg);
+                callback(fig, msg);
+            } catch (e) {
+                console.log(
+                    "Exception inside the 'handler_" + msg_type + "' callback:",
+                    e,
+                    e.stack,
+                    msg
+                );
+            }
+        }
+    };
+};
+
+// from http://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas
+mpl.findpos = function (e) {
+    //this section is from http://www.quirksmode.org/js/events_properties.html
+    var targ;
+    if (!e) {
+        e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    }
+    if (targ.nodeType === 3) {
+        // defeat Safari bug
+        targ = targ.parentNode;
+    }
+
+    // pageX,Y are the mouse positions relative to the document
+    var boundingRect = targ.getBoundingClientRect();
+    var x = e.pageX - (boundingRect.left + document.body.scrollLeft);
+    var y = e.pageY - (boundingRect.top + document.body.scrollTop);
+
+    return { x: x, y: y };
+};
+
+/*
+ * return a copy of an object with only non-object keys
+ * we need this to avoid circular references
+ * http://stackoverflow.com/a/24161582/3208463
+ */
+function simpleKeys(original) {
+    return Object.keys(original).reduce(function (obj, key) {
+        if (typeof original[key] !== 'object') {
+            obj[key] = original[key];
+        }
+        return obj;
+    }, {});
+}
+
+mpl.figure.prototype.mouse_event = function (event, name) {
+    var canvas_pos = mpl.findpos(event);
+
+    if (name === 'button_press') {
+        this.canvas.focus();
+        this.canvas_div.focus();
+    }
+
+    var x = canvas_pos.x * this.ratio;
+    var y = canvas_pos.y * this.ratio;
+
+    this.send_message(name, {
+        x: x,
+        y: y,
+        button: event.button,
+        step: event.step,
+        guiEvent: simpleKeys(event),
+    });
+
+    /* This prevents the web browser from automatically changing to
+     * the text insertion cursor when the button is pressed.  We want
+     * to control all of the cursor setting manually through the
+     * 'cursor' event from matplotlib */
+    event.preventDefault();
+    return false;
+};
+
+mpl.figure.prototype._key_event_extra = function (_event, _name) {
+    // Handle any extra behaviour associated with a key event
+};
+
+mpl.figure.prototype.key_event = function (event, name) {
+    // Prevent repeat events
+    if (name === 'key_press') {
+        if (event.which === this._key) {
+            return;
+        } else {
+            this._key = event.which;
+        }
+    }
+    if (name === 'key_release') {
+        this._key = null;
+    }
+
+    var value = '';
+    if (event.ctrlKey && event.which !== 17) {
+        value += 'ctrl+';
+    }
+    if (event.altKey && event.which !== 18) {
+        value += 'alt+';
+    }
+    if (event.shiftKey && event.which !== 16) {
+        value += 'shift+';
+    }
+
+    value += 'k';
+    value += event.which.toString();
+
+    this._key_event_extra(event, name);
+
+    this.send_message(name, { key: value, guiEvent: simpleKeys(event) });
+    return false;
+};
+
+mpl.figure.prototype.toolbar_button_onclick = function (name) {
+    if (name === 'download') {
+        this.handle_save(this, null);
+    } else {
+        this.send_message('toolbar_button', { name: name });
+    }
+};
+
+mpl.figure.prototype.toolbar_button_onmouseover = function (tooltip) {
+    this.message.textContent = tooltip;
+};
+
+///////////////// REMAINING CONTENT GENERATED BY embed_js.py /////////////////
+// prettier-ignore
+var _JSXTOOLS_RESIZE_OBSERVER=function(A){var t,i=new WeakMap,n=new WeakMap,a=new WeakMap,r=new WeakMap,o=new Set;function s(e){if(!(this instanceof s))throw new TypeError("Constructor requires 'new' operator");i.set(this,e)}function h(){throw new TypeError("Function is not a constructor")}function c(e,t,i,n){e=0 in arguments?Number(arguments[0]):0,t=1 in arguments?Number(arguments[1]):0,i=2 in arguments?Number(arguments[2]):0,n=3 in arguments?Number(arguments[3]):0,this.right=(this.x=this.left=e)+(this.width=i),this.bottom=(this.y=this.top=t)+(this.height=n),Object.freeze(this)}function d(){t=requestAnimationFrame(d);var s=new WeakMap,p=new Set;o.forEach((function(t){r.get(t).forEach((function(i){var r=t instanceof window.SVGElement,o=a.get(t),d=r?0:parseFloat(o.paddingTop),f=r?0:parseFloat(o.paddingRight),l=r?0:parseFloat(o.paddingBottom),u=r?0:parseFloat(o.paddingLeft),g=r?0:parseFloat(o.borderTopWidth),m=r?0:parseFloat(o.borderRightWidth),w=r?0:parseFloat(o.borderBottomWidth),b=u+f,F=d+l,v=(r?0:parseFloat(o.borderLeftWidth))+m,W=g+w,y=r?0:t.offsetHeight-W-t.clientHeight,E=r?0:t.offsetWidth-v-t.clientWidth,R=b+v,z=F+W,M=r?t.width:parseFloat(o.width)-R-E,O=r?t.height:parseFloat(o.height)-z-y;if(n.has(t)){var k=n.get(t);if(k[0]===M&&k[1]===O)return}n.set(t,[M,O]);var S=Object.create(h.prototype);S.target=t,S.contentRect=new c(u,d,M,O),s.has(i)||(s.set(i,[]),p.add(i)),s.get(i).push(S)}))})),p.forEach((function(e){i.get(e).call(e,s.get(e),e)}))}return s.prototype.observe=function(i){if(i instanceof window.Element){r.has(i)||(r.set(i,new Set),o.add(i),a.set(i,window.getComputedStyle(i)));var n=r.get(i);n.has(this)||n.add(this),cancelAnimationFrame(t),t=requestAnimationFrame(d)}},s.prototype.unobserve=function(i){if(i instanceof window.Element&&r.has(i)){var n=r.get(i);n.has(this)&&(n.delete(this),n.size||(r.delete(i),o.delete(i))),n.size||r.delete(i),o.size||cancelAnimationFrame(t)}},A.DOMRectReadOnly=c,A.ResizeObserver=s,A.ResizeObserverEntry=h,A}; // eslint-disable-line
+mpl.toolbar_items = [["Home", "Reset original view", "fa fa-home icon-home", "home"], ["Back", "Back to previous view", "fa fa-arrow-left icon-arrow-left", "back"], ["Forward", "Forward to next view", "fa fa-arrow-right icon-arrow-right", "forward"], ["", "", "", ""], ["Pan", "Left button pans, Right button zooms\nx/y fixes axis, CTRL fixes aspect", "fa fa-arrows icon-move", "pan"], ["Zoom", "Zoom to rectangle\nx/y fixes axis, CTRL fixes aspect", "fa fa-square-o icon-check-empty", "zoom"], ["", "", "", ""], ["Download", "Download plot", "fa fa-floppy-o icon-save", "download"]];
+
+mpl.extensions = ["eps", "jpeg", "pdf", "png", "ps", "raw", "svg", "tif"];
+
+mpl.default_extension = "png";/* global mpl */
+
+var comm_websocket_adapter = function (comm) {
+    // Create a "websocket"-like object which calls the given IPython comm
+    // object with the appropriate methods. Currently this is a non binary
+    // socket, so there is still some room for performance tuning.
+    var ws = {};
+
+    ws.close = function () {
+        comm.close();
+    };
+    ws.send = function (m) {
+        //console.log('sending', m);
+        comm.send(m);
+    };
+    // Register the callback with on_msg.
+    comm.on_msg(function (msg) {
+        //console.log('receiving', msg['content']['data'], msg);
+        // Pass the mpl event to the overridden (by mpl) onmessage function.
+        ws.onmessage(msg['content']['data']);
+    });
+    return ws;
+};
+
+mpl.mpl_figure_comm = function (comm, msg) {
+    // This is the function which gets called when the mpl process
+    // starts-up an IPython Comm through the "matplotlib" channel.
+
+    var id = msg.content.data.id;
+    // Get hold of the div created by the display call when the Comm
+    // socket was opened in Python.
+    var element = document.getElementById(id);
+    var ws_proxy = comm_websocket_adapter(comm);
+
+    function ondownload(figure, _format) {
+        window.open(figure.canvas.toDataURL());
+    }
+
+    var fig = new mpl.figure(id, ws_proxy, ondownload, element);
+
+    // Call onopen now - mpl needs it, as it is assuming we've passed it a real
+    // web socket which is closed, not our websocket->open comm proxy.
+    ws_proxy.onopen();
+
+    fig.parent_element = element;
+    fig.cell_info = mpl.find_output_cell("<div id='" + id + "'></div>");
+    if (!fig.cell_info) {
+        console.error('Failed to find cell for figure', id, fig);
+        return;
+    }
+    fig.cell_info[0].output_area.element.on(
+        'cleared',
+        { fig: fig },
+        fig._remove_fig_handler
+    );
+};
+
+mpl.figure.prototype.handle_close = function (fig, msg) {
+    var width = fig.canvas.width / fig.ratio;
+    fig.cell_info[0].output_area.element.off(
+        'cleared',
+        fig._remove_fig_handler
+    );
+    fig.resizeObserverInstance.unobserve(fig.canvas_div);
+
+    // Update the output cell to use the data from the current canvas.
+    fig.push_to_output();
+    var dataURL = fig.canvas.toDataURL();
+    // Re-enable the keyboard manager in IPython - without this line, in FF,
+    // the notebook keyboard shortcuts fail.
+    IPython.keyboard_manager.enable();
+    fig.parent_element.innerHTML =
+        '<img src="' + dataURL + '" width="' + width + '">';
+    fig.close_ws(fig, msg);
+};
+
+mpl.figure.prototype.close_ws = function (fig, msg) {
+    fig.send_message('closing', msg);
+    // fig.ws.close()
+};
+
+mpl.figure.prototype.push_to_output = function (_remove_interactive) {
+    // Turn the data on the canvas into data in the output cell.
+    var width = this.canvas.width / this.ratio;
+    var dataURL = this.canvas.toDataURL();
+    this.cell_info[1]['text/html'] =
+        '<img src="' + dataURL + '" width="' + width + '">';
+};
+
+mpl.figure.prototype.updated_canvas_event = function () {
+    // Tell IPython that the notebook contents must change.
+    IPython.notebook.set_dirty(true);
+    this.send_message('ack', {});
+    var fig = this;
+    // Wait a second, then push the new image to the DOM so
+    // that it is saved nicely (might be nice to debounce this).
+    setTimeout(function () {
+        fig.push_to_output();
+    }, 1000);
+};
+
+mpl.figure.prototype._init_toolbar = function () {
+    var fig = this;
+
+    var toolbar = document.createElement('div');
+    toolbar.classList = 'btn-toolbar';
+    this.root.appendChild(toolbar);
+
+    function on_click_closure(name) {
+        return function (_event) {
+            return fig.toolbar_button_onclick(name);
+        };
+    }
+
+    function on_mouseover_closure(tooltip) {
+        return function (event) {
+            if (!event.currentTarget.disabled) {
+                return fig.toolbar_button_onmouseover(tooltip);
+            }
+        };
+    }
+
+    fig.buttons = {};
+    var buttonGroup = document.createElement('div');
+    buttonGroup.classList = 'btn-group';
+    var button;
+    for (var toolbar_ind in mpl.toolbar_items) {
+        var name = mpl.toolbar_items[toolbar_ind][0];
+        var tooltip = mpl.toolbar_items[toolbar_ind][1];
+        var image = mpl.toolbar_items[toolbar_ind][2];
+        var method_name = mpl.toolbar_items[toolbar_ind][3];
+
+        if (!name) {
+            /* Instead of a spacer, we start a new button group. */
+            if (buttonGroup.hasChildNodes()) {
+                toolbar.appendChild(buttonGroup);
+            }
+            buttonGroup = document.createElement('div');
+            buttonGroup.classList = 'btn-group';
+            continue;
+        }
+
+        button = fig.buttons[name] = document.createElement('button');
+        button.classList = 'btn btn-default';
+        button.href = '#';
+        button.title = name;
+        button.innerHTML = '<i class="fa ' + image + ' fa-lg"></i>';
+        button.addEventListener('click', on_click_closure(method_name));
+        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
+        buttonGroup.appendChild(button);
+    }
+
+    if (buttonGroup.hasChildNodes()) {
+        toolbar.appendChild(buttonGroup);
+    }
+
+    // Add the status bar.
+    var status_bar = document.createElement('span');
+    status_bar.classList = 'mpl-message pull-right';
+    toolbar.appendChild(status_bar);
+    this.message = status_bar;
+
+    // Add the close button to the window.
+    var buttongrp = document.createElement('div');
+    buttongrp.classList = 'btn-group inline pull-right';
+    button = document.createElement('button');
+    button.classList = 'btn btn-mini btn-primary';
+    button.href = '#';
+    button.title = 'Stop Interaction';
+    button.innerHTML = '<i class="fa fa-power-off icon-remove icon-large"></i>';
+    button.addEventListener('click', function (_evt) {
+        fig.handle_close(fig, {});
+    });
+    button.addEventListener(
+        'mouseover',
+        on_mouseover_closure('Stop Interaction')
+    );
+    buttongrp.appendChild(button);
+    var titlebar = this.root.querySelector('.ui-dialog-titlebar');
+    titlebar.insertBefore(buttongrp, titlebar.firstChild);
+};
+
+mpl.figure.prototype._remove_fig_handler = function (event) {
+    var fig = event.data.fig;
+    if (event.target !== this) {
+        // Ignore bubbled events from children.
+        return;
+    }
+    fig.close_ws(fig, {});
+};
+
+mpl.figure.prototype._root_extra_style = function (el) {
+    el.style.boxSizing = 'content-box'; // override notebook setting of border-box.
+};
+
+mpl.figure.prototype._canvas_extra_style = function (el) {
+    // this is important to make the div 'focusable
+    el.setAttribute('tabindex', 0);
+    // reach out to IPython and tell the keyboard manager to turn it's self
+    // off when our div gets focus
+
+    // location in version 3
+    if (IPython.notebook.keyboard_manager) {
+        IPython.notebook.keyboard_manager.register_events(el);
+    } else {
+        // location in version 2
+        IPython.keyboard_manager.register_events(el);
+    }
+};
+
+mpl.figure.prototype._key_event_extra = function (event, _name) {
+    var manager = IPython.notebook.keyboard_manager;
+    if (!manager) {
+        manager = IPython.keyboard_manager;
+    }
+
+    // Check for shift+enter
+    if (event.shiftKey && event.which === 13) {
+        this.canvas_div.blur();
+        // select the cell after this one
+        var index = IPython.notebook.find_cell_index(this.cell_info[0]);
+        IPython.notebook.select(index + 1);
+    }
+};
+
+mpl.figure.prototype.handle_save = function (fig, _msg) {
+    fig.ondownload(fig, null);
+};
+
+mpl.find_output_cell = function (html_output) {
+    // Return the cell and output element which can be found *uniquely* in the notebook.
+    // Note - this is a bit hacky, but it is done because the "notebook_saving.Notebook"
+    // IPython event is triggered only after the cells have been serialised, which for
+    // our purposes (turning an active figure into a static one), is too late.
+    var cells = IPython.notebook.get_cells();
+    var ncells = cells.length;
+    for (var i = 0; i < ncells; i++) {
+        var cell = cells[i];
+        if (cell.cell_type === 'code') {
+            for (var j = 0; j < cell.output_area.outputs.length; j++) {
+                var data = cell.output_area.outputs[j];
+                if (data.data) {
+                    // IPython >= 3 moved mimebundle to data attribute of output
+                    data = data.data;
+                }
+                if (data['text/html'] === html_output) {
+                    return [cell, data, j];
+                }
+            }
+        }
+    }
+};
+
+// Register the function which deals with the matplotlib target/channel.
+// The kernel may be null if the page has been refreshed.
+if (IPython.notebook.kernel !== null) {
+    IPython.notebook.kernel.comm_manager.register_target(
+        'matplotlib',
+        mpl.mpl_figure_comm
+    );
+}
+</script><div class="output text_html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAAA10dzkAAAAAXNSR0IArs4c6QAAIABJREFUeF7s3QdUVNfaBuB3QBRREbuiYAMVwQLYEEHsXbFr7C3WWGOLDaxR7L0Qa9TYjSbRWLHHxBoVFXvD3hCVGWDmXzNG75+rXkc3A2efeWetrP/+yfnO+fZz3nF/zjCDxmAwGMAHBShAAQpQgAIUoIDVCGg4AFrNveZCKUABClCAAhSggEmAAyCDQAEKUIACFKAABaxMgAOgld1wLpcCFKAABShAAQpwAGQGKEABClCAAhSggJUJcAC0shvO5VKAAhSgAAUoQAEOgMwABShAAQpQgAIUsDIBDoBWdsO5XApQgAIUoAAFKMABkBmgAAUoQAEKUIACVibAAdDKbjiXSwEKUIACFKAABTgAMgMUoAAFKEABClDAygQ4AFrZDedyKUABClCAAhSgAAdAZoACFKAABShAAQpYmQAHQCu74VwuBShAAQpQgAIU4ADIDFCAAhSgAAUoQAErE+AAaGU3nMulAAUoQAEKUIACHACZAQpQgAIUoAAFKGBlAhwAreyGc7kUoAAFKEABClCAAyAzQAEKUIACFKAABaxMgAOgld1wLpcCFKAABShAAQpwAGQGKEABClCAAhSggJUJcAC0shvO5VKAAhSgAAUoQAEOgMwABShAAQpQgAIUsDIBDoBWdsO5XApQgAIUoAAFKMABkBmgAAUoQAEKUIACVibAAdDKbjiXSwEKUIACFKAABTgAMgMUoAAFKEABClDAygQ4AFrZDedyKUABClCAAhSgAAdAZoACFKAABShAAQpYmQAHQCu74VwuBShAAQpQgAIU4ADIDFCAAhSgAAUoQAErE+AAaGU3nMulAAUoQAEKUIACHACZAQpQgAIUoAAFKGBlAhwAreyGc7kUoAAFKEABClCAAyAzQAEKUIACFKAABaxMgAOgld1wLpcCFKAABShAAQpwAGQGKEABClCAAhSggJUJcAC0shvO5VKAAhSgAAUoQAEOgMwABShAAQpQgAIUsDIBDoBWdsO5XApQgAIUoAAFKMABkBmgAAUoQAEKUIACVibAAdDKbjiXSwEKUIACFKAABTgAMgMUoAAFKEABClDAygQ4AFrZDedyKUABClCAAhSgAAdAZoACFKAABShAAQpYmQAHQCu74VwuBShAAQpQgAIU4ADIDFCAAhSgAAUoQAErE+AAaGU3nMulAAUoQAEKUIACHACZAQpQgAIUoAAFKGBlAhwAreyGc7kUoAAFKEABClCAAyAzQAEKUIACFKAABaxMgAOgld1wLpcCFKAABShAAQpwAGQGKEABClCAAhSggJUJcAC0shvO5VKAAhSgAAUoQAEOgMwABShAAQpQgAIUsDIBDoBWdsO5XApQgAIUoAAFKMABkBmgAAUoQAEKUIACVibAAVDghuv1ekRHRyNDhgzQaDQCZ2IpBShAAQpQgALJJWAwGPDixQs4OzvDxsYmuS6rqOtwABS4Hbdv34aLi4vAGVhKAQpQgAIUoEBKCdy6dQt58uRJqcun6HU5AArwP3/+HE5OTjAGyNHRUeBMLKUABShAAQpQILkEYmJiTC/gPHv2DBkzZkyuyyrqOhwABW6HMUDG4BgHQQ6AApAspQAFKEABCiSjAPdvgAOgQOAYIAE8llKAAhSgAAVSSID7NwdAoegxQEJ8LKYABShAAQqkiAD3bw6AQsFjgIT4WEwBClCAAhRIEQHu3xwAhYLHAAnxsZgCFKAABSiQIgLcvzkACgWPARLiYzEFKEABClAgRQS4f3MAFAoeAyTEx2IKUIACFKBAighw/+YAKBQ8BkiIj8UUoAAFKECBFBHg/s0BUCh4DJAQH4spQAEKUIACKSLA/ZsDoFDwGCAhPhZTgAIUoAAFUkSA+7eKBsD9+/cjLCwMx48fx927d7Fp0yYEBwf/z2Dt27cP/fv3x7lz50y/EHrQoEHo1q2b2WFkgMym4oEUoAAFKEABxQhw/1bRALht2zYcOnQIPj4+aNy48ScHwGvXrsHLywtdunRB165dTbU9evTA6tWrTfXmPBggc5R4DAUoQAEKUEBZAty/VTQA/v9oaTSaTw6AgwcPxpYtW3D+/Pl3pcZX/06fPo0jR46YlVQGyCwmHkQBClCAAhRQlAD3byseAAMDA+Ht7Y0ZM2a8C6XxbeNmzZrh1atXsLOzey+sWq0Wxn/ePowBcnFxwfPnz+Ho6KiocLMZCsgioNcb8Of1J7j5+BUevIjDgxdaaOP1yJMpLVyzOCBvlnTIm9kBTg520Bj0wOPLwL0zQKo0QP5AwD6j8pcaHwfE3gdiHwCx9978X33Cv/tOiIPhxX3oXj7Fg/QeuJC+LC7EZcbtp6+Rxs4G2TOkQfYM9iaTMvkyw8ZGo/x1s0MKKFSAA6AVD4CFChVC+/bt8d13372L5+HDh+Hv74/o6GjkypXrvdiGhIQgNDT0vX/PAVChz3C2pWiBmLh4rDt2Gz8djkKuZ8dRweYsimmuwcPmBhzx6oO922gM//r3Bo0tNM7eQMY8QLpsgO0/f3HLWRzwDAbs0lrWIP418OTam+Hu4UXg8i7g1lEgfXYgZzEgQQvc/RuIuf1FfegNb4a8e8iEnxP9sS6xIq4anJE3iwPa+uVD01J54Gj//l9Wv+hiLKKAFQlwALTyAbBDhw4YOnTou8gbfw6wQoUKpg+R5MyZk68AWtEfBlxq8gnExSdi1u4onDm8DY0MO1HD5hjSanRmN/DKkAbnDa5wQiwK2tz9eJ3xlcECQYCN3ZtXC7MVAXJ6AWn+ebU+U34gXZZPX9f4at2jS29euXv5GDAkAonxwM0jwJW9QMLrT58DgN42DV7aZcYjOOGWLgNi4m3+VadDKjw0ZIQWdgiwu4jihouwhf69c1+GC35P8MbqxCp4YpcTHfzzoXcVd6RJZWtWHzyIAhQAOABa8QD4JW8B//eThgHiHyMU+DyBM7efY9JP29E/ZhK8bS6/K9ZnyAUb92qAS1nA+Opdhn//Bcw4NEY/e216O/RCjB1O34nFqVvPYPP8OoprriGb5hmyaGJgAz3S2SSgtt1xZE+8/7+bs0kFFKoJFKwEvHoKvHoMwAAY32Z+9eTNq3pvB7//dSbjoJnBGciYG8gXABSoiGeP7+F+1DHcjEnEwRfO2P4wE+7HG1+N/M/bthoNkD9rOng5Z4SnsyMKZktvemXPJbMD7O1sAd3LN/8YDMDtP4GTPwKXdr4ZQAHoYIfwhFqYk9AAuXNkw5SmJVEsjwRvh39eZHg0BSwiwP3bigdA44dAtm7disjIyHfh6t69O06dOsUPgVjk6caTWrNAfKIes3Zfwvl9azE51Vxk1LxCgq0DbEs0hca3HeDsAxgnos98GH9m8O9bz3H69jPTQHj61jPExCVAAz38bc7BXfPmrdfcDokoZX8HBQy3kM42EbbGIcrst2U1QKZ8gKMz4JDlP28zG19RLFwLyOGFJ6/isffCAxy8/AjHbzzFzSfvv4WdMa0dfFyd4OOaCT55M6F4nozI8Llv375+ClzeDZxYBlzbb1rbHWRHO+23uKZxQc9KbvimshvsbP/96uJnsvJwCqhegAOgigbA2NhYXL785hUF44c7pk6dikqVKiFz5sxwdXU1vdV7584dLF++3HTM26+BMX4FjPGrYIyf/DV+CphfA6P65z0XmMwCBoMB/decQvYzCzDUbrXp6gm5fJGq+TLAySVJuzF+oOTqo1icuPEMJ24+Nf0TdT/2X9cwfnbCOIQ1cY1FDd0uOL26Dk36bG+GO+OrgsZH2sxA+hxAprxADk8gdbp/ncO4pssPYrHr/APsPn/fdB39//vxROMs6549PXzzZoK3ceBzzYQCWdMl3Qc3jK8KXtwGbB8MPLuJVzbp0DmuDw7rvdDIOzemNCsB47ch8EEBCnxYgAOgigbAiIgI08D334927dph6dKlpg98XL9+Hcbj3j6MXwTdr1+/d18EbXxVkF8EzT8uKJC0AmHbziHHoVFom2rnmxOX7gLUGA+kSp20F/rI2Z6/jje9MvjntSfYc+EBIu/G/OtI18wOqOKRHQHuWeGbNzOMr9R96GE8z/EbT3Dg0iPsPv/gvVf5PHI5okqR7CiTPzNKujolz4czjD+T+NNXwK0/oNekQhddP+xO9EbPSgUxsEaRZPHlRSggowAHQBUNgCkRQAYoJdR5TZkE1u4/idw7e8Lf9hwM0EBjHPz8eqToEu48e4095++bXr07cuUxdIn/+aCF8UUzj5yOMA5zb99FNf5n49B44V6M6cfx3j5S29rAr2AWVPXIjsoeOZDbycKfOP6YmvErZjZ1BSI3I8EmDVq9HoSjBg+MDfZC63J5U9SaF6eAUgW4f3MAFMomAyTEx2KVC+w8cwtZ1gXDx+YydDZpkbrJAqBoA0Wt+qU2wfSKXsTFBzh67QmuPXr5P/szvo1rfIUvqPCbVwzTpfnnLeOUXpXxU8lr2gBR26C1TYfgV8NxEXmxoE0pVCuaI6W74/UpoDgB7t8cAIVCyQAJ8bFYxQJPXuqwYVIXdNFsxmub9LDvuhOaHEUVv2Ljh0qMbxX/94c4jG8TGwc/4xcxK/ZhfCVwZRPg+gHctS+AwGchSJPGHvsHVULmdMnzdrtibdgYBf5LgPs3B0ChJwUDJMTHYhULzNxyGF8frw97TTwSGy+FbbGGKl6tgpb28hEwp4zpK21W2zfH0GcN0D2oIAbX5M8DKugusRUFCHD/5gAoFEMGSIiPxSoVeBSrxbqwbuiu2YjnmYsh4zcHvugrXlTKY/llnd0IrO8Ag8YGLeKG4YydFw4MqoQs6dNY/tq8AgUkEeD+zQFQKKoMkBAfi1UqMOPng+hwogkcNa9haLYcGoX93J9K2f+9rM09gFMrcd02L4JejkfXwIIYWtvDKpbORVLAHAHu3xwAzcnJR49hgIT4WKxCgYcvtIgIa46mNnsRk8kLjsZX/2z4pcTJfqtfPwOmFgXiX6KlbhhO2RY3/Sxgtgx8FTDZ7wUvqEgB7t8cAIWCyQAJ8bFYhQIzNu7FN6cbwkZjgKHj79C4llPhKiVZ0q8DgL/C8UfqcmgR0xudK+TH8LrK/yCOJLpsU3IB7t8cAIUizAAJ8bFYZQIPYuKwIqwPBtj+hGfZy8Cpxz9f/KyydUqznIdRwJzSpp8FLP96Bp7aZTO9CqjoTzJLg8tGZRfg/s0BUCjDDJAQH4tVJjB950XUO9AABW3uwlB/NjQ+bVS2QgmXs7Su6Wth1jh8hcFP6qJvVXf0rVpIwoWwZQokrQD3bw6AQoligIT4WKwygaGzlmLC4z5IsLFHqkGXAHtHla1QwuWcWQ9s6IRXabKj2PMpKJU/G9Z09ZNwIWyZAkkrwP2bA6BQohggIT4Wq0ggLj4RG8a0QCubHXhRqBEyfLVERauTeCkJWmCqh+l7ATvrBmC/TWmcCamONKlsJV4UW6eAuAD3bw6AQiligIT4WKwigb8u34XbilLIpImFofVGaNyqqGh1ki9lx3Dg8Cwc0Pigzetvsa6bH0rnyyz5otg+BcQEuH9zABRKEAMkxMdiFQn8unYR6kR+i2e2WeE0LAqw4StMirm9jy4Ds32hhw3Kxc1Cuxrl0LOSm2LaYyMUSAkB7t8cAIVyxwAJ8bFYRQIHJzVChVe7EenaGkU7zlHRylSylIWVgOgT6K/rhkdujbG8YxmVLIzLoMCXCXD/5gD4Zcn5p4oBEuJjsUoE4nVxeD0uPxw1r3CjwQbk9a6qkpWpaBm7QoCD07AhMQAjNb1welR1pLLlF3Sr6A5zKZ8pwP2bA+BnRubfhzNAQnwsVonAlSObUfD3dngIJ2QZcRU2tnz7V3G39speYEUw7iMzysbNws89K6CEi5Pi2mRDFEguAe7fHACFssYACfGxWCUCpxb3Rsmby7A/fW0EfrtaJatS2TJ0r4CJeYFEHSppp+CrWpXRJbCAyhbJ5VDAfAHu3xwAzU/LB45kgIT4WKwSgXPfV4Zn3HEcKDwcAS0HqmRVKlzGktrAjUMYFN8FTwq1QHi7UipcJJdEAfMEuH9zADQvKR85igES4mOxCgT0iXo8G+OKzHiBqPpbUMinogpWpdIl7BgBHJ6JlQlVMMmuG06OqAYbG41KF8tlUeB/C3D/5gAo9BxhgIT4WKwCgaioCyi0qiwSDDbAd3eQKo2DClal0iWc2wSsa49zhvyoox2HbX0C4JGLv61FpXeby/qEAPdvDoBCTxIGSIiPxSoQ2L1pCaqc7oubdvnhOuyUClak4iU8uwlML4YE2MIz7gd8V98b7crnU/GCuTQKfFyA+zcHQKHnBwMkxMdiFQj8MrM36j5Zhgs56qBI91UqWJGKl2AwAGFuwKtHaKgNhbNXIOa08lHxgrk0CnAA/F8Z0BgMxj8V+PgSAQ6AX6LGGrUIGP/o2Du6BiobjuJm6eFwrcMPgCj+3q5sClzagZD4tvglbQP8NawKNBr+HKDi7xsbTHIB7t98BVAoVAyQEB+LJRd4HKvF00kl4WYTDV3L9UhduJrkK7KC9iO+ByImYFOiP/rF98SJEdWQOV1qK1g4l0iBfwtw/+YAKPScYICE+FgsucCF2w/htqgQUmn0QP/zgKOz5CuygvYv7QJWNsZN5ERg3FRs7xuAIjn5QRAruPNc4n8JcP/mACj0pGCAhPhYLLnAsT8PotRvdRCLdEg/6g7AtxKVf0dfPQEm5Tf1WTJuAWZ2rILAQtmU3zc7pEASC3D/5gAoFCkGSIiPxZILHNmyEH4nBuJS6qJw/+6I5KuxovZn+gBPrqC9bhDqNm6HJr55rGjxXCoF3ghw/+YAKPRcYICE+FgsucBfiweg9M1w/OFUF+X6rpR8NVbU/savgb/XYHpCI6SuOgw9gtysaPFcKgU4AL7NAD8FLPBs4AAogMdS6QUipzdA0WcR2J23L6p0CJV+PVazgMOzgB3DsSXRDydKT0FIfU+rWToXSoG3Aty/+Qqg0LOBARLiY7HkArfG+8JFdxm7Ss5E1eB2kq/GitqP/BlY2xYn9G4IL7wQc1v5WtHiuVQK8BVAvgKYBM8CDoBJgMhTSCsQG5ob6Q2x2F/tFwT6B0i7Dqtr/M4JYFEl3Dc4oWfO1VjfvbzVEXDBFOD+zVcAhZ4FDJAQH4tlFoh7DnzvalrBiVbn4OPODxJIcztfPgbCCpjarZp2LXYNriFN62yUAkklwP2bA6BQlhggIT4WSyxguHcGmvkV8NiQAS97R8E1i4PEq7Gy1g0G6Mc7wyb+FWomTsW20R3520CsLAJcLj8FbMwAPwQi8EzgACiAx1KpBV7+vQXpNrbBaX0BFB5xDPZ2tlKvx9qa188uC5tHF9BGNwRzRn4LR3s7ayPgeq1cgPs3B0ChpwADJMTHYokFHu6ajmwHR2EnyqJayA6JV2Klrf/zO4GHxHdG5z6hcMue3kohuGxrFeD+zQFQKPsMkBAfiyUWiF7TH87nf8Da1MFo9t0yiVdipa3/OgD4KxyzExrAp8NUlC+Y1UohuGxrFeD+zQFQKPsMkBAfiyUWiF7QBM53d2Jpxh5o32+CxCux0tYPzQB2jsTmxPLQNA5Hg5K5rRSCy7ZWAe7fHACFss8ACfGxWGKBh5PLIlvsBSzKPR5duvSUeCVW2vqZ9cCGTjiqL4LTVVfh68CCVgrBZVurAPdvDoBC2WeAhPhYLLFAzLiCcIx/hMWeS9GxaUOJV2KlrV/dByyvj0v63FhTZj2G1y1qpRBctrUKcP/mACiUfQZIiI/FEgvoQrMhtUGHn8r/ihbVK0i8Eitt/f45YF5509f4hBbZipktva0Ugsu2VgHu3xwAhbLPAAnxsVhWgfjXwLicpu5/rfMn6pQuLOtKrLfvF/eBKYWgN2jQyvkXrO7KId56w2CdK+f+zQFQKPkMkBAfi2UViIkGpnogwWCDY20voRw/QSrfnUxMAMZkMfXdKN0ybBwYLN8a2DEFBAS4f3MAFIgPv0lcCI/F8gr88/bhI4MjYnqdR4Fs/A45GW9m4oS8sNU+Q7BhCjaHdpZxCeyZAl8swAGQA+AXh8dYyAAJ8bFYUoHXl/Yh7cr6uKLPhRzDziJ9mlSSrsS6206c6QvbJ5fRQjcci0P6wSE176N1J8K6Vs/9mwOgUOIZICE+FksqcP/oeuTY1gknDYXgHfqXpKtg24bFNaG5eQQ9db0xsP8Q5MuajigUsBoB7t8cAIXCzgAJ8bFYUoGrv89FgSNDccS2FPxG7JZ0FWwba1oD57diRHx71Os8CmXyZyYKBaxGgPs3B0ChsDNAQnwsllQgct0YFD03Gfvsq6DikI2SroJt45d+wLHFmJ7QCG7NxqFucWeiUMBqBLh/cwAUCjsDJMTHYkkFTi/thxLXF2OPU2NU7rtY0lWwbewZB+yfhBUJVRFfczI6VshPFApYjQD3bw6AQmFngIT4WCypwMm57eD9YDP25uqMSl2nSLoKto2jC4Btg/BrYhmcKT8LQ2oVIQoFrEaA+zcHQKGwM0BCfCyWVODUlPoo+WIfDrgPQkCrYZKugm3j7AZgfUf8offAWq/5mNqsJFEoYDUC3L85AAqFnQES4mOxpALnJlSEp/YU/vSZiDL1u0m6CraN//f7gEfnXYIVncoShQJWI8D9mwOgUNgZICE+FksqcHl0Sbjpr+FspcXwqthY0lWwbdz9G1gQgAcGJ7RxWoHf+wUShQJWI8D9mwOgUNgZICE+FksqEB1SEM54hJuNtsC1eEVJV8G28fQGMKM4XhtSw892JU6NrE4UCliNAPdvDoBCYWeAhPhYLKFAXHwiEsY6I70mDjGd/4BjHg8JV8GWTQKvnwIT85n+Z6G4ZTgzth7SpLIlDgWsQoD7NwdAoaAzQEJ8LJZQ4NajGLjMdjF1bhh4BZp0WSVcBVs2CegTgdFvvvzZN24efh4cjDyZHIhDAasQ4P7NAVAo6AyQEB+LJRQ4FXUdJVeVeNP58IdAqtQSroItvxOY4AJoYxCknYKp3RvDxzUTcShgFQLcvzkACgWdARLiY7GEAhFHjyFoWxXoYIfUIY8kXAFb/pfAVE8g5jbqa8egR6tmqOmVk0AUsAoB7t8qGwDnzp2LsLAw3L17F56enpg+fToCAgI+GuaVK1di0qRJuHTpEjJmzIiaNWti8uTJyJIli1lPAAbILCYepCKBLTt2ov7hJoixcYLjyBsqWpmVLmVueeDBObTWDUWNei3Qxu/NzwTyQQG1C3D/VtEAuGbNGrRp0wbGIdDf3x8LFixAeHg4IiMj4erq+l6WDx48iIoVK2LatGmoV68e7ty5g27dusHd3R2bNm0yK/sMkFlMPEhFAqvWr8NXZzvjSWpnZP7uvIpWZqVLWVwLuHkYPXS9UTCoNQZUL2ylEFy2tQlw/1bRAFi2bFn4+Phg3rx573Ls4eGB4OBgTJgw4b1sG1/pMx575cqVd/9t1qxZplcEb926ZdZzgQEyi4kHqUggfPFCdL45EA/TFUK2gX+paGVWupRVzYGo7Rgc3wUG7zaY1OSfn++0Ug4u23oEuH+rZADU6XRwcHDAunXr0LBhw3cJ7tOnD06dOoV9+/a9l+rDhw+jUqVKplf7atWqhQcPHqBZs2YwDo3z58//4LNAq9XC+M/bhzFALi4ueP78ORwdHa3nmcOVWq3A/DmT0e3hGNzP5IscffZYrYNqFr7xa+DvNRgX/xWuFeqE8HalVLM0LoQC/0uAA6BKBsDo6Gjkzp0bhw4dQvny5d/d8/Hjx2PZsmW4ePHiB3Owfv16dOjQAXFxcUhISED9+vVh/Hd2dnYfPD4kJAShoaHv/TcOgPyDxloEFs0IQZen03AvR0Xk7L7FWpat3nX+NhD4cyFmJQTjz/w9+Ovg1HunubL/EuAAqLIB0Piqnp+f37vbPG7cOKxYsQIXLlx4L/zGnw2sWrUq+vXrhxo1apg+ODJw4ECULl0aP/zwA18B5B8XFPiAwJLJA9EhdiGiXerCudNKGskusHsMcGAyliZUxy+5+2F99//8BVr2pbF/CvAVwP+dAY3BYDDIHpMveQvY+IER4yt/xreN3z6MHwwxfmrY+Ipirly5PsnCv0F8kogHqEzgx4nd0fr1KkS7tYRz6w//qITKlqzu5RyaCewcgY2JFbA4+xD88s3HvzVB3RBcnbUJcP9WySuAxuAaPwTi6+tr+hTw20fRokXRoEGDD34IpHHjxkiVKhWMnx5++zhy5IjpLWTjJ4KdnZ0/+XxggD5JxANUJrB2XDs0i9+Mu55dkKvpZJWtzgqXc3wZsLU3diV6Y4JTCHYPCLJCBC7ZGgW4f6toAHz7NTDGD3AY3wZeuHAhFi1ahHPnziFv3rwYOnSoabBbvny5KetLly5Fly5dMHPmzHdvAfft2xc2NjY4evSoWc8HBsgsJh6kIoGfRzdBA/1O3PPtj5z1RqloZVa6lHObgHXtcVRfBP0dJuDQkMpWCsFlW5sA928VDYDG8Bpf/TN+jYvx5/m8vLxM3/EXGBhoynX79u1x/fp1REREvMu58WtfjAPjtWvX4OTkhMqVK2PixImmD5SY82CAzFHiMWoS+D2kFmrgMB76hyBbtX5qWpp1ruXKHmBFQ5zXu6CV3TScGFHNOh24aqsT4P6tsgEwuRPMACW3OK+X0gIRo4IQpDmJJ1WmInNAp5Ruh9cXFbhzHFhUGXcMWVBVPxfnx9QUPSPrKSCFAPdvDoBCQWWAhPhYLJmA8fNif40qizI2FxFT7wc4+jaRbAVs9z2BR5eB2b6IMaRFce0PuDahNjQaDaEooHoB7t8cAIVCzgAJ8bFYMoG4+ERcG1MSHjY3Edd8Pew9+HahZLfw/XZjHwCT3U3/Pn/cjzg/pjbs7WylXxYXQIFPCXD/5gD4qYz8z//OAAnxsVgygacvdXgxsShcbR4iseNO2LqWkWwFbPc9Ad1LYPybbzwoGrcYh0fWg5NDakJRQPUC3L85AAqFnAES4mOxZAIJCV8eAAAgAElEQVTRz17DfpobMmtigR5/ANk9JFsB231PQK8HRmcy/etScfOwdWhD5MqYllAUUL0A928OgEIhZ4CE+FgsmcCVh7Fwme2K1JpEoN85IGMeyVbAdj8oMC4XEP8KAdppWNa/GQpkS08oCqhegPs3B0ChkDNAQnwslkzg3M0H8Fz85ufFMOQmYJ9RshWw3Q8KTCoIvHqEGtrvMfWbr+DpzPvKpKhfgPs3B0ChlDNAQnwslkzg9MVLKLG61JuuRz4BbPhhAclu4YfbnV4MeHYTDbWhGN6tHXzzvnlLmA8KqFmA+zcHQKF8M0BCfCyWTOCvEydQekslxCEN7EMeSNY92/2owFw/4EEkWumGokfHzvB3y0osCqhegPs3B0ChkDNAQnwslkzgyOH98NtRD880TnAadUOy7tnuRwUWVQHuHEMXXX80b90NVYvmIBYFVC/A/ZsDoFDIGSAhPhZLJnBg728I2NcSD2xzIPuIKMm6Z7sfFVhWD7i2H711PVGteS/UK/Hma2H4oICaBbh/cwAUyjcDJMTHYskEIratR9DRTrhtlw95hp2WrHu2+1GBVS2AqG0YEt8ZPg37olkpF2JRQPUC3L85AAqFnAES4mOxZAK7Ny9FlVN9cD1NEeQbelSy7tnuRwXWdwTObsDo+DbIV/dbtPXLRywKqF6A+zcHQKGQM0BCfCyWTGDX2rmoGjkUlx284TYoQrLu2e5HBX7uBZxcgbD4ZshYYwi+DixILAqoXoD7NwdAoZAzQEJ8LJZMYMePk1H98hhcdPRD4f7bJeue7X5UYNsQ4Og8zE2oj/igkehT9Z/veiQZBVQswP2bA6BQvBkgIT4WSyawY0koqt+YishMlVG0zybJume7HxXYPRo4MAVLEmrgvv9oDKlVhFgUUL0A928OgEIhZ4CE+FgsmcDOhUNQLXoezmarC6+eKyXrnu1+VGD/ZGDPGKxJCML5MuMRUt+TWBRQvQD3bw6AQiFngIT4WCyZwK45vVH14TKccW6KYl+HS9Y92/2owB/zgO1DsDWxHA6WCMPEJsWJRQHVC3D/5gAoFHIGSIiPxZIJ7J7RBVWersXfeduheIeZknXPdj8qcHwZsLU3diV6Y6vnNMxo4U0sCqhegPs3B0ChkDNAQnwslkwgYkprBL3YijNu3VGs9feSdc92PypwZj2woRMOJxbFUvdZWNj2n9/3TDIKqFiA+zcHQKF4M0BCfCyWTODApMYIeLULZ4sOgFezkZJ1z3Y/KnBxG7C6BU7pC2JK3nlY0akssSigegHu3xwAhULOAAnxsVgygSMTasNPewiRJUegaPC3knXPdj8qcHUfsLw+ovS5Mcw5HOu6lScWBVQvwP2bA6BQyBkgIT4WSybw17jKKB1/HBfKfo8itbpL1j3b/ajA7WNAeBXcNmRFt6xL8cs3AcSigOoFuH9zABQKOQMkxMdiyQROjymPEonncClwFtwrt5Wse7b7UYH7kcA8Pzw2ZEAzxx+xe0AQsSigegHu3xwAhULOAAnxsVgygfOhvvAwXMa16ouRv3xjybpnux8VeHodmFECrw2pUTXtGhwaUplYFFC9APdvDoBCIWeAhPhYLJnA1RBPFMBt3Kq/Fi4+NSTrnu1+VCD2ITDZzfSfS9msxbGRvLdMi/oFuH9zABRKOQMkxMdiyQSiRxWEs+YR7jf7DTmK+kvWPdv9qIDuFTA+15sBUL8Mx0YHE4sCqhfg/s0BUCjkDJAQH4slEjAYDHgS4oIsmhd40m4/MucvIVH3bPV/ChgMMIRmggYGlNbOw5/jW0Kj0RCNAqoW4P7NAVAo4AyQEB+LJRKIi0+EYWxOpNXo8LL7CaTLUVCi7tnqpwQM45yhiX+JQO007BjdDvZ2tp8q4X+ngNQC3L85AAoFmAES4mOxRAJPY+OQaXIOU8cJ/aOQyvHN/+ZDHQKGSQWgefUY1bUTsXZERzg5pFbHwrgKCnxEgPs3B0ChJwcDJMTHYokE7j16hJyz/3nVb+gdIE16ibpnq58UmOYFPL+F+toxWDjka+TMaP/JEh5AAZkFuH9zABTKLwMkxMdiiQSu37yBfIuLv+l45FPAxkai7tnqJwVmlQIeX0Iz7QhMHNAd+bOm+2QJD6CAzALcvzkACuWXARLiY7FEAlEXz6LQan/EITXsQx5K1DlbNUtgfgXg3hm00w3G4F69UNTZ0awyHkQBWQW4f3MAFMouAyTEx2KJBM6dPgrPTdXxDBngFHJbos7ZqlkC4dWA23+iq64fvu7aB755M5lVxoMoIKsA928OgELZZYCE+FgskcCpP/ag5PaGeKDJiuyjrkjUOVs1S2BZfeDaPvTW9UTzjv3h75bVrDIeRAFZBbh/cwAUyi4DJMTHYokEjkVsRamI1rhl6wKXEWcl6pytmiWwqjkQtR2D4rugRuuBqOLBT3mb5caDpBXg/s0BUCi8DJAQH4slEjj6+08oe6Qrrtq5ocCw4xJ1zlbNEljbDojcjFHx7VC6+RDULe5sVhkPooCsAty/OQAKZZcBEuJjsUQCh7Yuhv/xfohK44VCQw9J1DlbNUtgU3fg9CpMiG8Jt4bD0LSUi1llPIgCsgpw/+YAKJRdBkiIj8USCRzYMBsBZ4bhvIMvPAbtkahztmqWwC/9gGOLMS2+MbLWHYk2fvnMKuNBFJBVgPs3B0Ch7DJAQnwslkhg/+pJCLw4DmcyVECxAb9K1DlbNUtg+3fAH3MwP6EebKqH4utA/qo/s9x4kLQC3L85AAqFlwES4mOxRAIRy0IRdG0qTjtVQYm+GyXqnK2aJbB7NHBgCpYk1EBM0Dj0qepuVhkPooCsAty/OQAKZZcBEuJjsUQCEeFDEHR7Hk5lrYuSvVZK1DlbNUtgfxiwZyxWJ1TCzQrfY3DNImaV8SAKyCrA/ZsDoFB2GSAhPhZLJLBvfl9UvLcEJ3M0hXf3cIk6Z6tmCRyeDewYhk2J/jhdOgwh9T3NKuNBFJBVgPs3B0Ch7DJAQnwslkhg/6yuCHz8E07kaQufzrMk6pytmiXwVzjw6wBsTyyNiJJT8X3jf37vs1nFPIgC8glw/+YAKJRaBkiIj8USCRyY3g4BzzbjRP6v4dMuTKLO2apZAqdWAZu7IyKxBDZ5zsCMFt5mlfEgCsgqwP2bA6BQdhkgIT4WSyRwaHIz+Mf+jpOF+sL7q1CJOmerZgmc3Qis74A/9B5Y7DYbC9uWMquMB1FAVgHu3xwAhbLLAAnxsVgigT8m1ke51/tw2msoSjQZIlHnbNUsgYvbgNUtcEpfAFPzLcDyjmXMKuNBFJBVgPs3B0Ch7DJAQnwslkjg2ITqKKU9ijM+Y1Csfm+JOmerZglc2QusCMYFvQtGOi/C2m5+ZpXxIArIKsD9mwOgUHYZICE+FkskcHJcRXjHn0Kk32QUrdFFos7ZqlkCN48Ci6vjuj4Hvsm2GFu/qWBWGQ+igKwC3L85AApllwES4mOxRAJnR5eFl/4CLgbNQ+GgryTqnK2aJXD3NLAgEPcMmdA64zLs6l/RrDIeRAFZBbh/cwAUyi4DJMTHYokELoZ6o7DhKq7WWIYCfsESdc5WzRJ4GAXMKY3nBgfUTrsSh4ZUNquMB1FAVgHu3xwAhbLLAAnxsVgigWshHsiPaNxqsB4u3tUk6pytmiXw7BYw3Qtagx3Kp1qN4yN4j81y40HSCnD/5gAoFF4GSIiPxRIJRI8qCGfNI9xvvg05PMpL1DlbNUvg5SMgrKDpUC/9apwdXdusMh5EAVkFuH9zABTKLgMkxMdiSQQMBgOehLggi+YFHreLQJb8/JJgSW6d+W1qY4EJuU3He2oX4+z4RtBoNObX80gKSCbA/ZsDoFBkGSAhPhZLIhAXn4jEsbmQTqNFbLdjSJ/TXZLO2abZAvpEYHRm0+HecfPxx9hmSJPK1uxyHkgB2QS4f3MAFMosAyTEx2JJBJ691MJxUg7YaAyI73sedk7OknTONj9HwDAmGzSJOvjFzcL2kS2R0cHuc8p5LAWkEuD+zQFQKLAMkBAfiyURuPv4GXLNyvum2yE3AfuMknTONj9LYIIroH2OStopWD2kNXJmtP+sch5MAZkEuH+rbACcO3cuwsLCcPfuXXh6emL69OkICAj4aCa1Wi1Gjx6NH3/8Effu3UOePHkwbNgwdOzY0awcM0BmMfEgyQVu3L6DvOFF36xi+EMgVWrJV8T2PygwuRAQex+1teMxd0B75MuajlAUUK0A928VDYBr1qxBmzZtYBwC/f39sWDBAoSHhyMyMhKurq4fDHGDBg1w//59jB07Fm5ubnjw4AESEhJQvrx5n3JkgFT7ZwMX9v8Eoi5FodDK0kiADVKNegLwwwHqzMeMEsDT62ikDcG43p3gkctRnevkqigAgPu3igbAsmXLwsfHB/PmzXsXbg8PDwQHB2PChAnvBX779u1o0aIFrl69isyZ3/zw8+c+GKDPFePxMgqcPXMSXhuC8Ar2cAi5L+MS2LM5AnPKAQ/P4yvdd/i229fwcc1kThWPoYCUAty/VTIA6nQ6ODg4YN26dWjYsOG7MPbp0wenTp3Cvn373gtojx49EBUVhVKlSmHFihVIly4d6tevjzFjxiBt2rRmBZoBMouJB0kucPKvQ/D+tTaeapyQadQNyVfD9j8qsDAIiD6JDrqB6NKxG8q7ZSUWBVQrwP1bJQNgdHQ0cufOjUOHDv3r7dvx48dj2bJluHjx4nshrlmzJiIiIlC1alWMHDkSjx49gnEorFy5MhYvXvzB0Bt/ZtD4z9uHMUAuLi54/vw5HB35dolq/6Sw8oX9eWAHyuxuivs22ZFj5CUr11Dx8hfXBG4eQXddHzRp0xNVPHKoeLFcmrULcABU2QB4+PBh+Pn5vcv1uHHjTK/uXbhw4b2sV69eHQcOHDB9+CNjxjefaty4cSOaNGmCly9ffvBVwJCQEISGhr53Lg6A1v5HibrXf3jXZpQ/2A63U7kiz/Az6l6sNa9ueTBwdS/66nqgaotvULc4v+7HmuOg9rVzAFTJAPglbwG3a9fO9Irh5cuX3+X8/PnzKFq0qOmtYXf397/slq8Aqv2PBK7vQwIHfl2JgL964Hpqd+T77hiR1CqwuiVw8TcMie+MUo36oYlvHrWulOuiAD8EApUMgMYsGz8E4uvra/oU8NuHcZgzftL3Qx8CWbhwIfr27Wv65G/69OlNJT///DMaNWqE2NhYs34OkH+D4J8i1iCwb1M4Kp4egMv2xeA25KA1LNk617iuPXBuE0bFt4NbvQFoU+6f7360Tg2uWuUC3L9VNAC+/RqY+fPnm94GNg54ixYtwrlz55A3b14MHToUd+7cwfLly02xNg55xk8JlytXzvS2rvFnADt37oyKFSua6sx5MEDmKPEY2QX2rpmBSudH4mK6Uig8cLfsy2H/HxPY1B04vQoT4lsia41B6BJYgFYUUK0A928VDYDGlBpf/Zs0aZLpi6C9vLwwbdo0BAYGmgLcvn17XL9+3fTBj7cP488GfvPNN6a3grNkyYJmzZqZvhOQnwJW7XOeC/sCgd0/TkSVy+MR6VgBRfv/+gVnYIkUAlv7AseXYGp8E6SqPAS9q/B3Pktx39jkFwlwAFTZAPhFKRAoYoAE8FgqjcCuJSGoemMazmauBq/e66Xpm41+psD2ocAfczE3oT5eVBiGwTWLfOYJeDgF5BHg/s0BUCitDJAQH4slEdi1cDCqRs/HmWz1UKznj5J0zTY/W2BXCHBwGhYn1MStsiMxqp7nZ5+CBRSQRYD7NwdAoawyQEJ8LJZEYNfcPqj6YCnO5GqCYl1/kKRrtvnZAhETgYjxWJlQBWd9QjChUfHPPgULKCCLAPdvDoBCWWWAhPhYLInA7pldUeXJTzjj2hrFOs6RpGu2+dkCh2YAO0diQ2IADniOwfQW3p99ChZQQBYB7t8cAIWyygAJ8bFYEoE9U9uhcsxmnC3YBV5tJkvSNdv8bIGjC4Btg/BLYjlsLTQOC9qU+uxTsIACsghw/+YAKJRVBkiIj8WSCOwNa4FKL7fhXJHe8GwxRpKu2eZnCxxfBmztjZ2JPliRfyKWdyzz2adgAQVkEeD+zQFQKKsMkBAfiyUR2P99MALj9uJ8scHwaPydJF2zzc8WOL0G2PQ19icWw+zcYVjb7T+/VvOzz8UCCihcgPs3B0ChiDJAQnwslkTg8PhaKK87jIu+IShcr58kXbPNzxaI/BlY2xZ/6gtjbPap2NKrwmefggUUkEWA+zcHQKGsMkBCfCyWRODo2Moom3Acl8tPglv1rpJ0zTY/WyDqd2BVM/ytz48BTjOws3/Fzz4FCyggiwD3bw6AQlllgIT4WCyJwInR/vDRn8X1oFnIF9RWkq7Z5mcLXN0HLK+Pi/o86JRuFg4OrvzZp2ABBWQR4P7NAVAoqwyQEB+LJRE4E1IKxXAJd2r8gNx+TSTpmm1+tsCtP4EfquGGPjsap56LY8OrffYpWEABWQS4f3MAFMoqAyTEx2JJBC6MKo4imht40GA1snvXlqRrtvnZAndPAwsCcc+QCVUM83FudM3PPgULKCCLAPdvDoBCWWWAhPhYLIGAwWDAtVEeKGBzF0+b/4xMHkESdM0Wv0jgYRQwpzSeGdLBNz4cl8fVgkaj+aJTsYgCShfg/s0BUCijDJAQH4slENAmJOLRGHfk1jxGbLudSJ+f3w0nwW37shaf3gBmFMdrQ2p4aJciamwtpE5l82XnYhUFFC7A/ZsDoFBEGSAhPhZLIPD8VTwSJuZHFs0LxHc9DLtcnhJ0zRa/SCD2ATDZ3VSaL24lTo+qgYxp7b7oVCyigNIFuH9zABTKKAMkxMdiCQTuPY9DhqmuSKfRAr1PAZnzS9A1W/wigbjnwPeuptLCcUux/7tayOFo/0WnYhEFlC7A/ZsDoFBGGSAhPhZLIHDtYSxcZ+eBrcYADLgIZMgpQdds8YsEEnTA2Gym0uJxi7Dl2zrIlzXdF52KRRRQugD3bw6AQhllgIT4WCyBQOTtxygaXuBNp4OvA2kzSdA1W/wiAYMBCDXeXwNKx83B8j714ZHL8YtOxSIKKF2A+zcHQKGMMkBCfCyWQODU5Zso+WOxN50Ouw/Y8S1BCW7bl7c4LhcQ/woVtNMxs3swfFw58H85JiuVLMD9mwOgUD4ZICE+Fksg8NeZCyi9oSz00MBm1FOAXwsiwV0TaHFifuD1E1TVTsLozo1RvmBWgZOxlALKFeD+zQFQKJ0MkBAfiyUQOHzsOMr/UhlapEGakAcSdMwWhQSmeAAvolFHOw7ftmuGSkWyC52OxRRQqgD3bw6AQtlkgIT4WCyBwL5DB1FxZx280GRAhlG3JeiYLQoJzPQGnlxFY+0odP6qJWoVyyV0OhZTQKkC3L85AAplkwES4mOxBAJ79uxA5f1N8cQ2KzKPuCJBx2xRSGCuH/AgEl/pvkPTpq3Q0DuP0OlYTAGlCnD/5gAolE0GSIiPxRII/L79Z9T4oy3up8qNHMMjJeiYLQoJLKwERJ9AR923qNqgHb4q++Z7AfmggNoEuH9zABTKNAMkxMdiCQR+2/ITap/oiujU+eH83SkJOmaLQgKLawE3D6OHrjdK1e6IjhX4xd9CnixWrAD3bw6AQuFkgIT4WCyBwC/rF6Pu2X64mbYIXAcflaBjtigksKIhcGUP+um6w716Z/QIchM6HYspoFQB7t8cAIWyyQAJ8bFYAoGtq+agXtR3uJ6+JPJ9u0+CjtmikMDqr4CLv2JofCdkC+qG/tUKCZ2OxRRQqgD3bw6AQtlkgIT4WCyBwJblU1D/6mhcyVgOBfv9LkHHbFFIYF0H4NxGhMS3RRr/Hhha20PodCymgFIFuH9zABTKJgMkxMdiCQR+Dh+HBrcn4XLminDrvUWCjtmikMDmHsCplfg+vgVelfkGoxt4CZ2OxRRQqgD3bw6AQtlkgIT4WCyBwM/zh6PBvVmIyl4DhXqslaBjtigk8Et/4NgPmJ7QCNEl+2JSkxJCp2MxBZQqwP2bA6BQNhkgIT4WSyCwZfa3qP9oEaKcg1Ho62USdMwWhQS2fwf8MQfzEurhvOcAzGzpLXQ6FlNAqQLcvzkACmWTARLiY7EEAlun90K9ZysQ5dochToulKBjtigksHs0cGAKliTUwJFCg7CwbSmh07GYAkoV4P7NAVAomwyQEB+LJRD4dUpn1HmxDlEF26NQmxkSdMwWhQT2hQF7x2JVQiVsyz8UKzqVFTodiymgVAHu3xwAhbLJAAnxsVgCge2TWqPmq6245NED7s0nSNAxWxQSODQT2DkCGxIrYE3u4VjbzU/odCymgFIFuH9zABTKJgMkxMdiCQR2TWiMqtpduFziW7g1HCFBx2xRSODPRcBv3+LXxDJYkGMUtvSqIHQ6FlNAqQLcvzkACmWTARLiY7EEAhFj6yAo4SCulh6FAnX6S9AxWxQSOLEC2NILuxO9MTFzKHb0qyh0OhZTQKkC3L85AAplkwES4mOxBAKHR1dGef1x3KgwCXmrdpWgY7YoJPD3OmBjZxxM9MR3GcZh/6BKQqdjMQWUKsD9mwOgUDYZICE+Fksg8FeoP0obzuJ2lTnIE9Bago7ZopDA+a3AmtY4pi+E7mkm4K9hVYVOx2IKKFWA+zcHQKFsMkBCfCyWQODvUb4orrmMe7WXIGeZRhJ0zBaFBC7tAlY2xll9PrS0mYQzITWETsdiCihVgPs3B0ChbDJAQnwslkDg4igvFNbcwuPG65GlWDUJOmaLQgLXDgDL6uKSPjfqJE5B1LhaQqdjMQWUKsD9mwOgUDYZICE+FitcICFRj+jQQnC1eYiYVtvg6F5e4R2zPWGB28eA8Cq4pc+GAN0MXBlfG7Y2GuHT8gQUUJoA928OgEKZZICE+FiscIFYbQJejy+AbJrniOt8EPZ5iim8Y7YnLHDvLDDfHw8NGVFaOw/nQmsgXZpUwqflCSigNAHu3xwAhTLJAAnxsVjhAo9itbAPc0V6TRz0vU7CJmsBhXfM9oQFHl0GZvsixuCA4tpwHB9eFVnSpxE+LU9AAaUJcP/mACiUSQZIiI/FChe4/eQlcs3IDVuNARgQBWTIofCO2Z6wwPPbwDRP6AypUEi7HIeGVEZup7TCp+UJKKA0Ae7fHACFMskACfGxWOECV6IfoeDCgm+6HHILsHdUeMdsT1jg5WMg7M0rvQXifsTOAZVQMFt64dPyBBRQmgD3bw6AQplkgIT4WKxwgfNXrsNjRYk3XY54DNjyZ8EUfsvE29O9BMY7m85TJG4JNvSuAk/njOLn5RkooDAB7t8cAIUiyQAJ8bFY4QKnz51FiXX+0CEVUoc8Vni3bC9JBPSJwOjMplOVjFuAH7pXh2/eN/8/HxRQkwD3bw6AQnlmgIT4WKxwgePHjsL3l+p4oUmPDKPuKLxbtpdkAqOzAvp4lIubhSmda8PfLWuSnZonooBSBLh/cwAUyiIDJMTHYoULHD20B2V3NsQjmyzIOvKqwrtle0kmMMEF0MagonYqRratiyoe/PBPktnyRIoR4P7NAVAojAyQEB+LFS5weM8WlN/fBtG2ueE8IlLh3bK9JBMIcwNePkQN7ffo3TIYdYrnSrJT80QUUIoA928OgEJZZICE+FiscIH9v/2EwD+74oZdQeQddkLh3bK9JBOYVgx4fhMNtKPRpkljNPHNk2Sn5okooBQB7t8cAIWyyAAJ8bFY4QIRm39A0Kn+uGzvBbchhxTeLdtLMoHZpYFHUWimHYH6DZqidbm8SXZqnogCShHg/s0BUCiLDJAQH4sVLhCxdhaCIofjgkMpFBm0W+Hdsr0kE5hfAbh3Bm11gxFYqwU6B/A3wCSZLU+kGAHu3xwAhcLIAAnxsVjhAnt//B6VLk/AOccAePb/ReHdsr0kEwivBtz+E1/r+qFEtdboWcktyU7NE1FAKQLcvzkACmWRARLiY7HCBfYsGYXKN6bj70zVUbzPOoV3y/aSTGBZPeDafnyj64V8QW0xoHrhJDs1T0QBpQhw/+YAKJRFBkiIj8UKF9i7cCAqRS/EyWwN4N1zucK7ZXtJJrCyKXBpBwbGf42Mfh0wvG7RJDs1T0QBpQhw/+YAKJRFBkiIj8UKF9g3tycqPvgRJ3K1gE/XBQrvlu0lmcCaNsD5LRge3wEo3Qljg4sl2al5IgooRYD7NwdAoSwyQEJ8LFa4wP6ZHRH4ZAOOu3aEb8dpCu+W7SWZwMavgb/XYEx8Kzwv2RWTm/7z+6CT7AI8EQVSXoD7t8oGwLlz5yIsLAx3796Fp6cnpk+fjoCAgE8m7dChQ6hYsSK8vLxw6tSpTx7/9gAGyGwqHiihwKGpLeEf8xtOFOwJnzbjJVwBW/4igS3fACeWIyy+GW54dsfsr3y+6DQsooCSBbh/q2gAXLNmDdq0aQPjEOjv748FCxYgPDwckZGRcHV1/WgOnz9/Dh8fH7i5ueH+/fscAJX8jGVvySrwR1gwyr3cixMeg+DTfFiyXpsXS0GB3wYBfy7ArIRgnHbvhfB2pVOwGV6aApYR4ACoogGwbNmypkFu3rx579Li4eGB4OBgTJgw4aMJatGiBdzd3WFra4vNmzdzALTMc41nlVDg2Pc1USruCE6WCIF3w34SroAtf5HAzlHAoekIT6iFiHz98GPnsl90GhZRQMkCHABVMgDqdDo4ODhg3bp1aNiw4bvM9enTxzTQ7du374M5XLJkiekVwyNHjmDs2LEcAJX8bGVvyS5wenwQSuhO4nSZMJSo/XWyX58XTCGBfWHA3rFYlVAJG3MPwvru5VOoEV6WApYT4ACokgEwOjoauXPnhvFn+cqX/88fVuPHj8eyZctw8eLF91J06dIlVKhQAQcOHEChQoUQEhLyyQFQq9XC+M/bhzFALi4uML6N7OjoaLmk8swUSAGByLHlUDThPM5WmAOvqq1ToANeMkUE/pgHbB+CLYvKL8EAACAASURBVIl+WJh9GH755tM/R50iffKiFBAQ4ACosgHw8OHD8PPzexeJcePGYcWKFbhw4cK/YpKYmIhy5cqhU6dO6Natm+m/mTMAGo8JDQ19L3IcAAWehSxVrMCl0SXhrr+G81WWwiPgP6+sK7ZhNpY0AidWAFt6YVeiNyY4hWD3gKCkOS/PQgEFCXAAVMkA+LlvAT979gyZMmUy/dzf24der4fBYDD9ux07dqBy5crvRZWvACro2ctWLC5wM9QDroZoXKqzDu6lq1v8eryAQgTObgTWd8Afeg8McBiPQ0Pe/7NQIZ2yDQp8sQAHQJUMgMYEGD8E4uvra/qZvrePokWLokGDBu99CMQ47Bk/Hfz/H8a6PXv2YP369cifPz/SpUv3yWAxQJ8k4gESC9wPyY8ceIJrjX9F/mIVJF4JW/8sgUs7gZVNcEafDx1ST8ax4dU+q5wHU0AGAe7fKhoA334NzPz5801vAy9cuBCLFi3CuXPnkDdvXgwdOhR37tzB8uUf/pVW5rwF/N+hZoBkeJqzxy8VeD7KGRk1L3Gn1T7kdi/5padhnWwCNw4DS2rhij4XGmhm4GxoDdlWwH4p8EkB7t8qGgCNd9v4Kt6kSZNMXwRt/FLnadOmITAw0BSE9u3b4/r164iIiPhgMDgAfvL5wgOsSMD44xC6kGxIo4nHw87HkS2PmxWt3sqXevdvYEEA7huc4B8/D5fH17ZyEC5fjQIcAFU2ACZ3SBmg5Bbn9ZJLQKeLR+rxWU2Xi+l1EY5ZcybXpXmdlBZ4chWY6Y1Ygz28tItxaVwt2NnapHRXvD4FklSA+zcHQKFAMUBCfCxWsEBMzFM4Ts1n6jBu0G3YO2RQcLdsLUkFYh8Ak92hN2hQULsCf4fURAZ7uyS9BE9GgZQW4P7NAVAogwyQEB+LFSzw8N5NZJtfzNShYeRTaGz4CpCCb1fStqZ7BYzPZTpn0bjF2DesLrJlSJO01+DZKJDCAty/OQAKRZABEuJjsYIFoq9dgPOysnhlSAOH0AcK7pStJbmAwQCMzgwY9CgdNwcbBzWCS2aHJL8MT0iBlBTg/s0BUCh/DJAQH4sVLHD9/DHkW1MFT5EBmUJuK7hTtmYRgQkugDYGQdopWNS3Odxz8EcALOLMk6aYAPdvDoBC4WOAhPhYrGCBSyf3wf3n+riLrMgVckXBnbI1iwhM8QBeRKOOdhy+79kGxfJktMhleFIKpJQA928OgELZY4CE+FisYIHzR36Dx+8tcUOTB3lHnVNwp2zNIgKzSwOPotBMOwIDu3ZE6XyZLXIZnpQCKSXA/ZsDoFD2GCAhPhYrWODM3nUotq8zomzdUGjEcQV3ytYsIrAwCIg+iQ66gejYoSsC3LNZ5DI8KQVSSoD7NwdAoewxQEJ8LFawwOnfl6LEkT44Z+cJz2GHFdwpW7OIwNK6wPUD+EbXC/Vb90a1ojkschmelAIpJcD9mwOgUPYYICE+FitY4MSWufA5MRSn0/iixNA9Cu6UrVlEYHVL4OJvGBzfBf7N+qN+CWeLXIYnpUBKCXD/5gAolD0GSIiPxQoWOL5+MnzPjsHxtP7wHfybgjtlaxYR2NAZOLMOY+Jbo3DDIWhWysUil+FJKZBSAty/OQAKZY8BEuJjsYIFjq0ORamLU3E0Q1WUHbBBwZ2yNYsIbO0LHF+CqfFNkK3uCLTxe/NbYfiggFoEuH9zABTKMgMkxMdiBQv8tWwISl+bhyNO9eDX90cFd8rWLCKwYzhweBbmJ9SFbfUx6BJYwCKX4UkpkFIC3L85AApljwES4mOxggX+Cu+D0reX4mDWZqjQa5GCO2VrFhGI+B6ImIAfE6rgSaWJ6F3F3SKX4UkpkFIC3L85AApljwES4mOxggWOze+CUvfW4kDOtgjoNkvBnbI1iwgcng3sGIZNif645D8Vg2oWschleFIKpJQA928OgELZY4CE+FisYIETs1rD5/FW7HfphsBOExXcKVuziMCxJcAvfbEz0RdHyszGyHpFLXIZnpQCKSXA/ZsDoFD2GCAhPhYrWODU9MYo+WwX9uXvj4rtRim4U7ZmEYG/1wEbO+Ngoid+81mA8Q2LWeQyPCkFUkqA+zcHQKHsMUBCfCxWsMCZyXVQLPYg9hcehsCWgxTcKVuziMCF34CfWuKE3g0/ev2Aqc1KWuQyPCkFUkqA+zcHQKHsMUBCfCxWsEDkxMoo+vo4DhQbh4DGvRTcKVuziMDVCGB5A1zQu2Bm4WWY28rXIpfhSSmQUgLcvzkACmWPARLiY7GCBS5N8IO7NhKHfKbBv35HBXfK1iwicPsYEF4Ft/TZMKrAaixuX9oil+FJKZBSAty/OQAKZY8BEuJjsYIFro/1Qb6EKzjitwB+NVoouFO2ZhGB+5HAPD88Mjiid551WNWlnEUuw5NSIKUEuH9zABTKHgMkxMdiBQtEj/GAc2I0jlZaibIV6yq4U7ZmEYGnN4AZxfHakBqtcmzGxh7+FrkMT0qBlBLg/s0BUCh7DJAQH4sVLPAkNC8yG57heK2t8C0bqOBO2ZpFBF4+BsLe/PaPOk4/49e+QRa5DE9KgZQS4P7NAVAoewyQEB+LFSzwOiQH0iIOpxtGoEQJbwV3ytYsIhD/GhiX880AmG41fh1Y2yKX4UkpkFIC3L85AApljwES4mOxUgX0emB0JlN351odh6e7m1I7ZV+WEjAYYBidGRqDHvVSh2Prd00tdSWelwIpIsD9mwOgUPAYICE+FitVQPsCmJDH1N2lzpfgnie7UjtlXxYUSByfB7a6F2hgMws/j2xrwSvx1BRIfgHu3xwAhVLHAAnxsVipAjF3galFkGjQILr3HbhkSafUTtmXBQUSwgoh1cv7aKSfiI2ju1nwSjw1BZJfgPs3B0Ch1DFAQnwsVqiA4dElaGaXQowhLeK+vY7sGewV2inbsqRAwnRvpHp2FU11I7F2XH9oNBpLXo7npkCyCnD/5gAoFDgGSIiPxQoV0N48jjSLK+OuITPSDY2Co72dQjtlW5YUSJxbAbYPzqCdbjAWjh6MNKlsLXk5npsCySrA/ZsDoFDgGCAhPhYrVCD2QgTS/9QAV/S54DIyEqlT2Si0U7ZlSQH9DzVgc+sPdNP1xcQRw5ExLf8iYElvnjt5Bbh/cwAUShwDJMTHYoUKPD21BZk2t8Hf+gIoFnqCb/0p9D5Zui3Dj42hubwLA3TdMHhIKLI78kcBLG3O8yefAPdvDoBCaWOAhPhYrFCBh4dXItuOHjhq8ETZ0MMK7ZJtWVxgTRvg/BYMj++ALv3HIS8/DGRxcl4g+QS4f3MAFEobAyTEx2KFCtzdMx+59g/GPpRCxZDdCu2SbVlcYFN34PQqTIhviUbfhKFwzgwWvyQvQIHkEuD+zQFQKGsMkBAfixUqcGfbZOQ+OgY7bAJRfeRWhXbJtiwu8Ou3wF+LMCOhIYK6TkcJFyeLX5IXoEByCXD/5gAolDUGSIiPxQoVuLVpFFxOT8dWuxqoN2ytQrtkWxYX2DkSODQDixJqo3jH2ShbIIvFL8kLUCC5BLh/cwAUyhoDJMTHYoUK3PypP1wv/ICN9g3RaMhShXbJtiwusG8SsHccViVUhnObBQgqzN8IY3FzXiDZBLh/cwAUChsDJMTHYoUK3FzeFa5Xf8KadK3QfOBchXbJtiwucHg2sGMYNieWh33zJajpldPil+QFKJBcAty/OQAKZY0BEuJjsUIFboW3gsvtX7AyYxe06jdZoV2yLYsLHFsC/NIXOxJ98brxCjQomdvil+QFKJBcAty/OQAKZY0BEuJjsUIFbs8LRp77e7E8S1+0/SZUoV2yLYsL/L0O2NgZBxM9caf+T2he2tXil+QFKJBcAty/OQAKZY0BEuJjsUIFomdWg/OTP7EkxzB06D5IoV2yLYsLXPgV+OkrnNS74e+aG9CufD6LX5IXoEByCXD/5gAolDUGSIiPxQoVuD/FHzlenMVil/Ho2KmnQrtkWxYXuBoBLG+AKH1u7KmyFd0qFrT4JXkBCiSXAPdvDoBCWWOAhPhYrFCBxxNLIsvrawgvOBOd27RTaJdsy+ICd44DiyrjjiEL1gVsR9+qhSx+SV6AAsklwP2bA6BQ1hggIT4WK1Tg+fhCyKi7j3CPH9C5eROFdsm2LC7wMAqYUxrPDQ6YV24vhtQqYvFL8gIUSC4B7t8cAIWyxgAJ8bFYoQKvx+RB2sQX+KHkGnQKrqnQLtmWxQVi7gJTiyDRoMEYn4MIaeBl8UvyAhRILgHu3xwAhbLGAAnxsViJAno99KOzwAZ6LCm7DR1qlVdil+wpOQS0scCEN1/9MsJzJ8Y0LZMcV+U1KJAsAty/OQAKBY0BEuJjsRIF4mKA711MnS0JOoIOQUWV2CV7Sg4BgwGG0EzQwIARbhswpnXV5Lgqr0GBZBHg/s0BUChoDJAQH4uVKPDsFjDdC1pDKqyteRxt/PjVH0q8TcnVk25sbqROiMVIl+UY3alBcl2W16GAxQW4f3MAFAoZAyTEx2IlCtw7A8yvgIeGjIiodwhNS715NZAP6xR49X0hOMTdx6iccxDarbV1InDVqhTg/s0BUCjYDJAQH4uVKHD9ILC0Dq7oc+Fai32oWjSHErtkT8kkEDvVB+ljrmCY43iM68/vhEwmdl4mGQS4f3MAFIoZAyTEx2IlCpz/BVjTyvTbH2y/3o3ieZyU2CV7SiaBl3MqIt3DUxiYagjChg9NpqvyMhSwvAD3bw6AQiljgIT4WKxAAf2JH2GzpSciEkvAY+AO5HC0V2CXbCm5BLSL6yHNzf3on9ADYaPHw9ZGk1yX5nUoYFEB7t8cAIUCxgAJ8bFYgQIvImYgQ8RIbEn0Q+2Q35DK1kaBXbKl5BLQ/9QaNhe2Ynh8B/QZMhHZMqRJrkvzOhSwqAD3bw6AQgFjgIT4WKxAgQdbRiL7iRlYb1MDTUauVWCHbClZBTZ1B06vwvfxLVC3xyR45c6YrJfnxShgKQHu3xwAhbLFAAnxsViBArdWfQOXqOVYY98UzYeEK7BDtpSsAr8NAv5cgFkJwfBqHYZKRbIn6+V5MQpYSoD7NwdAoWwxQEJ8LFagwLVFrZH/zlasdeqMZn2nKLBDtpSsArtHAwemYElCDTg0mIzmpV2T9fK8GAUsJcD9mwOgULYYICE+FitQ4OrMuijw5AA25B6Ixl2GK7BDtpSsAgenAbtCsD4xENFBU9G7inuyXp4Xo4ClBLh/cwAUyhYDJMTHYgUKXAsLRP6Xp7G10HjU+4rf+6bAW5S8Lf25CPjtW2xLLI1DvtMwNrhY8l6fV6OAhQS4f3MAFIoWAyTEx2IFCtweVxJ54q9hV6mFqFq3uQI7ZEvJKnB6DbDpaxxI9MJy9xlY1LZUsl6eF6OApQS4f6tsAJw7dy7CwsJw9+5deHp6Yvr06QgICPhgfjZu3Ih58+bh1KlT0Gq1puNDQkJQo0YNs/PGAJlNxQMlEXg0uiCy6h/hjyrrUS6gmiRds02LCVz4FfjpK9MXg4fkmImfe/pb7FI8MQWSU4D7t4oGwDVr1qBNmzYwDoH+/v5YsGABwsPDERkZCVfX939wuW/fvnB2dkalSpXg5OSEJUuWYPLkyTh69Ci8vb3NyiEDZBYTD5JI4FVIDjggDueb7oeHZwmJOmerFhG4th9YVg+X9LnRNu0sHBlaxSKX4UkpkNwC3L9VNACWLVsWPj4+plf13j48PDwQHByMCRMmmJUt46uAzZs3x8iRI806ngEyi4kHSSKgj9fBZlw2U7f3ukUiZ87cknTONi0mEH0SWBiEaENmBMbPQdTYWrDhbwOxGDdPnHwC3L9VMgDqdDo4ODhg3bp1aNiw4bsE9enTx/QW7759+z6ZKr1ej3z58mHQoEHo1avXB483vlVs/OftwxggFxcXPH/+HI6Ojp+8Bg+ggJIF/q+98wCPqljf+JteCKFdIJSAIgSBcClBpYuIoNcCUhVFQEGwXUQRAQugUgQVEKXKleIFERQVC/pHhUu9CAhXei+GFlogJNnNlv/znbDLEhJY9pzNzh7eeZ48m2zOzHzzm+/MvGfaOXUiFaUm1dRMzHktDRERkSqbS9sKg8CpvcDE+jjvjEFtywxseL0VSsXxbSCFgZ55+JcABaBJBOCRI0dQoUIFrFq1Co0bN3Z7zciRIzFr1izs3Lnzmp4kawdHjx6N7du3o0yZ/A87lTWCw4cPvyItCsBr4uUFQUBgz5Z1qLrwHpxFHIoPSw0Ci2mi3wlkpwOjc5fQ3Jr9Kb76ZyvULM+HXb9zZwZ+J0ABaDIBuHr1ajRq1MjtOCNGjMCcOXOwY8eOqzrTvHnz0KtXL3zzzTdo1apVgddyBNDv9yQzCCCBTcu/Rt3fuuNgaCVUfvPPAFrCrJUh4HQCI8sDOZm40/IBhvd4EC2q820gytQPDfGZAAWgSQSgnilg2TzSs2dPbfr4/vvvvy5nogNdFy5erDiBtYs+RsPNQ7A1uh5qDVqmuLU0r9AIfFgfOL0XXSxvoEP7Luh8W2KhZc2MSMBfBNh/m0QAioPIJpCUlBRtF7Ar1KxZE23bti1wE4iM/D355JOQT9kscr2BDnS9xHi9ygRWznoTTfdPwMZi96B+/4Uqm0rbCpPAzAeAAyvwT+vzSGrVA8+35NtAChM/8/IPAfbfJhKArmNgpkyZok0DT5s2DdOnT8fWrVtRuXJlDB48GKmpqZg9e7bmTSL6nnjiCUyYMAHt27d3e1hMTAyKFSvmlcfRgbzCxIuChMDKj/ugadrnWF/+MTR4+tKDVJCYTzP9ReDLXsCfCzAipysstz+Ht9om+ysnpksChUaA/beJBKB4jYz+jRkzRjsIOjk5GePGjUPz5s01h+rRowcOHDiAZctyp7ZatGiR7+7g7t27Y+bMmV45IR3IK0y8KEgIrH2vPRpm/IINSS8hpevQILGaZvqdwM9vAKs/xAzbfVhXfQCmduPbQPzOnBn4nQD7b5MJQL97TJ4M6ECFTZz5+ZPA5hF3ok7OJmy+bQzq3N/Hn1kx7WAisHYysGQQvrM3xIxyb2LRs3wbSDBVH23NnwD7bwpAXfcGHUgXPkZWjMC+4cmo4jyMPW0+Q9VGDypmHc0JGIGti4AFPfC7Iwkvxr6LVYNaBswUZkwCRhFg/00BqMuX6EC68DGyQgQcDifODq+IkiEZOP74byhbtb5C1tGUgBI49F/gX61xyFEad9s/1N4GEhISElCTmDkJ6CXA/psCUJcP0YF04WNkhQicSj+PUuMqahZZX9qLyPi/KWQdTQkogbOHgPG1YXFGoLplJja+0Roli/AtMQGtE2aumwD7bwpAXU5EB9KFj5EVIrB7905U+/ftyEE4It5MA0JDFbKOpgSUgM0KvJP7juj62VMw98X7cWsC3wYS0Dph5roJsP+mANTlRHQgXfgYWSECG1cvRf2fOyAtpBRKD92nkGU0RQkC79cAzh/BQ5a3MaDno2ielCsIGUggWAmw/6YA1OW7dCBd+BhZIQJrv56EhpsGY3vU31Fj8AqFLKMpShD4133AodV43voC7mzfB50a8G0gStQLjfCZAPtvCkCfnUci0oF04WNkhQhsmNEPKYdnYnWJdmjcb5ZCltEUJQgs6gtsnocxOV1QpNVAPHdXVSXMohEk4CsB9t8UgL76jhaPDqQLHyMrRGD7uPtRI30llt40AK16vKGQZTRFCQLLRgPLRmGe7S7suO0dDOfbQJSoFhrhOwH23xSAvnsPBaAudoysFoETI2qiTE4qfkqZhjYPdlHLOFoTeAKbPwcW9cEqey18Vn0iJj+eEnibaAEJ6CBAAUgBqMN9OAKoCx4jq0MgJwv2EeURBgd+fWAlWjaorY5ttEQNAofWAv9qg8OO0uiXMAtf8W0gatQLrfCZAAUgBaDPzsMpYF3oGFklAsf+BKY0xRlnHPb1/BMpN5VUyTraogKB88eA96vD7gxBy5gvsHxQaxWsog0k4DMBCkAKQJ+dhwJQFzpGVoiA839fIOSr3ljnqI7y/ZehYolYhayjKUoQcDrheCcBofZs3G0bj6Vv9+DbQJSoGBrhKwEKQApAX31Hi0cH0oWPkRUhkLVkGGLWjsNcW0t0GLYQUeFhilhGM1Qi4JjUCKEntqG39SWMfX0wisfybSAq1Q9tuT4C7L8pAK/PY/JcTQfShY+RFSFwflYXFN2/BGNCemDg0AmKWEUzlCPwzXPAH5/hI1tbtH7hYySVLaqciTSIBLwlwP6bAtBbX8n3OjqQLnyMrAiBjPfqIi5jP4bEvYORA15QxCqaoRyB9Z8C372IFfZknO+8EP+oXU45E2kQCXhLgP03BaC3vkIBqIsUIytLwGaB/Z1yCIMd7yd/g5c7tlDWVBoWYAJH/wdMbYZzzhi8X+9nDG/39wAbxOxJwHcCFIAUgL57D9cA6mLHyIoQOL4VmNwY55yxWN1xI+7lqI4iFaOgGXYb7CMrIMyejSeLTMK/XnlMQSNpEgl4R4ACkALQO08p4Co6kC58jKwAgfTfP0ex7/tgg6Mabhm0mgv7FagTlU3Imd4aEan/xUvWvhg8+C2ULhqlsrm0jQQKJMD+mwJQ1+1BB9KFj5EVILB77gBU2zUdSyJb494hCxSwiCYoTeCn14A1H2G27R6U6PQhHqxTXmlzaRwJFESA/TcFoK67gw6kCx8jK0Dg8LsNkZi1HV/f/CbadX9ZAYtogtIEtnwFLOyJzY4q+LzubIxqz7fGKF1fNI4jgFfxgRCn0+mkj/hGgALQN26MpQiBrDNwvHszQuHEiodWoFl9LupXpGbUNePMQWDC32F1huGBuM/x8yt8I4i6lUXLrkaA/TdHAHXdIXQgXfgYOcAEzqxfiBLfPYVdjgpIGLIZ8dERAbaI2StPQN4IMrYqQjNP4mHLcEwe1BcJxaKVN5sGkkBeAuy/KQB13RV0IF34GDnABPZ9+jSqHJyPxdEP4cFBcwJsDbMPGgJzuwC7luCtnG6o3XEQHq5XMWhMp6Ek4CLA/psCUNfdQAfShY+RA0wgbWRNlLamYkHSWHTq+nSArWH2QUNg5Xhg6VD8Zq+DH+tMxJiOdYLGdBpKAhSAl3yAawB13A8UgDrgMWpgCVxcy2VzhmJt5w1oWqtKYO1h7sFD4MQOYNIdsDgjcH/MbCwd9I/gsZ2WksBFAuy/OQKo62agA+nCx8gBJHB6xSco+cvL2OBIwq2vrUGRqPAAWsOsg4qArAOcUAehZw+il/VlDB0wAIklY4OqCDSWBNh/UwDqugvoQLrwMXIACRya2gWVji7BF0W6ovMrkwNoCbMOSgI/DATWTcVc210IbzcRnRskBmUxaPSNS4D9NwWgLu+nA+nCx8iBImDNRPboKoh2ZOHfyZ/gsY6dAmUJ8w1WAnt+AT5rj+PO4ni3xtf44JF6wVoS2n2DEmD/TQGoy/XpQLrwMXKACFg3fYHIr3vjkKM0DndbgybVSgfIEmYbtARsFthH34QwWyYeCx2DGYN7IToiLGiLQ8NvPALsvykAdXk9HUgXPkYOEIHUSQ+hwonlmBnWEY8NmY6IsNAAWcJsg5mAY15XhO78Hh/kdETFdsPQ+TZOAwdzfd5otrP/pgDU5fN0IF34GDkABJwXTsI+NgnhsGPBHV+i032tAmAFszQFgY2zgW9fwH5HWTxbfDJ+6N8SISEhpigaC2F+Auy/KQB1eTkdSBc+Rg4AgV3fjUPS+mHY6rwZiYN/59s/AlAHpsnSch6OCXW1t4K8ntMT93R/DXcmcTmBaerX5AVh/00BqMvF6UC68DFyAAjsGtkISdZt+LniP9G619sBsIBZmorAuunADwOQ5ozHkIqzMb33XaYqHgtjXgLsvykAdXk3HUgXPkYuZAKH1yxA4k+9YHeG4FivP1Ah8eZCtoDZmY6APQc5E29HxNl9mGBrjzbPT8CtCfGmKyYLZD4C7L8pAHV5NR1IFz5GLkwCGWnIGNcAcfaz+L8SXXBPv2mFmTvzMjOBbd8AXzyBTGcUxifNwpDH7jNzaVk2kxBg/00BqMuV6UC68DFyYRFwOmH57BFE7V2C7Y5EWHouRd2bEword+ZjdgJOJ85PbYOix/6LlY7aSBrwfygTH2P2UrN8QU6A/TcFoC4XpgPpwsfIhUVgw0xgcT9YnWEYVOpDfPDPxwsrZ+ZzoxA4tReWiQ0RBSvmJryKrn2H3CglZzmDlAD7bwpAXa5LB9KFj5ELg8DxbbBPbYEwhwWjbI+izdOjUL9SicLImXncYAT++m4UKq4fjXRnLDbc+y1aNrrtBiPA4gYTAfbfFIC6/JUOpAsfI/ubgDUTtqktEH5qJ36z18HGplPxcpsa/s6V6d+oBOw2HPugCRIu7MBRlEJkz+9RqjL97UZ1B9XLzf6bAlCXj9KBdOFjZH8SyMmGc8ETCNn1k/a+1hdLfIxZz/8DkeF864c/sd/oaVvPpOL4xNZIdPyFM2GlULzvjwgpXf1Gx8LyK0iA/TcFoC63pAPpwsfI/iJgyQA+7wrsX45sZwSetA/BsBd6I6lsUX/lyHRJwE1gz759sM96CNVDDiM7siSin1wMJCSTEAkoRYD9NwWgLoekA+nCx8j+IJD+FzC/G3BkIzKc0XjK+gpa3dcevZtX8UduTJME8iUwa+l6pPznKSSHHoA1ohgiu38FVGxAWiSgDAH23xSAupyRDqQLHyMbTWDfMmDhk0DmKZxxxuFJ6yuoULs5JjxSD2GhfEer0biZXsEE7A4nXv33Cjy6+yWkhO6GPTQKYQ+OA+o9RmwkoAQB9t8UgLockQ6kCx8jG0UgPRX4ZTjwv/lailscN6FvzotokpKCke1rU/wZxZnpXBcBEYFDF6xFiy2D0Srsj9y4dR8HWr4GxJe/rrR4MQkYTYD9NwWgLp+iA+nCx8hGEPh9BvDTa4AtS0vt37a78ZatGx5rUh1vPFADISEc+TMCM9PwRnp6ggAAGJ9JREFUjYDD4cTb321B3H/Ho3/4lwgNccIZFomQOo8CTfoBpW7xLWHGIgGdBNh/UwDqciE6kC58jGwAAef2xQiZ/zg24Va8bnkcW5xV0O/uanixVTWKPwP4Mgn9BJxOJ8Yv3Y21v36LlyIW4I7QHVqizmYDEHL3G/ozYAok4AMB9t8UgD64zaUodCBd+BhZBwHpVNfsO4VJv+6Bc/8yrHIko2qZohjVvjZuu6mkjpQZlQT8Q+D3A6cx+Ks/UTxtPXqH/4CvKw7EE60aoGGVknxY8Q9ypnoVAuy/KQB13SB0IF34GNkHAhabHUu2HMP0FfuwJfWclkJkWCieb1kVfe6sgqjwMB9SZRQSKBwC4r9Tl+/DR7/ugdXu0DJNrhCP3s2q4N7kBPpv4VQDcwHA/psCUNeNQAfShY+RvSRwLjsHy3am4aetx7B8ZxoyLDYtZnREKDqlJGqdZ6VSsV6mxstIIPAEDp3K1B5iFmw4jOycXCEYFxWOFtVLo3WtBO0zPjoi8IbSAtMSYP9NAajLuelAuvAxcj4EZGr3rzNZ+DM1Hev2n4ZMm20/eg4O56WLy8ZHoevtldGtUWWULBJJjiQQtAROX7BizpqDmLvuII6fs7jLIacW1SgXry1nuP3mkqhVPh6JJWIRyuOMgrauVTOc/TcFoC6fpAPpwndDR5YjMo6mZ2Ff2gXsS8vAvpMXsOPoeWw/dg7ns3NH+DzDLaWLoE2tBG105O8VirEjvKG9x3yFl93C/0tNx89bj2kj3XvTLlxRSBnxrlamKKqVjdPeapNUNk77u3zxGB51ZD6X8HuJ2H9TAOpyMjqQLnymjWyzO3DqghVp5y04fi4bR85m4Uh67ufRs9lIPZulfW/zHNbzoBERFqJ1bA1uKuEeASkbH21aXiwYCeQlcCw9Wxv9llHwDQfPYE9aBqy23KnivCE8NARyfyQUy/0pd/H3csVicv8uFo0yRaMQHsb3YNPTLhFg/00BqOt+oAPpwhc0kWV04rzFhnNZOUi/+HMyw6IJPPePx9+nM61wekzZFlRQEXqVSsaiSuk4VCldBNXLFtWmvW4pHYfIcHZWQeMgNNTvBOSh6tDpTOw6noHdx89j14ncz71pGcixX/tmk5njv8VFoXTRKO3z0u+R7u+KxURAfuJjIlA0Kpyj7H6v1cBmwP6bAlCXB9KBdOErtMiyrk52HF6w2C8TcSLmZIOFS9R5Cjztf1k27X/ns3MuW4PnjeGeHY5MUVUoHqONRMjv5YvnfpaO46iENyx5DQkURECE4ckMq7acQkYNj6Zn49i5i5/pWThyNvuqo+0FpSv3b9HoXEGYKwrDPX73+N7jGrmuaHQ4YiPDtQ1aPIRdbb9l/00BqMtD6UC68F0R2SXUsqx2ZOXYcbXPC1Y7LlhsuGC15X5aPP+++Lv2/9zfC5puvZ4SSKPu6hBcIwgi4mRUwTWy4Pq9RGwk1yVdD1xeSwJ+IiAj+CcvWHA83QL3yH1G7u8iHk+et+DUBYv7QdC1K1mvOTERYYiNDEP0xc+YyDDId/Lp+t51Te734YiJCM0VkHLNxWtd8SSOK758ckpbXw2x/6YA1OVBZnUgaTBzHA5takWesGX0zGZ3Isee+518yt+53+f+P9NqR7anaHP97hJzeQSddm2O/Yp4BSyL01VPnpGLRIa5p3lcYs417eP596XvwrUpIfmbZ+wZVg1MiASUJSBnFebOAFyaHfCcEXDNGOQ3cyDtYGEFOf9THkpFMOYnLvMKxktiVK4PRUxEbrz8rpO2LjwsBLK+0qwjmWbtv6/H/0KcMuzC4BMBfzuQCLG0DIt2LMiZC9bLR8U8BJUlxw7rRbGmiTQRcDaHNuqVK9o8xVyuqLtMzF283iX6ZIdqoIOrcbvUsOU+HV96Gg5HkahwxEVJAyaf4YiNCsv9jJT/Xfrd9b8ikeEclQt0xTJ/EjAxAWk73bMXFx9+M622y9pu18OyfMoshzwMa797tOm5cRzI8oxrtSMzx+7V+mIjEUtbLGIwIiwUsm5ZPt1/h4YiIvzi/y7+Hi6fHtfmjXd5erlpyncy5S4P2/HR4drmnYolYv3aXvu7/zayDvyVlqkE4KRJkzB27FgcPXoUtWrVwvjx49GsWbMC2S1fvhwvvfQStm7divLly2PgwIHo27ev16z95UAzVu7H7DUHtB2jrtPyvTbKTxfKDSo3qkw75HdDa0+RF6co3FMeEWHaVIbnNIf8L+8UiPZ3hEx7yFNp7pSJ5MFAAiRAAiRwiYCM11hsIgwvn0G5JCBzxaZLXOa9znPWxX3NReEpolOmv1Xpc6LCQ7UNctXKxOEftctpb4oxMvir/zbSRn+nZRoBOH/+fHTr1g0iAps0aYKpU6fik08+wbZt21CpUqUrOO7fvx/Jycno3bs3+vTpg1WrVuHZZ5/FvHnz0KFDB6+4+8uBJi3bgzFLdmo2yGJkOc7gb3GRF4WTjITliiQZxpfRLrlRXE9l2tNVaAgi5LvreiK79HSXN60wE08DeFXRvIgESIAEbhACMjskR+64l/nIciCba1mQx+8XZ5kuXyLkuUxIxOSlGafLZqk8lhJJfiJqXSctyNS7HJUl37lC/1ZJ6NeqmqE14K/+21Aj/ZyYaQTgHXfcgfr162Py5MluZDVq1EC7du0watSoKzC++uqr+Pbbb7F9+3b3/2T0b/PmzVizZo1X2P3lQIdPZ2pnxlUoEYOE+Ggu9vWqNngRCZAACZCAGQjIVPpfZzKxR477OZGBhlVKoW5icUOL5q/+21Aj/ZyYKQSg1WpFbGwsFixYgIcfftiNrF+/fti0aRNkqjdvaN68OerVq4cJEya4/7Vo0SJ07twZmZmZiIi48j2UFosF8uMK4kCJiYlIT09HfHy8n6uKyZMACZAACZAACRhBgALQJLuAjxw5ggoVKmjTuI0bN3b7xsiRIzFr1izs3Jk7neoZkpKS0KNHDwwZMsT99erVq7XpY0mvXLlyV8QZNmwYhg8ffsX3FIBG3I5MgwRIgARIgAQKhwAFoMkEoAi4Ro0aub1nxIgRmDNnDnbs2JGvAOzZsycGDx7s/p8IyKZNm2qbSBISrlxwyhHAwrkxmQsJkAAJkAAJ+JMABaBJBGBhTQHndUY6kD9vT6ZNAiRAAiRAAv4hwP7bJAJQ3EM2gaSkpGi7gF2hZs2aaNu2bYGbQBYvXqztEnaFZ555RlszGOhNIP5xd6ZKAiRAAiRAAiQgBCgATSQAXcfATJkyRZsGnjZtGqZPn66d8Ve5cmVtqjc1NRWzZ8/WvN91DIwcASNHwYjok13AKhwDw9uTBEiABEiABEjAfwQoAE0kAMVNZPRvzJgx2ho+OeNv3LhxkN2+EmTDx4EDB7Bs2TK3R8nu4P79+7sPgpajYVQ4CNp/Ls+USYAESIAESIAEKABNJgAL26XpQIVNnPmRAAmQAAmQgH4C7L8pAHV5ER1IFz5GJgESIAESIIGAEGD/TQGoy/HoQLrwMTIJkAAJkAAJBIQA+28KQF2ORwfShY+RSYAESIAESCAgBNh/UwDqcjw6kC58jEwCJEACJEACASHA/psCUJfj0YF04WNkEiABEiABEggIAfbfFIC6HI8OpAsfI5MACZAACZBAQAiw/6YA1OV46enpKF68OA4fPoz4+HhdaTEyCZAACZAACZBA4RAQAZiYmIizZ8+iWLFihZOpYrmEOJ1Op2I2BY05f/31l+ZADCRAAiRAAiRAAsFHQAZwKlasGHyGG2AxBaAOiA6HA0eOHEHRokUREhKiI6VLUV1PJWYeVTR7Gc1ePvFWltGQ2z3gibAeA14Fug1gHfqGUMa+zp8/j/LlyyM0NNS3RII8FgWgYhV4I6xLMHsZzV4+lwCUaRNZBmHW5Q+sR8UaRx/NMXs9mr18N0p746N764pGAagLn/GReTMbz7SwU2QdFjZx/+THevQP18JO1ez1aPbyUQD6746hAPQfW59S5s3sEzalIrEOlaoOn41hPfqMTqmIZq9Hs5ePAtB/txMFoP/Y+pSyxWLBqFGjMHjwYERFRfmUhuqRzF5Gs5dP/ItlVP0u884+1qN3nFS+inWocu2obRsFoNr1Q+tIgARIgARIgARIwHACFICGI2WCJEACJEACJEACJKA2AQpAteuH1pEACZAACZAACZCA4QQoAA1HygRJgARIgARIgARIQG0CFIBq1w+tIwESIAESIAESIAHDCVAAGo702gkeOHAAb7/9Nn799VccO3ZMO4n88ccfx2uvvYbIyEh3AocOHcJzzz2nXRcTE4OuXbvivffeu+yaP//8E88//zzWrVuHkiVLok+fPnjjjTcMezPJtUtT8BUjRozA999/j02bNmk2yzsX84b83qAyefJk9O3b131psJcx2Osxb53ddNNNOHjw4GVfv/rqqxg9evR1+a4e3/J33EmTJmHs2LE4evQoatWqhfHjx6NZs2b+ztYv6Q8bNgzDhw+/LO2yZctqbY8EeSOC/H/atGk4c+YM7rjjDnz88cdauVUN//nPf7T62bBhg1ZHixYtQrt27dzmelMm2T07YMAAzJs3D1lZWbj77rsh9a7Ka8GuVcYePXpg1qxZl1WR1N3atWvd36lcRjnt4quvvsKOHTu0/q1x48Z49913Ub16dVPVo6r3kNhFARiA2lmyZAnmz5+PRx99FFWrVsWWLVvQu3dvdOvWTRN4Eux2O+rWrYvSpUvj/fffx6lTp9C9e3e0b98eEydO1K6R85+SkpJw1113aeJx165dkEZh6NChePnllwNQssuzFDuKFy8OeWfyjBkzChSAn376Ke699153ZHnDhDQIZiijGeoxPwH41FNPaT7rCnFxcZAfb3034M55FQPk3pR7UcRAkyZNMHXqVHzyySfYtm0bKlWqpLLp+domAnDhwoVYunSp+/9hYWFa2yJBOl15WJs5c6bWnrzzzjsQ8bFz507tNZcqhh9//BGrVq1C/fr10aFDhysEoDdleuaZZ7B48WKt3KVKldLazNOnT2uiUvgEOlyrjNLWHz9+HNJ+uoI8aMtAgCuoXEZp8x955BHcdtttsNlsWh8mD/tynxUpUsRr31S5jIH2oWvlTwF4LUKF9H95mpWRr3379mk5ys3/wAMPQN4JLCOEEj7//HNN4J04cUJ7/ZZcL+cFSiPgOjNQRmFEIIroMur9xHoRSAP74osvFigA8z69e+YX7GU0Uz266kVGAKU+5Se/4E2Z9fqUP+PLKIoIC/E9V6hRo4Y2wiSjFsEWRAB+/fXX2kh83iAjZdK+SF3KKK4EGTWSEUIRUTKjoHqQds6zDfGmTPIKQxHAc+bMQZcuXbQiynvdExMT8cMPP6BNmzZKFTtvGcU46QtkVkXqNr8QbGVMS0tDmTJlsHz5cjRv3lwbmb6WbwZbGZVyKo4AqlMdr7/+OmRkcP369ZpRb775Jr755hts3rzZbaRMz8jTnUwJy6jfE088ob2LVa5zhT/++EPrvERI3nzzzUoU8FoCsEKFCsjOztbslZGlp59+2v1y7mAvo5nq0VMAikiwWq1ah9mpUye88sor7qUJ3pRZCcfMxwgpU2xsLBYsWICHH37YfUW/fv00ASWdU7AFEYDygCkj6/KgKAJ35MiRqFKlitZO3HLLLdi4cSPq1avnLlrbtm210fu8U4wqlj2vOPKmTNKGypSvjPiVKFHCXaw6depoQj/vlHmgy12QABTxJ6N+Uld33nmnNpIrIkpCsJVxz549qFatmjYKmJyc7JVvBlsZA+1HefPnCKACNbJ3715NtMlUb69evTSLRATJWsGff/75MgulARdBJdPHrVu3hozGyNodV5CnWBFUq1evRqNGjRQoHTR7CxoBlOkmaYhlyveXX37RhK+MaooglhDsZTRTPbqcady4cZq/Sscpa0+lvkQwyDSpt76rhGPmY4Tr/pHpRVmT5AoimEQMybRosAUZkc3MzNSmd2W2QO45WXe1detWrTwyzZ2amuqeaXDVoazz/Omnn5Qvbl5xJG3ftco0d+5c9OzZUxvt9AzS3siDqEz7qxTyE4CyVEGWXVSuXBn79+/X1n7LVKpMYUs/EUxllNE+aUNkkGPFihUaejPWo0o+JbZQABpYI/ktts6b/O+//44GDRpcJtjkyU1+XB3o1RpgedqbPXu2tnYiv8ZKGnJZxLxmzRo0bNjQwNLlJuVLGa8mAPMaKCL4rbfe0kY2XQIwb4McTGUUAZhfRxroeszL3Zd6daXx5ZdfomPHjjh58qS2lsqbMhvumAYlWNADlIysyHShCKdgDxcuXNBG/QYOHKi1ESKWpNzlypVzF03Wd8ryE5mVUD0UJACvVqaCxNE999yjsZkyZYpSxc5PAOY1UDbDiBiUpUKyVjyYyiibHWXD4MqVK92bcFwC0Ez1qJRTUQAaWx3SAcrP1YKM2EVHR2uXiGPLVK5MyYhICg0NdUf1ZhotENOj11tGKdD1CEAZeWnatKm2Q1HWIQV7GVWtx7w+6ku9utJwCXLZfSi+7E2Zjb3zjEvNjFPA+dERoSMb0GTqnlPAwTkFnF+9yhSqzCLJes5gmR594YUXtHWMsvHIc9mSGafyjWupjEmJI4DGcLzuVKTTFPGXkpKCzz777IpdZ66F9LKZw/VkLkP+shPYcxPIkCFDtGkd1/ExsnD7ww8/DJpNIHnBffTRR1qnJIubZRpDFuIHcxnNVI8FOfl3332HBx98UBvplF2y3pT5um+YQowgIlbuS9kF7Ao1a9bUpqiCcRNIXnQy7SmiT0ZqZdpQFtr3799fGxGUICJY1pEF+yaQq5XJtXlA2t7OnTtr5ZYRNJk9CZZNIHnrVU6KkOU/siTI9eAsG11ULaNM+4r4kw08y5Yt09b/eQbXJhAz1WMhNmNeZUUB6BUmYy+SkT+Z8pXOUqZzPY8cSEhI0DJzHR8io2CygFsWK8uuL1mg7DoGRhoxOTOpZcuWmkjavXu3do2MwKhwDIycfyd2f/vtt1oZXGs7ZORB1q7IEQwy0idrFWUN4G+//abZLWWYMGGCxiHYy2iGevT0fllaICN98vAimwpkSYM00LKswbUZyZsyG3tHGZua6xgYmQYU35QOdfr06dqaOZliC7YgZ92JQJf2Rh4eZQ2gbGaRxfZSHhF6ImzlOBHphGW9o3TIKh8Dk5GRAdk0IEE2r3zwwQeaT8omOSmnN2WS40Pk4UVmKCSecBIRpcoxMFcro9gryzbkCBwZIJD14tIHSJu7fft29/E9Kpfx2Wef1aappd3wPPvP8xgwM9Sjyu0FBWAAakcaHFmAnF+Qpx5XkJtZbpK8B0G7jnyR66QRl/UTshhfFuXLAcoiAFU4Aia/g0rFZhF6LVq00NYXyQYCacgdDoe2K1GmL6Q84eHhbg7BXEYpRLDXo6efym5R8UlZCycjSSIgZD2qjB7J7tnr8d0A3HpeZymjf2PGjNFGhWRHomx8kaMpgjFI/cj0mkzzy4iQrPuTg+hlVFOC69Bk2fjgeRC0lFvVIAJVBF/eIDMk0r56UyY5eUBmG0SEeB4ELTvbVQhXK6PMjMhggJz6ILMlIgKFh9Srp/0ql7GgPkoeRKTv8NY3VS6jCn50NRsoAFWvIdpHAiRAAiRAAiRAAgYToAA0GCiTIwESIAESIAESIAHVCVAAql5DtI8ESIAESIAESIAEDCZAAWgwUCZHAiRAAiRAAiRAAqoToABUvYZoHwmQAAmQAAmQAAkYTIAC0GCgTI4ESIAESIAESIAEVCdAAah6DdE+EiABEiABEiABEjCYAAWgwUCZHAmQAAmQAAmQAAmoToACUPUaon0kQAIkQAIkQAIkYDABCkCDgTI5EiABEiABEiABElCdAAWg6jVE+0iABEiABEiABEjAYAIUgAYDZXIkQAIkQAIkQAIkoDoBCkDVa4j2kQAJkAAJkAAJkIDBBCgADQbK5EiABEiABEiABEhAdQIUgKrXEO0jARIgARIgARIgAYMJUAAaDJTJkQAJkAAJkAAJkIDqBCgAVa8h2kcCJEACJEACJEACBhOgADQYKJMjARIgARIgARIgAdUJUACqXkO0jwRIgARIgARIgAQMJkABaDBQJkcCJEACJEACJEACqhOgAFS9hmgfCZAACZAACZAACRhMgALQYKBMjgRIgARIgARIgARUJ0ABqHoN0T4SIAESIAESIAESMJgABaDBQJkcCZAACZAACZAACahOgAJQ9RqifSRAAiRAAiRAAiRgMAEKQIOBMjkSIAESIAESIAESUJ0ABaDqNUT7SIAESIAESIAESMBgAhSABgNlciRAAiRAAiRAAiSgOgEKQNVriPaRAAmQAAmQAAmQgMEEKAANBsrkSIAESIAESIAESEB1AhSAqtcQ7SMBEiABEiABEiABgwlQABoMlMmRAAmQAAmQAAmQgOoE/h+NKGn0Q26ylQAAAABJRU5ErkJggg==" width="640"></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perfiles50mm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perfiles50mm</span><span class="p">[</span><span class="s1">&#39;Prof&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perfiles50mm</span><span class="p">[</span><span class="s1">&#39;Dosis&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perfiles</span><span class="p">[</span><span class="s1">&#39;Depth = 50 mm&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perfiles100mm</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;CrossPlane_100x100.xlsx&quot;</span><span class="p">,</span> <span class="n">sheet_name</span> <span class="o">=</span> <span class="s1">&#39;Depth = 100 mm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perfiles100mm</span><span class="p">[</span><span class="s2">&quot;Prof&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">perfiles100mm</span><span class="p">[</span><span class="s1">&#39;Prof&#39;</span><span class="p">],</span> <span class="n">perfiles100mm</span><span class="p">[</span><span class="s1">&#39;Dosis&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Untitled.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pandas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

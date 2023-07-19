@@ -3,3 +3,12 @@
 *.json
 .settings/
 .ipynb_checkpoints/
+.DS_Store
+*.icloud
+*/*.icloud
+book/_build/doctrees
+book/_build/jupyter_execute
+finales/*
+.vscode
+ejercicios-python
+

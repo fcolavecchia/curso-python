@@ -1,0 +1,2290 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulos &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '4 Módulos';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NumPy - Avanzado" href="5%20Numpy%20-%20avanzado.html" />
+    <link rel="prev" title="Más sobre Funciones" href="3%20M%C3%A1s%20sobre%20funciones.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0%20Introducci%C3%B3n%20a%20Jupyter%20Notebooks.html">Clase 0</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="1%20El%20lenguaje%20Python.html">Introducción al Lenguaje Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2%20Funciones.html">Funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3%20M%C3%A1s%20sobre%20funciones.html">Más sobre Funciones</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Módulos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5%20Numpy%20-%20avanzado.html">NumPy - Avanzado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5%20Numpy.html">NumPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6%20Matplotlib.html">Líneas, símbolos y colores</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="6%20Plotly.html">Más gráficos: <code class="docutils literal notranslate"><span class="pre">Plotly</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="7%20Intermedio.html">Windows, <code class="docutils literal notranslate"><span class="pre">cmd.exe</span></code> y más</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="8%20Interpolaci%C3%B3n.html">Interpolación - Scipy</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="9%20Dicom.html">Imágenes médicas - DICOM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A%20Dicom%203D.html">Imágenes médicas - DICOM 3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B%20Integrales.html">Integración numérica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Borges%20y%20matplotlib%20resuelto.html">Borges y  <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Borges%20y%20matplotlib.html">Borges y  <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create_the_std_lib.html">Archivo para la preparación de la clase sobre <code class="docutils literal notranslate"><span class="pre">os</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ejercicios%2007.html">Ejercicio</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Find_the_file.html">Instalando Git</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Generala.html">Examen Final</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jugando%20con%20strings.html">Jugando con strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pangrama%20Versiones.html">Pangrama</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Pangrama.html">Pangrama</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sortea%20ejercicios.html">Sortea ejercicios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scikit_image_filters.html">Image filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Python%20funcional%202.html">Programación funcional con Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Python%20funcional.html">Programación funcional con Python</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F4 Módulos.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/4 Módulos.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Módulos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulos-estandard">Módulos estandard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliotecas-adicionales">Bibliotecas adicionales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atributos-y-metodos">Atributos y métodos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usando-modulos">Usando módulos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importando-todo-el-modulo">Importando todo el módulo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importando-todo-el-modulo-version-2">Importando todo el módulo, versión 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renombrando-un-modulo">Renombrando un módulo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importando-partes-de-un-modulo">Importando partes de un módulo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usos-y-costumbres">Usos y costumbres</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="modulos">
+<h1>Módulos<a class="headerlink" href="#modulos" title="Permalink to this headline">#</a></h1>
+<div class="section" id="introduccion">
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
+<p>Hemos visto que una parte fundamental de la programación en Python (y en cualquier lenguaje) consiste en estructurar la solución que estamos desarrollando en <em>funciones</em>.</p>
+<p>A partir de este concepto, surgen las <em>módulos</em> (<em>bibliotecas</em> o paquetes). Las bibliotecas reunen conjuntos de funciones específicas asociadas a un tema en particular. En esta clase y las próximas, recorreremos varias bibliotecas útiles para la programación en Python.</p>
+<div class="section" id="modulos-estandard">
+<h3>Módulos estandard<a class="headerlink" href="#modulos-estandard" title="Permalink to this headline">#</a></h3>
+<p>El lenguaje originalmente provee de una cantidad limitada de módulos, que puede consultarse <a class="reference external" href="https://docs.python.org/3/py-modindex.html">acá</a>. Estas bibliotecas ya vienen pre-instaladas con Python.</p>
+</div>
+<div class="section" id="bibliotecas-adicionales">
+<h3>Bibliotecas adicionales<a class="headerlink" href="#bibliotecas-adicionales" title="Permalink to this headline">#</a></h3>
+<p>Sin embargo, la mayor riqueza y flexibilidad de Python proviene de la enorme cantidad de bibliotecas que han sido desarrolladas a lo largo de los años por encima de las bibliotecas propias del lenguaje. Las bibliotecas pueden instalarse directamente desde Anaconda Navigator, que es la distribución de Python que estamos usando.
+Un listado de <em>todos</em> los módulos que provee Anaconda es <a class="reference external" href="https://docs.anaconda.com/anaconda/packages/pkg-docs/">éste</a>.</p>
+<p>En <a class="reference external" href="https://wiki.python.org/moin/UsefulModules">ésta página</a> pueden encontrar una lista curada de módulos.</p>
+<p>Verán con la práctica que puede haber <em>varios módulos</em> sobre un tema en particular. Por ejemplo, para graficar tenemos
+(tomado prestado de SciPy: <a class="reference external" href="https://scipy.org/topical-software.html">https://scipy.org/topical-software.html</a>):</p>
+<blockquote>
+<div><p><em>matplotlib</em>: a Python 2-D plotting library, which produces publication-quality figures used in a variety of hardcopy formats (PNG, JPG, PS, SVG) and interactive GUI environments (WX, GTK, Tkinter, FLTK, Qt) across platforms. matplotlib can be used in Python scripts, interactively from the Python shell (à la MATLAB or Mathematica), in web application servers generating dynamic charts, or embedded in GUI applications. For interactive use, IPython provides a special mode which integrates with matplotlib. See the matplotlib gallery for recipes.</p>
+</div></blockquote>
+<blockquote>
+<div><p><em>Bokeh</em>: an interactive web visualization library for large datasets. Its goal is to provide elegant, concise construction of novel graphics in the style of Protovis/D3, while delivering high-performance interactivity over large data to thin clients.</p>
+</div></blockquote>
+<blockquote>
+<div><p><em><a class="reference external" href="http://Gnuplot.py">Gnuplot.py</a></em>: a Python package that interfaces to gnuplot, the popular open-source plotting program. It allows you to use gnuplot from within Python to plot arrays of data from memory, data files, or mathematical functions. If you use Python to perform computations or as “glue” for numerical programs, you can use this package to plot data on the fly as they are computed. IPython includes additional enhancements to <a class="reference external" href="http://Gnuplot.py">Gnuplot.py</a> (but which require the base package) to make it more efficient in interactive usage.</p>
+</div></blockquote>
+<blockquote>
+<div><p><em>Graceplot</em>: a Python interface to the Grace 2-D plotting program.</p>
+</div></blockquote>
+<p>y la lista sigue y sigue.</p>
+</div>
+<div class="section" id="atributos-y-metodos">
+<h3>Atributos y métodos<a class="headerlink" href="#atributos-y-metodos" title="Permalink to this headline">#</a></h3>
+<p>Además de funciones, los módulos pueden definir nuevos tipos de variables. Las funciones dentro de los módulos se llaman <em>métodos</em>, mientras que las variables suelen denominarse <em>atributos</em>. Por ejemplo, imaginemos un módulo llamado <code class="docutils literal notranslate"><span class="pre">maradona</span></code> que define:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">diego</span> <span class="o">=</span> <span class="s1">&#39;Diego Armando&#39;</span>
+<span class="n">maradona</span> <span class="o">=</span> <span class="s1">&#39;Maradona&#39;</span>
+
+<span class="k">def</span> <span class="nf">hola</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span><span class="p">,</span> <span class="n">nombre</span><span class="p">,</span> <span class="s2">&quot;, te saluda &quot;</span><span class="p">,</span> <span class="n">diego</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Este módulo define dos variables (<em>atributos</em>), <code class="docutils literal notranslate"><span class="pre">diego</span></code> y <code class="docutils literal notranslate"><span class="pre">maradona</span></code>, y una función (<em>método</em>) <code class="docutils literal notranslate"><span class="pre">hola(nombre)</span></code>. Para acceder a los métodos y atributos se usa el <code class="docutils literal notranslate"><span class="pre">.</span></code>:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">maradona</span><span class="o">.</span><span class="n">diego</span>  <span class="c1"># a contiene &#39;Diego Armando&#39;</span>
+
+<span class="n">maradona</span><span class="o">.</span><span class="n">hola</span><span class="p">(</span><span class="s1">&#39;Flavio&#39;</span><span class="p">)</span>  <span class="c1"># imprime &quot;Hola Flavio, te saluda Diego Armando&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="usando-modulos">
+<h2>Usando módulos<a class="headerlink" href="#usando-modulos" title="Permalink to this headline">#</a></h2>
+<p>Para variar, existen varias maneras de usar módulos. Para todas ellas se usa la palabra reservada <code class="docutils literal notranslate"><span class="pre">import</span></code>.</p>
+<div class="section" id="importando-todo-el-modulo">
+<h3>Importando todo el módulo<a class="headerlink" href="#importando-todo-el-modulo" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con lo anterior, importamos el módulo completo. Ahora bien, ¿qué atributos y clases provee el módulo? Podemos usar el comando <code class="docutils literal notranslate"><span class="pre">help</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">random</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on module random:
+
+NAME
+    random - Random variable generators.
+
+MODULE REFERENCE
+    https://docs.python.org/3.9/library/random
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+        bytes
+        -----
+               uniform bytes (values between 0 and 255)
+    
+        integers
+        --------
+               uniform within range
+    
+        sequences
+        ---------
+               pick random element
+               pick random sample
+               pick weighted random sample
+               generate random permutation
+    
+        distributions on the real line:
+        ------------------------------
+               uniform
+               triangular
+               normal (Gaussian)
+               lognormal
+               negative exponential
+               gamma
+               beta
+               pareto
+               Weibull
+    
+        distributions on the circle (angles 0 to 2pi)
+        ---------------------------------------------
+               circular uniform
+               von Mises
+    
+    General notes on the underlying Mersenne Twister core generator:
+    
+    * The period is 2**19937-1.
+    * It is one of the most extensively tested generators in existence.
+    * The random() method is implemented in C, executes in a single Python step,
+      and is, therefore, threadsafe.
+
+CLASSES
+    _random.Random(builtins.object)
+        Random
+            SystemRandom
+    
+    class Random(_random.Random)
+     |  Random(x=None)
+     |  
+     |  Random number generator base class used by bound module functions.
+     |  
+     |  Used to instantiate instances of Random to get generators that don&#39;t
+     |  share state.
+     |  
+     |  Class Random can also be subclassed if you want to use a different basic
+     |  generator of your own devising: in that case, override the following
+     |  methods:  random(), seed(), getstate(), and setstate().
+     |  Optionally, implement a getrandbits() method so that randrange()
+     |  can cover arbitrarily large ranges.
+     |  
+     |  Method resolution order:
+     |      Random
+     |      _random.Random
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __getstate__(self)
+     |      # Issue 17489: Since __reduce__ was defined to fix #759889 this is no
+     |      # longer called; we leave it here because it has been here since random was
+     |      # rewritten back in 2001 and why risk breaking something.
+     |  
+     |  __init__(self, x=None)
+     |      Initialize an instance.
+     |      
+     |      Optional argument x controls seeding, as for Random.seed().
+     |  
+     |  __reduce__(self)
+     |      Helper for pickle.
+     |  
+     |  __setstate__(self, state)
+     |  
+     |  betavariate(self, alpha, beta)
+     |      Beta distribution.
+     |      
+     |      Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+     |      Returned values range between 0 and 1.
+     |  
+     |  choice(self, seq)
+     |      Choose a random element from a non-empty sequence.
+     |  
+     |  choices(self, population, weights=None, *, cum_weights=None, k=1)
+     |      Return a k sized list of population elements chosen with replacement.
+     |      
+     |      If the relative weights or cumulative weights are not specified,
+     |      the selections are made with equal probability.
+     |  
+     |  expovariate(self, lambd)
+     |      Exponential distribution.
+     |      
+     |      lambd is 1.0 divided by the desired mean.  It should be
+     |      nonzero.  (The parameter would be called &quot;lambda&quot;, but that is
+     |      a reserved word in Python.)  Returned values range from 0 to
+     |      positive infinity if lambd is positive, and from negative
+     |      infinity to 0 if lambd is negative.
+     |  
+     |  gammavariate(self, alpha, beta)
+     |      Gamma distribution.  Not the gamma function!
+     |      
+     |      Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+     |      
+     |      The probability distribution function is:
+     |      
+     |                  x ** (alpha - 1) * math.exp(-x / beta)
+     |        pdf(x) =  --------------------------------------
+     |                    math.gamma(alpha) * beta ** alpha
+     |  
+     |  gauss(self, mu, sigma)
+     |      Gaussian distribution.
+     |      
+     |      mu is the mean, and sigma is the standard deviation.  This is
+     |      slightly faster than the normalvariate() function.
+     |      
+     |      Not thread-safe without a lock around calls.
+     |  
+     |  getstate(self)
+     |      Return internal state; can be passed to setstate() later.
+     |  
+     |  lognormvariate(self, mu, sigma)
+     |      Log normal distribution.
+     |      
+     |      If you take the natural logarithm of this distribution, you&#39;ll get a
+     |      normal distribution with mean mu and standard deviation sigma.
+     |      mu can have any value, and sigma must be greater than zero.
+     |  
+     |  normalvariate(self, mu, sigma)
+     |      Normal distribution.
+     |      
+     |      mu is the mean, and sigma is the standard deviation.
+     |  
+     |  paretovariate(self, alpha)
+     |      Pareto distribution.  alpha is the shape parameter.
+     |  
+     |  randbytes(self, n)
+     |      Generate n random bytes.
+     |  
+     |  randint(self, a, b)
+     |      Return random integer in range [a, b], including both end points.
+     |  
+     |  randrange(self, start, stop=None, step=1)
+     |      Choose a random item from range(start, stop[, step]).
+     |      
+     |      This fixes the problem with randint() which includes the
+     |      endpoint; in Python this is usually not what you want.
+     |  
+     |  sample(self, population, k, *, counts=None)
+     |      Chooses k unique random elements from a population sequence or set.
+     |      
+     |      Returns a new list containing elements from the population while
+     |      leaving the original population unchanged.  The resulting list is
+     |      in selection order so that all sub-slices will also be valid random
+     |      samples.  This allows raffle winners (the sample) to be partitioned
+     |      into grand prize and second place winners (the subslices).
+     |      
+     |      Members of the population need not be hashable or unique.  If the
+     |      population contains repeats, then each occurrence is a possible
+     |      selection in the sample.
+     |      
+     |      Repeated elements can be specified one at a time or with the optional
+     |      counts parameter.  For example:
+     |      
+     |          sample([&#39;red&#39;, &#39;blue&#39;], counts=[4, 2], k=5)
+     |      
+     |      is equivalent to:
+     |      
+     |          sample([&#39;red&#39;, &#39;red&#39;, &#39;red&#39;, &#39;red&#39;, &#39;blue&#39;, &#39;blue&#39;], k=5)
+     |      
+     |      To choose a sample from a range of integers, use range() for the
+     |      population argument.  This is especially fast and space efficient
+     |      for sampling from a large population:
+     |      
+     |          sample(range(10000000), 60)
+     |  
+     |  seed(self, a=None, version=2)
+     |      Initialize internal state from a seed.
+     |      
+     |      The only supported seed types are None, int, float,
+     |      str, bytes, and bytearray.
+     |      
+     |      None or no argument seeds from current time or from an operating
+     |      system specific randomness source if available.
+     |      
+     |      If *a* is an int, all bits are used.
+     |      
+     |      For version 2 (the default), all of the bits are used if *a* is a str,
+     |      bytes, or bytearray.  For version 1 (provided for reproducing random
+     |      sequences from older versions of Python), the algorithm for str and
+     |      bytes generates a narrower range of seeds.
+     |  
+     |  setstate(self, state)
+     |      Restore internal state from object returned by getstate().
+     |  
+     |  shuffle(self, x, random=None)
+     |      Shuffle list x in place, and return None.
+     |      
+     |      Optional argument random is a 0-argument function returning a
+     |      random float in [0.0, 1.0); if it is the default None, the
+     |      standard random.random will be used.
+     |  
+     |  triangular(self, low=0.0, high=1.0, mode=None)
+     |      Triangular distribution.
+     |      
+     |      Continuous distribution bounded by given lower and upper limits,
+     |      and having a given mode value in-between.
+     |      
+     |      http://en.wikipedia.org/wiki/Triangular_distribution
+     |  
+     |  uniform(self, a, b)
+     |      Get a random number in the range [a, b) or [a, b] depending on rounding.
+     |  
+     |  vonmisesvariate(self, mu, kappa)
+     |      Circular data distribution.
+     |      
+     |      mu is the mean angle, expressed in radians between 0 and 2*pi, and
+     |      kappa is the concentration parameter, which must be greater than or
+     |      equal to zero.  If kappa is equal to zero, this distribution reduces
+     |      to a uniform random angle over the range 0 to 2*pi.
+     |  
+     |  weibullvariate(self, alpha, beta)
+     |      Weibull distribution.
+     |      
+     |      alpha is the scale parameter and beta is the shape parameter.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |  
+     |  __init_subclass__(**kwargs) from builtins.type
+     |      Control how subclasses generate random integers.
+     |      
+     |      The algorithm a subclass can use depends on the random() and/or
+     |      getrandbits() implementation available to it and determines
+     |      whether it can generate random integers from arbitrarily large
+     |      ranges.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  VERSION = 3
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from _random.Random:
+     |  
+     |  getrandbits(self, k, /)
+     |      getrandbits(k) -&gt; x.  Generates an int with k random bits.
+     |  
+     |  random(self, /)
+     |      random() -&gt; x in the interval [0, 1).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from _random.Random:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class SystemRandom(Random)
+     |  SystemRandom(x=None)
+     |  
+     |  Alternate random number generator using sources provided
+     |  by the operating system (such as /dev/urandom on Unix or
+     |  CryptGenRandom on Windows).
+     |  
+     |   Not available on all systems (see os.urandom() for details).
+     |  
+     |  Method resolution order:
+     |      SystemRandom
+     |      Random
+     |      _random.Random
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  getrandbits(self, k)
+     |      getrandbits(k) -&gt; x.  Generates an int with k random bits.
+     |  
+     |  getstate = _notimplemented(self, *args, **kwds)
+     |  
+     |  randbytes(self, n)
+     |      Generate n random bytes.
+     |  
+     |  random(self)
+     |      Get the next random number in the range [0.0, 1.0).
+     |  
+     |  seed(self, *args, **kwds)
+     |      Stub method.  Not used for a system random number generator.
+     |  
+     |  setstate = _notimplemented(self, *args, **kwds)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Random:
+     |  
+     |  __getstate__(self)
+     |      # Issue 17489: Since __reduce__ was defined to fix #759889 this is no
+     |      # longer called; we leave it here because it has been here since random was
+     |      # rewritten back in 2001 and why risk breaking something.
+     |  
+     |  __init__(self, x=None)
+     |      Initialize an instance.
+     |      
+     |      Optional argument x controls seeding, as for Random.seed().
+     |  
+     |  __reduce__(self)
+     |      Helper for pickle.
+     |  
+     |  __setstate__(self, state)
+     |  
+     |  betavariate(self, alpha, beta)
+     |      Beta distribution.
+     |      
+     |      Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+     |      Returned values range between 0 and 1.
+     |  
+     |  choice(self, seq)
+     |      Choose a random element from a non-empty sequence.
+     |  
+     |  choices(self, population, weights=None, *, cum_weights=None, k=1)
+     |      Return a k sized list of population elements chosen with replacement.
+     |      
+     |      If the relative weights or cumulative weights are not specified,
+     |      the selections are made with equal probability.
+     |  
+     |  expovariate(self, lambd)
+     |      Exponential distribution.
+     |      
+     |      lambd is 1.0 divided by the desired mean.  It should be
+     |      nonzero.  (The parameter would be called &quot;lambda&quot;, but that is
+     |      a reserved word in Python.)  Returned values range from 0 to
+     |      positive infinity if lambd is positive, and from negative
+     |      infinity to 0 if lambd is negative.
+     |  
+     |  gammavariate(self, alpha, beta)
+     |      Gamma distribution.  Not the gamma function!
+     |      
+     |      Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+     |      
+     |      The probability distribution function is:
+     |      
+     |                  x ** (alpha - 1) * math.exp(-x / beta)
+     |        pdf(x) =  --------------------------------------
+     |                    math.gamma(alpha) * beta ** alpha
+     |  
+     |  gauss(self, mu, sigma)
+     |      Gaussian distribution.
+     |      
+     |      mu is the mean, and sigma is the standard deviation.  This is
+     |      slightly faster than the normalvariate() function.
+     |      
+     |      Not thread-safe without a lock around calls.
+     |  
+     |  lognormvariate(self, mu, sigma)
+     |      Log normal distribution.
+     |      
+     |      If you take the natural logarithm of this distribution, you&#39;ll get a
+     |      normal distribution with mean mu and standard deviation sigma.
+     |      mu can have any value, and sigma must be greater than zero.
+     |  
+     |  normalvariate(self, mu, sigma)
+     |      Normal distribution.
+     |      
+     |      mu is the mean, and sigma is the standard deviation.
+     |  
+     |  paretovariate(self, alpha)
+     |      Pareto distribution.  alpha is the shape parameter.
+     |  
+     |  randint(self, a, b)
+     |      Return random integer in range [a, b], including both end points.
+     |  
+     |  randrange(self, start, stop=None, step=1)
+     |      Choose a random item from range(start, stop[, step]).
+     |      
+     |      This fixes the problem with randint() which includes the
+     |      endpoint; in Python this is usually not what you want.
+     |  
+     |  sample(self, population, k, *, counts=None)
+     |      Chooses k unique random elements from a population sequence or set.
+     |      
+     |      Returns a new list containing elements from the population while
+     |      leaving the original population unchanged.  The resulting list is
+     |      in selection order so that all sub-slices will also be valid random
+     |      samples.  This allows raffle winners (the sample) to be partitioned
+     |      into grand prize and second place winners (the subslices).
+     |      
+     |      Members of the population need not be hashable or unique.  If the
+     |      population contains repeats, then each occurrence is a possible
+     |      selection in the sample.
+     |      
+     |      Repeated elements can be specified one at a time or with the optional
+     |      counts parameter.  For example:
+     |      
+     |          sample([&#39;red&#39;, &#39;blue&#39;], counts=[4, 2], k=5)
+     |      
+     |      is equivalent to:
+     |      
+     |          sample([&#39;red&#39;, &#39;red&#39;, &#39;red&#39;, &#39;red&#39;, &#39;blue&#39;, &#39;blue&#39;], k=5)
+     |      
+     |      To choose a sample from a range of integers, use range() for the
+     |      population argument.  This is especially fast and space efficient
+     |      for sampling from a large population:
+     |      
+     |          sample(range(10000000), 60)
+     |  
+     |  shuffle(self, x, random=None)
+     |      Shuffle list x in place, and return None.
+     |      
+     |      Optional argument random is a 0-argument function returning a
+     |      random float in [0.0, 1.0); if it is the default None, the
+     |      standard random.random will be used.
+     |  
+     |  triangular(self, low=0.0, high=1.0, mode=None)
+     |      Triangular distribution.
+     |      
+     |      Continuous distribution bounded by given lower and upper limits,
+     |      and having a given mode value in-between.
+     |      
+     |      http://en.wikipedia.org/wiki/Triangular_distribution
+     |  
+     |  uniform(self, a, b)
+     |      Get a random number in the range [a, b) or [a, b] depending on rounding.
+     |  
+     |  vonmisesvariate(self, mu, kappa)
+     |      Circular data distribution.
+     |      
+     |      mu is the mean angle, expressed in radians between 0 and 2*pi, and
+     |      kappa is the concentration parameter, which must be greater than or
+     |      equal to zero.  If kappa is equal to zero, this distribution reduces
+     |      to a uniform random angle over the range 0 to 2*pi.
+     |  
+     |  weibullvariate(self, alpha, beta)
+     |      Weibull distribution.
+     |      
+     |      alpha is the scale parameter and beta is the shape parameter.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods inherited from Random:
+     |  
+     |  __init_subclass__(**kwargs) from builtins.type
+     |      Control how subclasses generate random integers.
+     |      
+     |      The algorithm a subclass can use depends on the random() and/or
+     |      getrandbits() implementation available to it and determines
+     |      whether it can generate random integers from arbitrarily large
+     |      ranges.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Random:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from Random:
+     |  
+     |  VERSION = 3
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods inherited from _random.Random:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+FUNCTIONS
+    betavariate(alpha, beta) method of Random instance
+        Beta distribution.
+        
+        Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+        Returned values range between 0 and 1.
+    
+    choice(seq) method of Random instance
+        Choose a random element from a non-empty sequence.
+    
+    choices(population, weights=None, *, cum_weights=None, k=1) method of Random instance
+        Return a k sized list of population elements chosen with replacement.
+        
+        If the relative weights or cumulative weights are not specified,
+        the selections are made with equal probability.
+    
+    expovariate(lambd) method of Random instance
+        Exponential distribution.
+        
+        lambd is 1.0 divided by the desired mean.  It should be
+        nonzero.  (The parameter would be called &quot;lambda&quot;, but that is
+        a reserved word in Python.)  Returned values range from 0 to
+        positive infinity if lambd is positive, and from negative
+        infinity to 0 if lambd is negative.
+    
+    gammavariate(alpha, beta) method of Random instance
+        Gamma distribution.  Not the gamma function!
+        
+        Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+        
+        The probability distribution function is:
+        
+                    x ** (alpha - 1) * math.exp(-x / beta)
+          pdf(x) =  --------------------------------------
+                      math.gamma(alpha) * beta ** alpha
+    
+    gauss(mu, sigma) method of Random instance
+        Gaussian distribution.
+        
+        mu is the mean, and sigma is the standard deviation.  This is
+        slightly faster than the normalvariate() function.
+        
+        Not thread-safe without a lock around calls.
+    
+    getrandbits(k, /) method of Random instance
+        getrandbits(k) -&gt; x.  Generates an int with k random bits.
+    
+    getstate() method of Random instance
+        Return internal state; can be passed to setstate() later.
+    
+    lognormvariate(mu, sigma) method of Random instance
+        Log normal distribution.
+        
+        If you take the natural logarithm of this distribution, you&#39;ll get a
+        normal distribution with mean mu and standard deviation sigma.
+        mu can have any value, and sigma must be greater than zero.
+    
+    normalvariate(mu, sigma) method of Random instance
+        Normal distribution.
+        
+        mu is the mean, and sigma is the standard deviation.
+    
+    paretovariate(alpha) method of Random instance
+        Pareto distribution.  alpha is the shape parameter.
+    
+    randbytes(n) method of Random instance
+        Generate n random bytes.
+    
+    randint(a, b) method of Random instance
+        Return random integer in range [a, b], including both end points.
+    
+    random() method of Random instance
+        random() -&gt; x in the interval [0, 1).
+    
+    randrange(start, stop=None, step=1) method of Random instance
+        Choose a random item from range(start, stop[, step]).
+        
+        This fixes the problem with randint() which includes the
+        endpoint; in Python this is usually not what you want.
+    
+    sample(population, k, *, counts=None) method of Random instance
+        Chooses k unique random elements from a population sequence or set.
+        
+        Returns a new list containing elements from the population while
+        leaving the original population unchanged.  The resulting list is
+        in selection order so that all sub-slices will also be valid random
+        samples.  This allows raffle winners (the sample) to be partitioned
+        into grand prize and second place winners (the subslices).
+        
+        Members of the population need not be hashable or unique.  If the
+        population contains repeats, then each occurrence is a possible
+        selection in the sample.
+        
+        Repeated elements can be specified one at a time or with the optional
+        counts parameter.  For example:
+        
+            sample([&#39;red&#39;, &#39;blue&#39;], counts=[4, 2], k=5)
+        
+        is equivalent to:
+        
+            sample([&#39;red&#39;, &#39;red&#39;, &#39;red&#39;, &#39;red&#39;, &#39;blue&#39;, &#39;blue&#39;], k=5)
+        
+        To choose a sample from a range of integers, use range() for the
+        population argument.  This is especially fast and space efficient
+        for sampling from a large population:
+        
+            sample(range(10000000), 60)
+    
+    seed(a=None, version=2) method of Random instance
+        Initialize internal state from a seed.
+        
+        The only supported seed types are None, int, float,
+        str, bytes, and bytearray.
+        
+        None or no argument seeds from current time or from an operating
+        system specific randomness source if available.
+        
+        If *a* is an int, all bits are used.
+        
+        For version 2 (the default), all of the bits are used if *a* is a str,
+        bytes, or bytearray.  For version 1 (provided for reproducing random
+        sequences from older versions of Python), the algorithm for str and
+        bytes generates a narrower range of seeds.
+    
+    setstate(state) method of Random instance
+        Restore internal state from object returned by getstate().
+    
+    shuffle(x, random=None) method of Random instance
+        Shuffle list x in place, and return None.
+        
+        Optional argument random is a 0-argument function returning a
+        random float in [0.0, 1.0); if it is the default None, the
+        standard random.random will be used.
+    
+    triangular(low=0.0, high=1.0, mode=None) method of Random instance
+        Triangular distribution.
+        
+        Continuous distribution bounded by given lower and upper limits,
+        and having a given mode value in-between.
+        
+        http://en.wikipedia.org/wiki/Triangular_distribution
+    
+    uniform(a, b) method of Random instance
+        Get a random number in the range [a, b) or [a, b] depending on rounding.
+    
+    vonmisesvariate(mu, kappa) method of Random instance
+        Circular data distribution.
+        
+        mu is the mean angle, expressed in radians between 0 and 2*pi, and
+        kappa is the concentration parameter, which must be greater than or
+        equal to zero.  If kappa is equal to zero, this distribution reduces
+        to a uniform random angle over the range 0 to 2*pi.
+    
+    weibullvariate(alpha, beta) method of Random instance
+        Weibull distribution.
+        
+        alpha is the scale parameter and beta is the shape parameter.
+
+DATA
+    __all__ = [&#39;Random&#39;, &#39;SystemRandom&#39;, &#39;betavariate&#39;, &#39;choice&#39;, &#39;choices...
+
+FILE
+    /opt/miniconda3/lib/python3.9/random.py
+</pre></div>
+</div>
+</div>
+</div>
+<p>La función <code class="docutils literal notranslate"><span class="pre">random()</span></code> del módulo <code class="docutils literal notranslate"><span class="pre">random</span></code>, que llamamos como <code class="docutils literal notranslate"><span class="pre">random.random()</span></code> genera un número pseudo-aleatorio entre 0 y 1:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.730397546791071
+</pre></div>
+</div>
+</div>
+</div>
+<p>La función <code class="docutils literal notranslate"><span class="pre">randrange()</span></code> genera números al azar en un rango:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Con lo anterior, importamos el módulo completo. Ahora bien, ¿qué atributos y clases provee el módulo? Podemos usar el comando <code class="docutils literal notranslate"><span class="pre">help</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">datetime</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on module datetime:
+
+NAME
+    datetime - Fast implementation of the datetime type.
+
+MODULE REFERENCE
+    https://docs.python.org/3.9/library/datetime
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+CLASSES
+    builtins.object
+        date
+            datetime
+        time
+        timedelta
+        tzinfo
+            timezone
+    
+    class date(builtins.object)
+     |  date(year, month, day) --&gt; date object
+     |  
+     |  Methods defined here:
+     |  
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __format__(...)
+     |      Formats self with strftime.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |  
+     |  ctime(...)
+     |      Return ctime() style string.
+     |  
+     |  isocalendar(...)
+     |      Return a named tuple containing ISO year, week number, and weekday.
+     |  
+     |  isoformat(...)
+     |      Return string in ISO 8601 format, YYYY-MM-DD.
+     |  
+     |  isoweekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 1 ... Sunday == 7
+     |  
+     |  replace(...)
+     |      Return date with new specified fields.
+     |  
+     |  strftime(...)
+     |      format -&gt; strftime() style string.
+     |  
+     |  timetuple(...)
+     |      Return time tuple, compatible with time.localtime().
+     |  
+     |  toordinal(...)
+     |      Return proleptic Gregorian ordinal.  January 1 of year 1 is day 1.
+     |  
+     |  weekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 0 ... Sunday == 6
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |  
+     |  fromisocalendar(...) from builtins.type
+     |      int, int, int -&gt; Construct a date from the ISO year, week number and weekday.
+     |      
+     |      This is the inverse of the date.isocalendar() function
+     |  
+     |  fromisoformat(...) from builtins.type
+     |      str -&gt; Construct a date from the output of date.isoformat()
+     |  
+     |  fromordinal(...) from builtins.type
+     |      int -&gt; date corresponding to a proleptic Gregorian ordinal.
+     |  
+     |  fromtimestamp(timestamp, /) from builtins.type
+     |      Create a date from a POSIX timestamp.
+     |      
+     |      The timestamp is a number, e.g. created via time.time(), that is interpreted
+     |      as local time.
+     |  
+     |  today(...) from builtins.type
+     |      Current date or datetime:  same as self.__class__.fromtimestamp(time.time()).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  day
+     |  
+     |  month
+     |  
+     |  year
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.date(9999, 12, 31)
+     |  
+     |  min = datetime.date(1, 1, 1)
+     |  
+     |  resolution = datetime.timedelta(days=1)
+    
+    class datetime(date)
+     |  datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])
+     |  
+     |  The year, month and day arguments are required. tzinfo may be None, or an
+     |  instance of a tzinfo subclass. The remaining arguments may be ints.
+     |  
+     |  Method resolution order:
+     |      datetime
+     |      date
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __reduce_ex__(...)
+     |      __reduce_ex__(proto) -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |  
+     |  astimezone(...)
+     |      tz -&gt; convert to local time in new timezone tz
+     |  
+     |  ctime(...)
+     |      Return ctime() style string.
+     |  
+     |  date(...)
+     |      Return date object with same year, month and day.
+     |  
+     |  dst(...)
+     |      Return self.tzinfo.dst(self).
+     |  
+     |  isoformat(...)
+     |      [sep] -&gt; string in ISO 8601 format, YYYY-MM-DDT[HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
+     |      sep is used to separate the year from the time, and defaults to &#39;T&#39;.
+     |      The optional argument timespec specifies the number of additional terms
+     |      of the time to include. Valid options are &#39;auto&#39;, &#39;hours&#39;, &#39;minutes&#39;,
+     |      &#39;seconds&#39;, &#39;milliseconds&#39; and &#39;microseconds&#39;.
+     |  
+     |  replace(...)
+     |      Return datetime with new specified fields.
+     |  
+     |  time(...)
+     |      Return time object with same time but with tzinfo=None.
+     |  
+     |  timestamp(...)
+     |      Return POSIX timestamp as float.
+     |  
+     |  timetuple(...)
+     |      Return time tuple, compatible with time.localtime().
+     |  
+     |  timetz(...)
+     |      Return time object with same time and tzinfo.
+     |  
+     |  tzname(...)
+     |      Return self.tzinfo.tzname(self).
+     |  
+     |  utcoffset(...)
+     |      Return self.tzinfo.utcoffset(self).
+     |  
+     |  utctimetuple(...)
+     |      Return UTC time tuple, compatible with time.localtime().
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |  
+     |  combine(...) from builtins.type
+     |      date, time -&gt; datetime with same date and time fields
+     |  
+     |  fromisoformat(...) from builtins.type
+     |      string -&gt; datetime from datetime.isoformat() output
+     |  
+     |  fromtimestamp(...) from builtins.type
+     |      timestamp[, tz] -&gt; tz&#39;s local time from POSIX timestamp.
+     |  
+     |  now(tz=None) from builtins.type
+     |      Returns new datetime object representing current time local to tz.
+     |      
+     |        tz
+     |          Timezone object.
+     |      
+     |      If no tz is specified, uses local timezone.
+     |  
+     |  strptime(...) from builtins.type
+     |      string, format -&gt; new datetime parsed from a string (like time.strptime()).
+     |  
+     |  utcfromtimestamp(...) from builtins.type
+     |      Construct a naive UTC datetime from a POSIX timestamp.
+     |  
+     |  utcnow(...) from builtins.type
+     |      Return a new datetime representing UTC day and time.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  fold
+     |  
+     |  hour
+     |  
+     |  microsecond
+     |  
+     |  minute
+     |  
+     |  second
+     |  
+     |  tzinfo
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.datetime(9999, 12, 31, 23, 59, 59, 999999)
+     |  
+     |  min = datetime.datetime(1, 1, 1, 0, 0)
+     |  
+     |  resolution = datetime.timedelta(microseconds=1)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from date:
+     |  
+     |  __format__(...)
+     |      Formats self with strftime.
+     |  
+     |  isocalendar(...)
+     |      Return a named tuple containing ISO year, week number, and weekday.
+     |  
+     |  isoweekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 1 ... Sunday == 7
+     |  
+     |  strftime(...)
+     |      format -&gt; strftime() style string.
+     |  
+     |  toordinal(...)
+     |      Return proleptic Gregorian ordinal.  January 1 of year 1 is day 1.
+     |  
+     |  weekday(...)
+     |      Return the day of the week represented by the date.
+     |      Monday == 0 ... Sunday == 6
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods inherited from date:
+     |  
+     |  fromisocalendar(...) from builtins.type
+     |      int, int, int -&gt; Construct a date from the ISO year, week number and weekday.
+     |      
+     |      This is the inverse of the date.isocalendar() function
+     |  
+     |  fromordinal(...) from builtins.type
+     |      int -&gt; date corresponding to a proleptic Gregorian ordinal.
+     |  
+     |  today(...) from builtins.type
+     |      Current date or datetime:  same as self.__class__.fromtimestamp(time.time()).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from date:
+     |  
+     |  day
+     |  
+     |  month
+     |  
+     |  year
+    
+    class time(builtins.object)
+     |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
+     |  
+     |  All arguments are optional. tzinfo may be None, or an instance of
+     |  a tzinfo subclass. The remaining arguments may be ints.
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __format__(...)
+     |      Formats self with strftime.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __reduce_ex__(...)
+     |      __reduce_ex__(proto) -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  dst(...)
+     |      Return self.tzinfo.dst(self).
+     |  
+     |  isoformat(...)
+     |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
+     |      
+     |      The optional argument timespec specifies the number of additional terms
+     |      of the time to include. Valid options are &#39;auto&#39;, &#39;hours&#39;, &#39;minutes&#39;,
+     |      &#39;seconds&#39;, &#39;milliseconds&#39; and &#39;microseconds&#39;.
+     |  
+     |  replace(...)
+     |      Return time with new specified fields.
+     |  
+     |  strftime(...)
+     |      format -&gt; strftime() style string.
+     |  
+     |  tzname(...)
+     |      Return self.tzinfo.tzname(self).
+     |  
+     |  utcoffset(...)
+     |      Return self.tzinfo.utcoffset(self).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |  
+     |  fromisoformat(...) from builtins.type
+     |      string -&gt; time from time.isoformat() output
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  fold
+     |  
+     |  hour
+     |  
+     |  microsecond
+     |  
+     |  minute
+     |  
+     |  second
+     |  
+     |  tzinfo
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.time(23, 59, 59, 999999)
+     |  
+     |  min = datetime.time(0, 0)
+     |  
+     |  resolution = datetime.timedelta(microseconds=1)
+    
+    class timedelta(builtins.object)
+     |  Difference between two datetime values.
+     |  
+     |  timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+     |  
+     |  All arguments are optional and default to 0.
+     |  Arguments may be integers or floats, and may be positive or negative.
+     |  
+     |  Methods defined here:
+     |  
+     |  __abs__(self, /)
+     |      abs(self)
+     |  
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |  
+     |  __bool__(self, /)
+     |      True if self else False
+     |  
+     |  __divmod__(self, value, /)
+     |      Return divmod(self, value).
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __floordiv__(self, value, /)
+     |      Return self//value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __mod__(self, value, /)
+     |      Return self%value.
+     |  
+     |  __mul__(self, value, /)
+     |      Return self*value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __neg__(self, /)
+     |      -self
+     |  
+     |  __pos__(self, /)
+     |      +self
+     |  
+     |  __radd__(self, value, /)
+     |      Return value+self.
+     |  
+     |  __rdivmod__(self, value, /)
+     |      Return divmod(value, self).
+     |  
+     |  __reduce__(...)
+     |      __reduce__() -&gt; (cls, state)
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __rfloordiv__(self, value, /)
+     |      Return value//self.
+     |  
+     |  __rmod__(self, value, /)
+     |      Return value%self.
+     |  
+     |  __rmul__(self, value, /)
+     |      Return value*self.
+     |  
+     |  __rsub__(self, value, /)
+     |      Return value-self.
+     |  
+     |  __rtruediv__(self, value, /)
+     |      Return value/self.
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  __sub__(self, value, /)
+     |      Return self-value.
+     |  
+     |  __truediv__(self, value, /)
+     |      Return self/value.
+     |  
+     |  total_seconds(...)
+     |      Total seconds in the duration.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  days
+     |      Number of days.
+     |  
+     |  microseconds
+     |      Number of microseconds (&gt;= 0 and less than 1 second).
+     |  
+     |  seconds
+     |      Number of seconds (&gt;= 0 and less than 1 day).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.timedelta(days=999999999, seconds=86399, microseconds=9...
+     |  
+     |  min = datetime.timedelta(days=-999999999)
+     |  
+     |  resolution = datetime.timedelta(microseconds=1)
+    
+    class timezone(tzinfo)
+     |  Fixed offset from UTC implementation of tzinfo.
+     |  
+     |  Method resolution order:
+     |      timezone
+     |      tzinfo
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self&gt;=value.
+     |  
+     |  __getinitargs__(...)
+     |      pickle support
+     |  
+     |  __gt__(self, value, /)
+     |      Return self&gt;value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self&lt;=value.
+     |  
+     |  __lt__(self, value, /)
+     |      Return self&lt;value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  dst(...)
+     |      Return None.
+     |  
+     |  fromutc(...)
+     |      datetime in UTC -&gt; datetime in local time.
+     |  
+     |  tzname(...)
+     |      If name is specified when timezone is created, returns the name.  Otherwise returns offset as &#39;UTC(+|-)HH:MM&#39;.
+     |  
+     |  utcoffset(...)
+     |      Return fixed offset.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  max = datetime.timezone(datetime.timedelta(seconds=86340))
+     |  
+     |  min = datetime.timezone(datetime.timedelta(days=-1, seconds=60))
+     |  
+     |  utc = datetime.timezone.utc
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from tzinfo:
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      -&gt; (cls, state)
+    
+    class tzinfo(builtins.object)
+     |  Abstract base class for time zone info objects.
+     |  
+     |  Methods defined here:
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      -&gt; (cls, state)
+     |  
+     |  dst(...)
+     |      datetime -&gt; DST offset as timedelta positive east of UTC.
+     |  
+     |  fromutc(...)
+     |      datetime in UTC -&gt; datetime in local time.
+     |  
+     |  tzname(...)
+     |      datetime -&gt; string name of time zone.
+     |  
+     |  utcoffset(...)
+     |      datetime -&gt; timedelta showing offset from UTC, negative values indicating West of UTC
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+DATA
+    MAXYEAR = 9999
+    MINYEAR = 1
+    __all__ = (&#39;date&#39;, &#39;datetime&#39;, &#39;time&#39;, &#39;timedelta&#39;, &#39;timezone&#39;, &#39;tzinf...
+
+FILE
+    /opt/miniconda3/lib/python3.9/datetime.py
+</pre></div>
+</div>
+</div>
+</div>
+<p>aunque lo que devuelve es bastante ilegible. Sin embargo, nos indica la página web  <a class="reference external" href="https://docs.python.org/3.7/library/datetime">https://docs.python.org/3.7/library/datetime</a> que es un poco mejor.</p>
+<p><img alt="datetime%20module.png" src="attachment:datetime%20module.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-07-19
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+
+<span class="ne">NameError</span>: name &#39;date&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">findeanio</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">findeanio</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">findeanio</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importando-todo-el-modulo-version-2">
+<h3>Importando todo el módulo, versión 2<a class="headerlink" href="#importando-todo-el-modulo-version-2" title="Permalink to this headline">#</a></h3>
+<p>Hay veces en que uno no quiere tener que referirse al módulo en particular usando el <code class="docutils literal notranslate"><span class="pre">.</span></code>. Para eso se puede importar el módulo así:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><blockquote>
+<div><p>Es importante en estos casos que los módulos que uno importan no tengan funciones que se llamen igual, porque no habría manera de distinguirlas.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="renombrando-un-modulo">
+<h3>Renombrando un módulo<a class="headerlink" href="#renombrando-un-modulo" title="Permalink to this headline">#</a></h3>
+<p>Hay veces que puede ser útil renombrar el módulo al momento de usarlo. Típicamente se usa cuando el módulo es muy complejo y tiene varios niveles de métodos y atributos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importando-partes-de-un-modulo">
+<h3>Importando partes de un módulo<a class="headerlink" href="#importando-partes-de-un-modulo" title="Permalink to this headline">#</a></h3>
+<p>Los módulos pueden importarse parcialmente, ya sea una función particular, o algunos objetos solamente.</p>
+<blockquote>
+<div><p>Para ver cómo funciona, reseteamos el Kernel (<em>Kernel -&gt; Restart</em>), de modo tal que se descarguen todos los módulos que cargamos hasta ahora.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span><span class="n">random</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.636243366768532
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo siguiente da error al resetear el Kernel, porque el módulo random no está cargado en el notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> <span class="c1">#Esto da error al resetear el Kernel, porque el módulo random no está cargado</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">203</span><span class="n">a3d038875</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> <span class="c1">#Esto da error al resetear el Kernel, porque el módulo random no está cargado</span>
+
+<span class="ne">AttributeError</span>: &#39;builtin_function_or_method&#39; object has no attribute &#39;randint&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.479425538604203
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">968</span><span class="n">d4a906a79</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;cos&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span><span class="n">cos</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.479425538604203
+0.8775825618903728
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">573735</span><span class="n">fd7a12</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;math&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="usos-y-costumbres">
+<h3>Usos y costumbres<a class="headerlink" href="#usos-y-costumbres" title="Permalink to this headline">#</a></h3>
+<p>Se estila llamar a los módulos muy usados de la siguiente manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3%20M%C3%A1s%20sobre%20funciones.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Más sobre Funciones</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5%20Numpy%20-%20avanzado.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NumPy - Avanzado</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduccion">Introducción</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modulos-estandard">Módulos estandard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliotecas-adicionales">Bibliotecas adicionales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atributos-y-metodos">Atributos y métodos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usando-modulos">Usando módulos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importando-todo-el-modulo">Importando todo el módulo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importando-todo-el-modulo-version-2">Importando todo el módulo, versión 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renombrando-un-modulo">Renombrando un módulo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importando-partes-de-un-modulo">Importando partes de un módulo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usos-y-costumbres">Usos y costumbres</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

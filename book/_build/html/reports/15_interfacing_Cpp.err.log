@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/miniconda3/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+lib = ctypes.CDLL('./libtest.dll', **mode)
+
+
+class Test(object):
+    def __init__(self, val: int):
+        # Declare input and output types for each method you intend to use
+        lib.init.argtypes = [ctypes.c_int]
+        lib.init.restype = ctypes.c_void_p
+
+        lib.setInt.argtypes = [ctypes.c_void_p, ctypes.c_int]
+        lib.setInt.restype = ctypes.c_void_p
+
+        lib.getInt.argtypes = [ctypes.c_void_p]
+        lib.getInt.restype = ctypes.c_int
+
+        self.obj = lib.init(val)
+
+    def setInt(self, n):
+        lib.setInt(self.obj, n)
+    
+    def getInt(self):
+        return lib.getInt(self.obj)
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[8], line 1[0m
+[0;32m----> 1[0m lib [38;5;241m=[39m ctypes[38;5;241m.[39mCDLL([38;5;124m'[39m[38;5;124m./libtest.dll[39m[38;5;124m'[39m, [38;5;241m*[39m[38;5;241m*[39m[43mmode[49m)
+[1;32m      4[0m [38;5;28;01mclass[39;00m [38;5;21;01mTest[39;00m([38;5;28mobject[39m):
+[1;32m      5[0m     [38;5;28;01mdef[39;00m [38;5;21m__init__[39m([38;5;28mself[39m, val: [38;5;28mint[39m):
+[1;32m      6[0m         [38;5;66;03m# Declare input and output types for each method you intend to use[39;00m
+
+[0;31mNameError[0m: name 'mode' is not defined
+NameError: name 'mode' is not defined
+

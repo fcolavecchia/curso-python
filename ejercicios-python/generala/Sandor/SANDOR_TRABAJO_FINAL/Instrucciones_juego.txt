@@ -1,7 +1,0 @@
-Para ejecutar la generala se debe escribir en consola lo siguiente:
-
->> python Generala.py -n Jugador1 Jugador2 .... JugadorN
-
-Una vez que se inicia la corrida, se le consutará al usuario si desea agregar a la PC como jugador y se inicia el juego.
-
-Una vez iniciado el juego se le dará todas las instrucciones al usuario. 
