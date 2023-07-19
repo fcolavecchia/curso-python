@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/opt/miniconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/miniconda3/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+print(shutil.copy(os.path.join(init_dir,"07_modulos_biblioteca.ipynb"),'./5YBIAM/G3WD10/IDRYW/RRF7781YU/9AASL'))
+print(shutil.copy(os.path.join(init_dir,"Assets","El Sur.txt"),files[1949]))
+print(shutil.copy(os.path.join(init_dir,"Assets","Funes el memorioso.txt"),files[2911]))
+print(shutil.copy(os.path.join(init_dir,"Assets","El inmortal.txt"),files[4400]))
+print(shutil.copy(os.path.join(init_dir,"Assets","El Evangelio segun marcos.txt"),files[8400]))
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[19], line 2[0m
+[1;32m      1[0m [38;5;28mprint[39m(shutil[38;5;241m.[39mcopy(os[38;5;241m.[39mpath[38;5;241m.[39mjoin(init_dir,[38;5;124m"[39m[38;5;124m07_modulos_biblioteca.ipynb[39m[38;5;124m"[39m),[38;5;124m'[39m[38;5;124m./5YBIAM/G3WD10/IDRYW/RRF7781YU/9AASL[39m[38;5;124m'[39m))
+[0;32m----> 2[0m [38;5;28mprint[39m([43mshutil[49m[38;5;241;43m.[39;49m[43mcopy[49m[43m([49m[43mos[49m[38;5;241;43m.[39;49m[43mpath[49m[38;5;241;43m.[39;49m[43mjoin[49m[43m([49m[43minit_dir[49m[43m,[49m[38;5;124;43m"[39;49m[38;5;124;43mAssets[39;49m[38;5;124;43m"[39;49m[43m,[49m[38;5;124;43m"[39;49m[38;5;124;43mEl Sur.txt[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m,[49m[43mfiles[49m[43m[[49m[38;5;241;43m1949[39;49m[43m][49m[43m)[49m)
+[1;32m      3[0m [38;5;28mprint[39m(shutil[38;5;241m.[39mcopy(os[38;5;241m.[39mpath[38;5;241m.[39mjoin(init_dir,[38;5;124m"[39m[38;5;124mAssets[39m[38;5;124m"[39m,[38;5;124m"[39m[38;5;124mFunes el memorioso.txt[39m[38;5;124m"[39m),files[[38;5;241m2911[39m]))
+[1;32m      4[0m [38;5;28mprint[39m(shutil[38;5;241m.[39mcopy(os[38;5;241m.[39mpath[38;5;241m.[39mjoin(init_dir,[38;5;124m"[39m[38;5;124mAssets[39m[38;5;124m"[39m,[38;5;124m"[39m[38;5;124mEl inmortal.txt[39m[38;5;124m"[39m),files[[38;5;241m4400[39m]))
+
+File [0;32m/opt/miniconda3/lib/python3.9/shutil.py:427[0m, in [0;36mcopy[0;34m(src, dst, follow_symlinks)[0m
+[1;32m    425[0m [38;5;28;01mif[39;00m os[38;5;241m.[39mpath[38;5;241m.[39misdir(dst):
+[1;32m    426[0m     dst [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mjoin(dst, os[38;5;241m.[39mpath[38;5;241m.[39mbasename(src))
+[0;32m--> 427[0m [43mcopyfile[49m[43m([49m[43msrc[49m[43m,[49m[43m [49m[43mdst[49m[43m,[49m[43m [49m[43mfollow_symlinks[49m[38;5;241;43m=[39;49m[43mfollow_symlinks[49m[43m)[49m
+[1;32m    428[0m copymode(src, dst, follow_symlinks[38;5;241m=[39mfollow_symlinks)
+[1;32m    429[0m [38;5;28;01mreturn[39;00m dst
+
+File [0;32m/opt/miniconda3/lib/python3.9/shutil.py:264[0m, in [0;36mcopyfile[0;34m(src, dst, follow_symlinks)[0m
+[1;32m    262[0m     os[38;5;241m.[39msymlink(os[38;5;241m.[39mreadlink(src), dst)
+[1;32m    263[0m [38;5;28;01melse[39;00m:
+[0;32m--> 264[0m     [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[43msrc[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m fsrc:
+[1;32m    265[0m         [38;5;28;01mtry[39;00m:
+[1;32m    266[0m             [38;5;28;01mwith[39;00m [38;5;28mopen[39m(dst, [38;5;124m'[39m[38;5;124mwb[39m[38;5;124m'[39m) [38;5;28;01mas[39;00m fdst:
+[1;32m    267[0m                 [38;5;66;03m# macOS[39;00m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/Users/flavioc/Library/Mobile Documents/com~apple~CloudDocs/Documents/cursos/curso-python/book/Assets/El Sur.txt'
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/flavioc/Library/Mobile Documents/com~apple~CloudDocs/Documents/cursos/curso-python/book/Assets/El Sur.txt'
+
