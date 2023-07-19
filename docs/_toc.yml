@@ -9,8 +9,8 @@ chapters:
 - file: "2 Funciones.ipynb"
 - file: "3 Más sobre funciones.ipynb"
 - file: "4 Módulos.ipynb"
+- file: "5 Numpy.ipynb"gi
 - file: "5 Numpy - avanzado.ipynb"
-- file: "5 Numpy.ipynb"
 - file: "6 Matplotlib.ipynb"
 - file: "7 Intermedio.ipynb"
 - file: "8 Interpolación.ipynb"
