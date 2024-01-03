@@ -1,3 +1,3 @@
-Esta es la primer lÃ­nea,
+Esta es la primer línea,
 esta es la segunda
 y esta es la tercera.
